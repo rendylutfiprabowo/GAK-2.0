@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/assets/material/assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="/assets/material/assets/img/icon-telkom.png">
     <title>
-        Si Mental || <?= $title; ?>
+        GAK || *nama halaman
     </title>
 
 
@@ -197,6 +197,20 @@
                         <span class="sidenav-normal  ms-3  ps-1"> Logout </span>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/AdminDashboard">
+                        <i class="material-icons">dashboard</i>
+                        <span class="sidenav-normal  ms-3  ps-1"> AdminDashboard </span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/PKHLolosPTN">
+                        <i class="material-icons">people</i>
+                        <span class="sidenav-normal  ms-3  ps-1"> PKH Lolos PTN </span>
+                    </a>
+                </li>
             </ul>
         </div>
     </aside>
@@ -222,10 +236,10 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page"> <?= $title; ?></li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page"> kosong</li>
 
                     </ol>
-                    <h6 class="font-weight-bolder mb-0"> <?= $title; ?></h6>
+                    <h6 class="font-weight-bolder mb-0"> kosong</h6>
                 </nav>
                 <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
                     <a href="javascript:;" class="nav-link text-body p-0">
