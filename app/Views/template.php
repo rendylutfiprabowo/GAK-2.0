@@ -5,9 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="/assets/material/assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="/assets/material/assets/img/icon-telkom.png">
+    <link rel="icon" type="image/png" href="/assets/material/assets/img/logoGAK.png">
     <title>
-        GAK || *nama halaman
+        Gerakan Ayo Kuliah || *Nama halaman
     </title>
 
 
@@ -115,88 +115,14 @@
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
         <div class="sidenav-header">
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard-pro/pages/dashboards/analytics.html " target="_blank">
-                <img src="/assets/material/assets/img/icon-telkom.png" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="ms-1 font-weight-bold text-white">Si Mental</span>
+                <img src="/assets/material/assets/img/logoGAK.png" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="ms-1 font-weight-bold text-white">Gerakan Ayo Kuliah</span>
             </a>
         </div>
         <hr class="horizontal light mt-0 mb-2">
         <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="/dashboard">
-                        <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">dashboard</i>
-                        <span class="nav-link-text ms-2 ps-1">Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a data-bs-toggle="collapse" href="#pagesExamples" class="nav-link text-white " aria-controls="pagesExamples" role="button" aria-expanded="false">
-                        <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">people</i>
-                        <span class="nav-link-text ms-2 ps-1">Data Pelanggan</span>
-                    </a>
-                    <div class="collapse " id="pagesExamples">
-                        <ul class="nav ">
-                            <li class="nav-item ">
-                                <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#profileExample">
-                                    <i class="material-icons">filter_1</i>
-                                    <span class="sidenav-normal  ms-2  ps-1"> Satu Bulan<b class="caret"></b></span>
-                                </a>
-                                <div class="collapse " id="profileExample">
-                                    <ul class="nav nav-sm flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link text-white " href="/datapelanggan/caring/satubulan">
-                                                <i class="material-icons">touch_app</i>
-                                                <span class="sidenav-normal  ms-2  ps-1">Caring</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link text-white " href="/datapelanggan/visit/satubulan">
-                                                <i class="material-icons">transfer_within_a_station</i>
-                                                <span class="sidenav-normal  ms-2  ps-1"> Visit </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#usersExample">
-                                    <i class="material-icons">filter_2</i>
-                                    <span class="sidenav-normal  ms-2  ps-1">Dua bulan<b class="caret"></b></span>
-                                </a>
-                                <div class="collapse " id="usersExample">
-                                    <ul class="nav nav-sm flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link text-white " href="/datapelanggan/caring/duabulan">
-                                                <i class="material-icons">touch_app</i>
-                                                <span class="sidenav-normal  ms-2  ps-1">Caring </span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link text-white " href="/datapelanggan/visit/duabulan">
-                                                <i class="material-icons">transfer_within_a_station</i>
-                                                <span class="sidenav-normal  ms-2  ps-1"> Visit </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
 
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="/dataagen">
-                        <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">receipt_long</i>
-                        <span class="nav-link-text ms-2 ps-1">Data Agen</span>
-                    </a>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="/logout">
-                        <i class="material-icons">input</i>
-                        <span class="sidenav-normal  ms-3  ps-1"> Logout </span>
-                    </a>
-                </li>
 
                 <li class="nav-item">
                     <a class="nav-link text-white " href="/AdminDashboard">

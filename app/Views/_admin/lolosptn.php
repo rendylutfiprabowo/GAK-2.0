@@ -69,7 +69,7 @@
             <div class="card my-4">
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                        <h6 class="text-white text-capitalize ps-3">DATA CARING 1 BULAN</h6>
+                        <h6 class="text-white text-capitalize ps-3">DATA SISWA KPM PKH</h6>
                     </div>
                 </div>
                 <div class="card-body px-0 ">
@@ -79,13 +79,13 @@
                                 <thead class="thead-light">
                                     <tr>
                                         <th class="text-center text-uppercase text-xxs font-weight-bolder">
-                                            <p><b>Nama Agen</b></p>
+                                            <p><b>NAMA SISWA/b></p>
                                         </th>
                                         <th class="text-center text-uppercase text-xxs font-weight-bolder">
-                                            <p><b>Nama Pelanggan</b></p>
+                                            <p><b>NOMOR PKH</b></p>
                                         </th>
                                         <th class="text-center text-uppercase text-xxs font-weight-bolder">
-                                            <p><b>Status Call</b></p>
+                                            <p><b>Status PKH</b></p>
                                         </th>
                                         <th class="text-center text-uppercase text-xxs font-weight-bolder">
                                             <p><b>Detail</b></p>
