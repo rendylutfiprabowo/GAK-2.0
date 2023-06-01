@@ -36,8 +36,13 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+//Admin
 $routes->get('/AdminDashboard', 'AdminDashboard::AdminDashboard');
 $routes->get('/PKHLolosPTN', 'AdminLolosptn::index');
+
+//siswa
+$routes->get('/SiswaDashboard', 'SiswaDashboard::SiswaDashboard');
+
 
 
 

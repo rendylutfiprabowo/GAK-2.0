@@ -2,7 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Models\AdminModel;
+use App\Database\Migrations\Admin;
+use App\Models\UserModel;
 
 class Login extends BaseController
 {
@@ -20,33 +21,29 @@ class Login extends BaseController
     public function process()
     {
 
-        $users = new AdminModel();
+        $users = new UserModel();
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
         $dataUser = $users->where([
             'username' => $username,
         ])->first();
-        if ($dataUser) {
-
-            if (password_verify($password, $dataUser->password)) {
-                session()->set([
-                    'username' => $dataUser->username,
-                    'nama' => $dataUser->nama,
-                    'logged_in' => TRUE
-                ]);
-                $ses_data = [
-                    'title' => 'Login',
-                    'logged_in'     => true,
-                ];
-                $this->session->set($ses_data);
-                return redirect()->to(base_url('dashboard'));
+        if ($password == $dataUser->password) {
+            session()->set([
+                'username' => $dataUser->username,
+                'user' => $dataUser->user,
+                'logged_in' => TRUE
+            ]);
+            $ses_data = [
+                'title' => 'Login',
+                'logged_in'     => true,
+            ];
+            $this->session->set($ses_data);
+            if (session()->get('user') == '0') {
+                return redirect()->to(base_url('AdminDashboard'));
             } else {
-
-                session()->setFlashdata('error', 'Username & Password Salah');
-                return redirect()->back();
+                return redirect()->to(base_url('SiswaDashboard'));
             }
         } else {
-
             session()->setFlashdata('error', 'Username & Password Salah');
             return redirect()->back();
         }
