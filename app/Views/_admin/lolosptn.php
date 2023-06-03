@@ -1,4 +1,4 @@
-<?= $this->extend('template') ?>
+<?= $this->extend('_admin/templateadmin') ?>
 <?= $this->section('content') ?>
 <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js">
 <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
