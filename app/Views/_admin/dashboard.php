@@ -10,18 +10,16 @@
             <h6 class="text-white text-capitalize ps-3">Graphic</h6>
           </div>
           <div class="card-body px-0 ">
-            calipp <br>
-            calipp <br>
-            calipp <br>
-            calipp <br>
-            calipp <br>
-            calipp <br>
-            calipp <br>
-            calipp <br>
-            calipp <br>
-            calipp <br>
-            calipp <br>
-            calipp <br>
+            <!-- <div class="card mb-3"> -->
+              <div class="card-body p-3">
+                <div class="chart">
+                  <canvas id="chart-pie1" class="chart-canvas" height="300px"></canvas>
+                </div>
+              </div>
+            </div>
+
+
+
           </div>
         </div>
       </div>
@@ -29,6 +27,7 @@
   </div>
 </div>
 </div>
+
 
 
 <?= $this->endSection() ?>

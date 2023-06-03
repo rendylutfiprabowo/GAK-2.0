@@ -140,33 +140,86 @@
             </div>
         </div>
     </main>
+</body>
 
-    <script src="/assets/material/assets/js/core/popper.min.js"></script>
-    <script src="/assets/material/assets/js/core/bootstrap.min.js"></script>
-    <script src="/assets/material/assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="/assets/material/assets/js/plugins/smooth-scrollbar.min.js"></script>
+<script src="/assets/material/assets/js/core/popper.min.js"></script>
+<script src="/assets/material/assets/js/core/bootstrap.min.js"></script>
+<script src="/assets/material/assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="/assets/material/assets/js/plugins/smooth-scrollbar.min.js"></script>
+<script src="/assets/material/assets/js/plugins/chartjs.min.js"></script>
+<script src="/assets/material/assets/js/plugins/dragula/dragula.min.js"></script>
+<script src="/assets/material/assets/js/plugins/jkanban/jkanban.js"></script>
 
-    <script src="/assets/material/assets/js/plugins/dragula/dragula.min.js"></script>
-    <script src="/assets/material/assets/js/plugins/jkanban/jkanban.js"></script>
-    <script src="/assets/material/assets/js/plugins/chartjs.min.js"></script>
-    <script>
-        var ctx1 = document.getElementById("chart-pie1").getContext("2d");
-        var ctx2 = document.getElementById("chart-pie2").getContext("2d");
-        var ctx3 = document.getElementById("chart-pie3").getContext("2d");
-        var ctx4 = document.getElementById("chart-pie4").getContext("2d");
-    </script>
-
-    <script>
-        var win = navigator.platform.indexOf('Win') > -1;
-        if (win && document.querySelector('#sidenav-scrollbar')) {
-            var options = {
-                damping: '0.5'
-            }
-            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+<script>
+    var ctx1 = document.getElementById("chart-pie1").getContext("2d");
+    new Chart(ctx1, {
+        type: "pie",
+        data: {
+            labels: ['rendy', 'lutfi'],
+            datasets: [{
+                label: "Caring 1 Bulan",
+                weight: 10,
+                cutout: 0,
+                tension: 0.9,
+                pointRadius: 0,
+                borderWidth: 0,
+                backgroundColor: ['#17c1e8', '#e91e63', '#3A416F', '#a8b8d8'],
+                data: ['12', '19'],
+                fill: false
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                        color: '#c1c4ce5c'
+                    },
+                    ticks: {
+                        display: false
+                    }
+                },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                        color: '#c1c4ce5c'
+                    },
+                    ticks: {
+                        display: false,
+                    }
+                },
+            },
+        },
+    });
+</script>
+<script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+            damping: '0.5'
         }
-    </script>
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+</script>
 
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    <script src="/assets/material/assets/js/material-dashboard.min.js?v=3.0.6"></script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"79dce2022c384a9b","version":"2023.2.0","r":1,"token":"1b7cbb72744b40c580f8633c6b62637e","si":100}' crossorigin="anonymous"></script>
+<script src="/assets/material/assets/js/material-dashboard.min.js?v=3.0.6"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"79dce2022c384a9b","version":"2023.2.0","r":1,"token":"1b7cbb72744b40c580f8633c6b62637e","si":100}' crossorigin="anonymous"></script>
