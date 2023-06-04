@@ -43,6 +43,8 @@ $routes->get('/PKHLolosPTN', 'AdminLolosptn::index');
 //siswa
 $routes->get('/SiswaDashboard', 'SiswaDashboard::SiswaDashboard');
 
+//LandingPage
+$routes->get('/LandingPage', 'LandingPage::LandingPage');
 
 
 
