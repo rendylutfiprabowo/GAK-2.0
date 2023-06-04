@@ -151,65 +151,68 @@
 <script src="/assets/material/assets/js/plugins/jkanban/jkanban.js"></script>
 
 <script>
-    // var ctx1 = document.getElementById("chart-pie1").getContext("2d");
+    var ctx1 = document.getElementById("chart-pie1").getContext("2d");
     var ctx2 = document.getElementById("bar-chart1").getContext("2d");
 
-    // new Chart(ctx1, {
-    //     type: "pie",
-    //     data: {
-    //         labels: ['rendy', 'lutfi'],
-    //         datasets: [{
-    //             label: "Caring 1 Bulan",
-    //             weight: 10,
-    //             cutout: 0,
-    //             tension: 0.9,
-    //             pointRadius: 0,
-    //             borderWidth: 0,
-    //             backgroundColor: ['#17c1e8', '#e91e63', '#3A416F', '#a8b8d8'],
-    //             data: ['12', '19'],
-    //             fill: false
-    //         }],
-    //     },
-    //     options: {
-    //         responsive: true,
-    //         maintainAspectRatio: false,
-    //         plugins: {
-    //             legend: {
-    //                 display: false,
-    //             }
-    //         },
-    //         interaction: {
-    //             intersect: false,
-    //             mode: 'index',
-    //         },
-    //         scales: {
-    //             y: {
-    //                 grid: {
-    //                     drawBorder: false,
-    //                     display: false,
-    //                     drawOnChartArea: false,
-    //                     drawTicks: false,
-    //                     color: '#c1c4ce5c'
-    //                 },
-    //                 ticks: {
-    //                     display: false
-    //                 }
-    //             },
-    //             x: {
-    //                 grid: {
-    //                     drawBorder: false,
-    //                     display: false,
-    //                     drawOnChartArea: false,
-    //                     drawTicks: false,
-    //                     color: '#c1c4ce5c'
-    //                 },
-    //                 ticks: {
-    //                     display: false,
-    //                 }
-    //             },
-    //         },
-    //     },
-    // });
+    new Chart(ctx1, {
+        type: "pie",
+        data: {
+            labels: ['Bandar Lampung', 'Lampung Barat', 'Lampung Selatan', 'Lampung Tengah', 'Lampung Timur', 'Lampung Utara', 'Mesuji', 'Metro', 'Pesawaran', 'Pringsewu', 'Tanggamus', 'Tulang Bawang', 'Way Kanan'],
+            datasets: [{
+                label: "Caring 1 Bulan",
+                weight: 10,
+                cutout: 0,
+                tension: 0.9,
+                pointRadius: 0,
+                borderWidth: 0,
+                backgroundColor: ['#17c1e8', '#e91e63', '#3A416F', '#a8b8d8'],
+                data: ['17', '1', '4', '3', '5', '3', '1', '1', '1', '3', '9', '5', '14'],
+                fill: true
+                // data pake rumus persentasi : data / total data *100%
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            marker: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    
+                }
+            },
+            interaction: {
+                intersect: true,
+                mode: 'index',
+            },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                        color: '#c1c4ce5c'
+                    },
+                    ticks: {
+                        display: false
+                    }
+                },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                        color: '#c1c4ce5c'
+                    },
+                    ticks: {
+                        display: false,
+                    }
+                },
+            },
+        },
+    });
 
     new Chart(ctx2, {
         type: "bar",
@@ -217,11 +220,11 @@
             labels: ['Bandar Lampung', 'Lampung Barat', 'Lampung Selatan', 'Lampung Tengah', 'Lampung Timur', 'Lampung Utara', 'Mesuji', 'Metro', 'Pesawaran', 'Pringsewu', 'Tanggamus', 'Tulang Bawang', 'Way Kanan'],
             datasets: [{
                 label: "nama kabupaten",
-                weight: 1,
+                weight: 0,
                 cutout: 0,
                 tension: 0.9,
-                pointRadius: 1,
-                borderWidth: 0,
+                pointRadius: 0.5,
+                borderWidth: 1,
                 backgroundColor: ['#17c1e8'],
                 data: ['17', '1', '4', '3', '5', '3', '1', '1', '1', '3', '9', '5', '14'],
                 fill: true
@@ -229,7 +232,7 @@
         },
         options: {
             responsive: true,
-            maintainAspectRatio: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: {
                     display: true,
