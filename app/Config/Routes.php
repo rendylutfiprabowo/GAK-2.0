@@ -20,7 +20,7 @@ $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
-$routes->set404Override();
+$routes->set404Override('/eror');
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -61,54 +61,7 @@ $routes->get('/eror', 'Home::eror');
 
 $routes->post('/login/process', 'Login::process');
 
-$routes->get('/datapelanggan/caring/satubulan', 'Datacaring::satubulan');
-$routes->get('/datapelanggan/caring/detail/(:num)', 'Datacaring::detail/$1');
-$routes->get('/datapelanggan/caring/delete/(:num)', 'Datacaring::delete/$1');
-$routes->post('/datapelanggan/caring/edit/import', 'Datacaring::import');
-$routes->get('/datapelanggan/caring/edit/export', 'Datacaring::export');
-$routes->get('/datapelanggan/caring/clearall', 'Datacaring::clearall');
-$routes->get('/datapelanggan/caring/edit', 'Datacaring::edit');
-$routes->get('/datapelanggan/caring/edit/(:num)', 'Datacaring::edit/$1');
-$routes->post('/caring/update/(:num)', 'Datacaring::update/$1');
-$routes->get('/caring/downloadtemplate', 'Datacaring::download');
 
-$routes->get('/datapelanggan/caring/duabulan', 'Datacaring2::duabulan');
-$routes->get('/datapelanggan/caring2/detail/(:num)', 'Datacaring2::detail/$1');
-$routes->get('/datapelanggan/caring2/delete/(:num)', 'Datacaring2::delete/$1');
-$routes->post('/datapelanggan/caring2/edit/import', 'Datacaring2::import');
-$routes->get('/datapelanggan/caring2/edit/export', 'Datacaring2::export');
-$routes->get('/datapelanggan/caring2/clearall', 'Datacaring2::clearall');
-$routes->get('/datapelanggan/caring2/edit/(:num)', 'Datacaring2::edit/$1');
-$routes->post('/caring2/update/(:num)', 'Datacaring2::update/$1');
-$routes->get('/caring2/downloadtemplate', 'Datacaring::download');
-
-$routes->get('/datapelanggan/visit/satubulan', 'Datavisit::satubulan');
-$routes->get('/datapelanggan/visit/detail/(:num)', 'Datavisit::detail/$1');
-$routes->get('/datapelanggan/visit/delete/(:num)', 'Datavisit::delete/$1');
-$routes->post('/datapelanggan/visit/edit/import', 'Datavisit::import');
-$routes->get('/datapelanggan/visit/edit/export', 'Datavisit::export');
-$routes->get('/datapelanggan/visit/clearall', 'Datavisit::clearall');
-$routes->get('/datapelanggan/visit/edit/(:num)', 'Datavisit::edit/$1');
-$routes->post('/visit/update/(:num)', 'Datavisit::update/$1');
-$routes->get('/visit/downloadtemplate', 'Datacaring::download');
-
-$routes->get('/datapelanggan/visit/duabulan', 'Datavisit2::duabulan');
-$routes->get('/datapelanggan/visit2/detail/(:num)', 'Datavisit2::detail/$1');
-$routes->get('/datapelanggan/visit2/delete/(:num)', 'Datavisit2::delete/$1');
-$routes->post('/datapelanggan/visit2/edit/import', 'Datavisit2::import');
-$routes->get('/datapelanggan/visit2/edit/export', 'Datavisit2::export');
-$routes->get('/datapelanggan/visit2/clearall', 'Datavisit2::clearall');
-$routes->get('/datapelanggan/visit2/edit', 'Datavisit::edit');
-$routes->get('/datapelanggan/visit2/edit/(:num)', 'Datavisit2::edit/$1');
-$routes->post('/visit2/update/(:num)', 'Datavisit2::update/$1');
-$routes->get('/visit/downloadtemplate', 'Datacaring::download');
-
-$routes->get('/dataagen', 'Dataagen::listdata');
-$routes->get('/dataagen/detail', 'Dataagen::detail');
-$routes->get('/dataagen', 'Dataagen::listdata');
-$routes->get('/dataagen/tambahdata', 'Dataagen::tambahdata');
-$routes->get('/dataagen/hapusdata/(:num)', 'Dataagen::delete/$1');
-$routes->get('/dataagen/editdata', 'Dataagen::editdata');
 
 /*
  * --------------------------------------------------------------------
