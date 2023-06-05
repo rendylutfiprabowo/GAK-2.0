@@ -79,7 +79,7 @@
                                 <thead class="thead-light">
                                     <tr>
                                         <th class="text-center text-uppercase text-xxs font-weight-bolder">
-                                            <p><b>NAMA SISWA/b></p>
+                                            <p><b>NAMA SISWA</b></p>
                                         </th>
                                         <th class="text-center text-uppercase text-xxs font-weight-bolder">
                                             <p><b>NOMOR PKH</b></p>

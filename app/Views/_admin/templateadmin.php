@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="/assets/material/assets/img/logoGAK.jpg" style="background-color: white; border-radius: 25px;">
+    <link rel="icon" type="image/png" href="/img/hero-img.png" style="background-color: white; border-radius: 25px;">
     <title>
         Gerakan Ayo Kuliah || *Nama halaman
     </title>
@@ -23,7 +23,7 @@
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
         <div class="sidenav-header">
             <a class="navbar-brand m-0" href="#" target="_blank">
-                <img src="/assets/material/assets/img/logoGAK.jpg" style="background-color: white; border-radius: 25px;" class="navbar-brand-img h-100" alt="main_logo">
+                <img src="/img/hero-img.png" style="background-color: white; border-radius: 25px;" class="navbar-brand-img h-100" alt="main_logo">
                 <span class="ms-1 font-weight-bold text-white">Gerakan Ayo Kuliah</span>
             </a>
         </div>
@@ -178,7 +178,7 @@
             plugins: {
                 legend: {
                     display: true,
-                    
+
                 }
             },
             interaction: {
@@ -189,7 +189,7 @@
                 y: {
                     grid: {
                         drawBorder: false,
-                        display: false,
+                        display: true,
                         drawOnChartArea: false,
                         drawTicks: false,
                         color: '#c1c4ce5c'
