@@ -6,6 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Gerakan Ayo Kuliah</title>
+  <link rel="icon" href="/img/hero-img.png">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -24,7 +25,7 @@
   <link href="/css/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/css/remixicon/remixicon.css" rel="stylesheet">
   <link href="/css/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  
 
   <!-- Template Main CSS File -->
   <link href="<?= base_url(); ?>/css/style.css" rel="stylesheet">

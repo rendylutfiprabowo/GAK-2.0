@@ -24,7 +24,7 @@ class Home extends BaseController
 
     public function login()
     {
-        if (session()->logged_in) return redirect()->to('dashboard');
+        if (session()->logged_in) return redirect()->to('login');
         return view('login');
     }
 
