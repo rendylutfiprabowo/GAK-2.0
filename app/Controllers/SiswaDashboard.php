@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 
 class SiswaDashboard extends BaseController
 {
-    public function SiswaDashboard()
+    public function index()
     {
         return view('_siswa/dashboard');
     }

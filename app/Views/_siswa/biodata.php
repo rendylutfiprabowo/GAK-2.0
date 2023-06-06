@@ -1,6 +1,5 @@
-<?= $this->extend('tempelate/index'); ?>
-
-<?= $this->section('page-content'); ?>
+<?= $this->extend('_siswa/templatesiswa'); ?>
+<?= $this->section('content'); ?>
 
 <!-- Begin Page Content -->
 <div class="container-fluid">

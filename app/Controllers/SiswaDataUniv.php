@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class SiswaPrestasi extends BaseController
+class SiswaDataUniv extends BaseController
 {
     public function index()
     {
-        return view('_siswa/prestasi');
+        return view('_siswa/datauniv');
     }
 }

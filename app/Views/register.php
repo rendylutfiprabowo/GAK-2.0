@@ -29,18 +29,6 @@
     <!-- Template Main CSS File -->
     <link href="<?= base_url(); ?>/css/style.css" rel="stylesheet">
 
-    <style>
-        .img-fluid {
-            width: 500px;
-            /* lebar crop gambar yg diinginkan */
-            height: 460px;
-            /* tinggi crop gambar yg diinginkan */
-            object-fit: cover;
-            object-position: 20% 10%;
-            /* menentukan view crop image yg diinginkan */
-        }
-    </style>
-
 </head>
 
 <body>
@@ -78,11 +66,11 @@
         <div class="container-fluid h-custom">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-9 col-lg-6 col-xl-5">
-                    <img src="https://img.freepik.com/free-vector/happy-students-jumping-with-flat-design_23-2147919953.jpg?w=740&t=st=1686037748~exp=1686038348~hmac=52d49f916a37084786c291d5569f523bae268935da702526151861c1158bf9c2" class="img-fluid" alt="Sample image">
+                    <img src="https://img.freepik.com/free-vector/organic-flat-join-us-concept_23-2148948357.jpg?w=740&t=st=1686037625~exp=1686038225~hmac=2b0ed7237fb78c52295fd0bb81056bdfd0b485559aba20c2b9396ff532f2a2ca" class="img-fluid" alt="Sample image">
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                    <h1 class="mb-3">Masuk</h1>
-                    <p>Silahkan masuk menggunakan akun anda, jika belum ada akun silahkan klik <b>buat akun</b> pada menu register.</p>
+                    <h1 class="mb-3">Registrasi Daftar Akun</h1>
+                    <p>Silahkan masukan data sesuai dengan <b>identitas diri</b> kalian.</p>
                     <form role="form" class="text-start" method="post" action="/login/process">
                         <div class="form-group">
                             <label class="mb-1" for="username">Username</label>
@@ -92,11 +80,10 @@
                         <div class="form-group">
                             <label class="mb-1" for="password">Password</label>
                             <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-
                         </div>
                         <div class="text-center text-lg-start mt-3">
-                            <button type="submit" class="btn btn-primary">Login</button>
-                            <p class="small fw-bold mt-2 pt-1 mb-0">Belum punya akun? <a href="/register" class="link-danger">Daftar</a></p>
+                            <button type="submit" class="btn btn-primary">Daftar</button>
+                            <p class="small fw-bold mt-2 pt-1 mb-0">Sudah punya akun? <a href="/login" class="link-danger">Masuk</a></p>
                         </div>
 
                     </form>

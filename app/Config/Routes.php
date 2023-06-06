@@ -40,6 +40,7 @@ $routes->set404Override('/eror');
 $routes->get('/', 'LandingPage::index');
 $routes->get('/login', 'Home::login');
 $routes->post('/login/process', 'Login::process');
+$routes->get('/register', 'Register::index');
 
 
 //Admin
@@ -50,7 +51,11 @@ $routes->get('/PKHLolosPTN/Edit', 'AdminLolosptn::edit');
 
 
 //siswa
-$routes->get('/SiswaDashboard', 'SiswaDashboard::SiswaDashboard');
+$routes->get('/SiswaDashboard', 'SiswaDashboard::index');
+$routes->get('/Biodata', 'SiswaBiodata::index');
+$routes->get('//DataUniversitas', 'SiswaDataUniv::index');
+$routes->get('/Prestasi', 'SiswaPrestasi::index');
+$routes->get('/UploadDokumen', 'SiswaUpload::index');
 
 //LandingPage
 $routes->get('/LandingPage', 'LandingPage::LandingPage');

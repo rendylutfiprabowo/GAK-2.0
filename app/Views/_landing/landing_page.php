@@ -37,7 +37,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a>GAK</a></h1>
+      <h1 class="logo me-auto"><img src="<?= base_url(); ?>/img/hero-img.png" alt=""></h1>
 
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <!-- .navbar -->
@@ -49,7 +49,7 @@
           <li><a class="nav-link   scrollto" href="#portfolio">Cerita Kami</a></li>
           <li><a class="nav-link scrollto" href="#team">Kepengurusan</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-          <li><a class="getstarted scrollto" href="#about">Register</a></li>
+          <li><a class="getstarted scrollto" href="/register">Daftar</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
