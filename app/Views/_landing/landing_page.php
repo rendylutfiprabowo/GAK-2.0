@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- Vendor CSS Files -->
   <link href="/css/aos/aos.css" rel="stylesheet">
   <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +24,7 @@
   <link href="/css/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/css/remixicon/remixicon.css" rel="stylesheet">
   <link href="/css/swiper/swiper-bundle.min.css" rel="stylesheet">
+
 
   <!-- Template Main CSS File -->
   <link href="<?= base_url(); ?>/css/style.css" rel="stylesheet">
@@ -36,10 +37,10 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">GAK</a></h1>
+      <h1 class="logo me-auto"><a>GAK</a></h1>
 
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <!-- .navbar -->
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
@@ -51,10 +52,12 @@
           <li><a class="getstarted scrollto" href="#about">Register</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
+
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -701,7 +704,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    <div class="footer-top">
+    <div class="footer-top" style="padding-top: 30px;">
       <div class="container">
         <div class="row">
 
@@ -767,13 +770,6 @@
   <script src="/css/waypoints/noframework.waypoints.js"></script>
   <script src="/css/php-email-form/validate.js"></script>
 
-
-
-  <link href="/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/css/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/css/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/css/remixicon/remixicon.css" rel="stylesheet">
-  <link href="/css/swiper/swiper-bundle.min.css" rel="stylesheet">
   <!-- Template Main JS File -->
   <script src="/js/main.js"></script>
 

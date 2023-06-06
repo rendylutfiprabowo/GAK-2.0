@@ -36,6 +36,12 @@ $routes->set404Override('/eror');
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+//sebelum login
+$routes->get('/', 'LandingPage::index');
+$routes->get('/login', 'Home::login');
+$routes->post('/login/process', 'Login::process');
+
+
 //Admin
 $routes->get('/AdminDashboard', 'AdminDashboard::AdminDashboard');
 $routes->get('/PKHLolosPTN', 'AdminLolosptn::index');
@@ -54,15 +60,15 @@ $routes->get('/LandingPage', 'LandingPage::LandingPage');
 
 // ----------------------------------------------------------
 
-$routes->get('/', 'LandingPage::index');
+
 $routes->get('/dashboard', 'Dashboard::index');
 
-$routes->get('/login', 'Home::login');
+
 $routes->get('/logout', 'Home::logout');
 $routes->get('/eror', 'Home::eror');
 
 
-$routes->post('/login/process', 'Login::process');
+
 
 
 
