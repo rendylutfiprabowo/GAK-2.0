@@ -17,13 +17,13 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="<?= base_url(); ?>/vendor/aos/aos.css" rel="stylesheet">
-  <link href="<?= base_url(); ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?= base_url(); ?>/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="<?= base_url(); ?>/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="<?= base_url(); ?>/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="<?= base_url(); ?>/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="<?= base_url(); ?>/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/css/aos/aos.css" rel="stylesheet">
+  <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/css/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/css/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/css/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/css/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="<?= base_url(); ?>/css/style.css" rel="stylesheet">
@@ -37,7 +37,7 @@
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="index.html">GAK</a></h1>
-      
+
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
@@ -64,10 +64,10 @@
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>Gerakan Ayo Kuliah <span>(GAK)</span></h1>
           <h2>Untuk kamu yang ingin melanjutkan kuliah, namun terkendala oleh biaya.
-            Dapatkan Kartu Indonesia Pintar Kuliah melalui Program 
+            Dapatkan Kartu Indonesia Pintar Kuliah melalui Program
             Gerakan Ayo Kuliah, Sekarang Juga!</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="<?php echo base_url('login'); ?>" class="btn-get-started scrollto">Login</a>
+            <a href="#" class="btn-get-started scrollto">Login</a>
             <a href="https://youtu.be/_kQERECXfGI" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
@@ -119,10 +119,10 @@
         <div class="row content">
           <div class="">
             <p>
-            Gerakan Ayo Kuliah (GAK) Adalah program inovasi PKH Provinsi Lampung berupa serangkaian
-            kegiatan sistematis yang bertujuan membantu meningkatkan kualitas SDM Keluarga Penerima Manfaat (KPM)
-            PKH khususnya kelas XII SMA sederajat. Dalam jangka panjang diharapkan dapat memutus mata rantai
-            kemiskinan antar generasi keluarga PKH menuju masyarakat Berjaya (mandiri).
+              Gerakan Ayo Kuliah (GAK) Adalah program inovasi PKH Provinsi Lampung berupa serangkaian
+              kegiatan sistematis yang bertujuan membantu meningkatkan kualitas SDM Keluarga Penerima Manfaat (KPM)
+              PKH khususnya kelas XII SMA sederajat. Dalam jangka panjang diharapkan dapat memutus mata rantai
+              kemiskinan antar generasi keluarga PKH menuju masyarakat Berjaya (mandiri).
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> Mapping Data</li>
@@ -146,9 +146,9 @@
             <div class="content">
               <h3>Konsep <strong>Gerakan Ayo Kuliah</strong></h3>
               <p>
-              Gerakan Ayo Kuliah (GAK) Adalah program inovasi PKH Provinsi Lampung berupa serangkaian
-              kegiatan sistematis yang bertujuan sebagai alternatif model pembinaan anak PKH berprestasi 
-              lanjut kuliah
+                Gerakan Ayo Kuliah (GAK) Adalah program inovasi PKH Provinsi Lampung berupa serangkaian
+                kegiatan sistematis yang bertujuan sebagai alternatif model pembinaan anak PKH berprestasi
+                lanjut kuliah
               </p>
             </div>
 
@@ -158,8 +158,8 @@
                   <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>Visi</span> <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                     <p>
-                    Dalam jangka panjang diharapkan dapat memutus mata rantai kemiskinan antar generasi keluarga
-                    PKH menuju masyarakat Berjaya (Mandiri).
+                      Dalam jangka panjang diharapkan dapat memutus mata rantai kemiskinan antar generasi keluarga
+                      PKH menuju masyarakat Berjaya (Mandiri).
                     </p>
                   </div>
                 </li>
@@ -168,10 +168,10 @@
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>Misi</span> <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                    Melakukan Edukasi kepada anak PKH kelas XII potensial dan KPM PKH untuk Lanjut Kuliah. <br>
-                    Melakukan Motivasi kepada anak KPM PKH Potensial terpilih. <br>
-                    Melakukan Advokasi & Pemberdayaan kepada anak PKH yang telah diterima di 
-                    PTN/PTKIN untuk mendapatkan KIP Kuliah atau jenis beasiswa lainnya serta persiapan pasca kampus. 
+                      Melakukan Edukasi kepada anak PKH kelas XII potensial dan KPM PKH untuk Lanjut Kuliah. <br>
+                      Melakukan Motivasi kepada anak KPM PKH Potensial terpilih. <br>
+                      Melakukan Advokasi & Pemberdayaan kepada anak PKH yang telah diterima di
+                      PTN/PTKIN untuk mendapatkan KIP Kuliah atau jenis beasiswa lainnya serta persiapan pasca kampus.
 
                     </p>
                   </div>
@@ -198,7 +198,7 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
             <h3>Pencapaian <br> Gerakan Ayo Kuliah (GAK)</h3>
-          
+
             <div class="skills-content">
 
               <div class="progress">
@@ -307,10 +307,10 @@
         <div class="row">
           <div class="col-lg-14 text-center text-lg-start">
             <h3>Gerakan Ayo Kuliah Tour 2022</h3>
-            <p> Kegiatan Sosialisasi dan Edukasi anak PKH di Provinsi Lampung dilaksanakan 
-              dengan sistem datang ke sekolah (Goes to School) atau ke kecamatan/kabupaten tujuan. 
-              Kegiatan ini diisi dengan pemberian informasi dan bimbingan kepada siswa PKH terkait 
-              motivasi lanjut kuliah, pemahaman terkait perguruan tinggi, dan hal hal yang harus 
+            <p> Kegiatan Sosialisasi dan Edukasi anak PKH di Provinsi Lampung dilaksanakan
+              dengan sistem datang ke sekolah (Goes to School) atau ke kecamatan/kabupaten tujuan.
+              Kegiatan ini diisi dengan pemberian informasi dan bimbingan kepada siswa PKH terkait
+              motivasi lanjut kuliah, pemahaman terkait perguruan tinggi, dan hal hal yang harus
               dipersiapkan untuk melanjutkan ke perguruan tinggi.</p>
           </div>
         </div>
@@ -522,7 +522,7 @@
 
         <div class="row gy-4">
 
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <article>
 
               <div class="post-img">
@@ -532,7 +532,7 @@
               <h2 class="title">
                 <a href="blog-details.html">Adian Saputra Narasumber Penulisan Pegiat Gerakan Ayo Kuliah</a>
               </h2>
-          
+
               <div class="d-flex align-items-center">
                 <div class="post-meta">
                   <p class="post-author">oleh : Adian Saputra</p>
@@ -557,7 +557,7 @@
               <h2 class="title">
                 <a href="blog-details.html">Founder BCF, Anindya Bakrie Dorong Replikasi Gerakan Ayo Kuliah</a>
               </h2>
-          
+
               <div class="d-flex align-items-center">
                 <div class="post-meta">
                   <p class="post-author">oleh : Syahdan Nurdin</p>
@@ -582,7 +582,7 @@
               <h2 class="title">
                 <a href="blog-details.html">40 Anak Penerima Manfaat Program Keluarga Harapan Lampung Selatan Ikuti Pembinaan Lanjut Kuliah</a>
               </h2>
-          
+
               <div class="d-flex align-items-center">
                 <div class="post-meta">
                   <p class="post-author">oleh : Adian Saputra</p>
@@ -621,7 +621,7 @@
 
             </article>
           </div><!-- End post list item -->
-      </div>
+        </div>
 
     </section>
 
@@ -642,7 +642,7 @@
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
                 <p>Jl. Basuki Rahmat No. 72, Sumur Putri, <br> Kec. Tlk. Betung Utara, <br> Kota Bandarlampung,
-              Lampung 35212</p>
+                  Lampung 35212</p>
               </div>
 
               <div class="email">
@@ -750,7 +750,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-         
+
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -759,16 +759,23 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="<?= base_url(); ?>/vendor/aos/aos.js"></script>
-  <script src="<?= base_url(); ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?= base_url(); ?>/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="<?= base_url(); ?>/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="<?= base_url(); ?>/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="<?= base_url(); ?>/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="<?= base_url(); ?>/vendor/php-email-form/validate.js"></script>
+  <script src="/css/aos/aos.js"></script>
+  <script src="/css/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/css/glightbox/js/glightbox.min.js"></script>
+  <script src="/css/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/css/swiper/swiper-bundle.min.js"></script>
+  <script src="/css/waypoints/noframework.waypoints.js"></script>
+  <script src="/css/php-email-form/validate.js"></script>
 
+
+
+  <link href="/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/css/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/css/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/css/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/css/swiper/swiper-bundle.min.css" rel="stylesheet">
   <!-- Template Main JS File -->
-  <script src="<?= base_url(); ?>/js/main.js"></script>
+  <script src="/js/main.js"></script>
 
 </body>
 

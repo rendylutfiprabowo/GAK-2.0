@@ -9,6 +9,12 @@ class Home extends BaseController
         parent::__construct();
     }
 
+    function index()
+    {
+        if (session()->logged_in) return view('_admin/dashboard');
+        else return redirect()->to('login');
+    }
+
 
     function logout()
     {
@@ -21,7 +27,7 @@ class Home extends BaseController
         if (session()->logged_in) return redirect()->to('dashboard');
         return view('login');
     }
-   
+
     public function eror()
     {
         return view('eror');
