@@ -54,7 +54,7 @@ $routes->get('/LandingPage', 'LandingPage::LandingPage');
 
 // ----------------------------------------------------------
 
-$routes->get('/', 'Home::index');
+$routes->get('/', 'LandingPage::index');
 $routes->get('/dashboard', 'Dashboard::index');
 
 $routes->get('/login', 'Home::login');

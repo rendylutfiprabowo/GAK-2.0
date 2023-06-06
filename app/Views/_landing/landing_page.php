@@ -67,7 +67,7 @@
             Dapatkan Kartu Indonesia Pintar Kuliah melalui Program
             Gerakan Ayo Kuliah, Sekarang Juga!</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#" class="btn-get-started scrollto">Login</a>
+            <a href="/login" class="btn-get-started scrollto">Login</a>
             <a href="https://youtu.be/_kQERECXfGI" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
