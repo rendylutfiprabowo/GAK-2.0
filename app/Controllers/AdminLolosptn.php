@@ -10,4 +10,14 @@ class AdminLolosptn extends BaseController
     {
         return view('_admin/lolosptn');
     }
+
+    public function detail()
+    {
+        return view('_admin/detailadmin');
+    }
+
+    public function edit()
+    {
+        return view('_admin/editadmin');
+    }
 }

@@ -39,6 +39,9 @@ $routes->set404Override('/eror');
 //Admin
 $routes->get('/AdminDashboard', 'AdminDashboard::AdminDashboard');
 $routes->get('/PKHLolosPTN', 'AdminLolosptn::index');
+$routes->get('/PKHLolosPTN/Detail', 'AdminLolosptn::detail');
+$routes->get('/PKHLolosPTN/Edit', 'AdminLolosptn::edit');
+
 
 //siswa
 $routes->get('/SiswaDashboard', 'SiswaDashboard::SiswaDashboard');

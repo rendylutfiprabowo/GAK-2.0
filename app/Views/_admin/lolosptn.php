@@ -113,7 +113,7 @@
                                     <h6 class="mb-0 text-sm">xxxxx</h6>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <a href="#">
+                                    <a href="/PKHLolosPTN/Detail">
                                         <span style="justify-content: center;" class="badge badge-sm bg-gradient-info"><i class="material-icons">info</i></span>
                                     </a>
                                     <a href="#">
