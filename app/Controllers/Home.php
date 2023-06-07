@@ -11,10 +11,16 @@ class Home extends BaseController
 
     function index()
     {
+<<<<<<< Updated upstream
         if (session()->logged_in) return view('_admin/dashboard');
         else return redirect()->to('login');
     }
 
+=======
+        if (session()->logged_in) return view('login');
+        else return redirect()->to('login');
+    }
+>>>>>>> Stashed changes
 
     function logout()
     {

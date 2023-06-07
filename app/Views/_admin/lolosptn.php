@@ -95,32 +95,38 @@
                         </div>
                         <tbody>
 
-                            <tr>
-                                <td>
-                                    <div class="d-flex px-2 py-1">
-                                        <div>
-                                            <img src="/assets/material/assets/img/user.png" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                            <?php
+                            foreach ($PTN as $dp) {
+                            ?>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2 py-1">
+                                            <div>
+                                                <img src="/assets/material/assets/img/user.png" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="mb-0 text-sm"><?php echo $dp['nama']; ?></h6>
+                                            </div>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">xxxxx</h6>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h6 class="mb-0 text-sm">xxxxx</h6>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <h6 class="mb-0 text-sm">xxxxx</h6>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <a href="/PKHLolosPTN/Detail">
-                                        <span style="justify-content: center;" class="badge badge-sm bg-gradient-info"><i class="material-icons">info</i></span>
-                                    </a>
-                                    <a href="#">
-                                        <span style="justify-content: center;" class="badge badge-sm bg-gradient-warning"><i class="material-icons">delete</i></span>
-                                    </a>
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td>
+                                        <h6 class="mb-0 text-sm"><?php echo $dp['no_pkh']; ?></h6>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <h6 class="mb-0 text-sm"><?php echo $dp['status_kip']; ?></h6>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <a href="/PKHLolosPTN/detail/<?= $dp['id_siswa'] ?>">
+                                            <span style="justify-content: center;" class="badge badge-sm bg-gradient-info"><i class="material-icons">info</i></span>
+                                        </a>
+                                        <a href="/PKHLolosPTN/delete/<?= $dp['id_siswa'] ?>">
+                                            <span style="justify-content: center;" class="badge badge-sm bg-gradient-warning"><i class="material-icons">delete</i></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                            ?>
 
                         </tbody>
                         </table>
