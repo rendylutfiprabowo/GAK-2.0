@@ -225,6 +225,4 @@ class AdminLolosptn extends BaseController
             return redirect()->to('/PKHLolosPTN');
         }
     }
-
-
 }

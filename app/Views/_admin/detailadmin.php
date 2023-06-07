@@ -27,7 +27,7 @@
             <?php endif;   ?>
 
             <a href="/PKHLolosPTN" style="margin-right: 8px;" class="btn bg-gradient-warning  mb-0"> <i class="material-icons">arrow_back</i></a>
-            <a href="/PKHLolosPTN/edit" class="btn bg-gradient-primary  mb-0"> <i class="material-icons">edit</i> Edit </a>
+            <a href="/PKHLolosPTNedit/<?= $PTN['id_siswa'] ?>class=" btn bg-gradient-primary mb-0"> <i class="material-icons">edit</i> Edit </a>
 
         </div>
     </div>
@@ -45,13 +45,13 @@
                 <div class="card-body px-0 ">
                     <div class="card-header m-0">
                         <p class="text-sm mb-0 text-capitalize">Email</p>
-                        <span class="text-success text-sm font-weight-bolder">xxxxxxxxxxx</span><br>
+                        <span class="text-success text-sm font-weight-bolder"><?= $PTN['email_address'] ?></span><br>
                         <p class="text-sm mb-0 text-capitalize">Nama Siswa</p>
-                        <span class="text-success text-sm font-weight-bolder">xxxxxxxxxxx</span><br>
+                        <span class="text-success text-sm font-weight-bolder"><?= $PTN['nama'] ?></span><br>
                         <p class="text-sm mb-0 text-capitalize">Nomor Telepon Seluler</p>
-                        <span class="text-success text-sm font-weight-bolder">xxxxxxxxxxx</span>
-                        <p class="text-sm mb-0 text-capitalize">Asal Sekolah</p>
-                        <span class="text-success text-sm font-weight-bolder ">xxxxxxxxxxx</span>
+                        <span class="text-success text-sm font-weight-bolder"><?= $PTN['no_whatshap'] ?></span>
+                        <p class="text-sm mb-0 text-capitalize">Provinsi</p>
+                        <span class="text-success text-sm font-weight-bolder "><?= $PTN['provinsi'] ?></span>
 
                     </div>
                 </div>
@@ -71,14 +71,14 @@
                 </div>
                 <div class="card-body px-0">
                     <div class="card-header m-0">
-                        <p class="text-sm mb-0 text-capitalize">Provinsi</p>
-                        <span class="text-success text-sm font-weight-bolder">xxxxxxxxxxx</span><br>
                         <p class="text-sm mb-0 text-capitalize">Kabupaten / Kota</p>
-                        <span class="text-success text-sm font-weight-bolder">xxxxxxxxxxx</span><br>
+                        <span class="text-success text-sm font-weight-bolder"><?= $PTN['kabupaten_kota'] ?></span><br>
                         <p class="text-sm mb-0 text-capitalize">Kecamatan</p>
-                        <span class="text-success text-sm font-weight-bolder">xxxxxxxxxxx</span><br>
+                        <span class="text-success text-sm font-weight-bolder"><?= $PTN['kecamatan'] ?></span><br>
                         <p class="text-sm mb-0 text-capitalize">Desa / Kelurahan</p>
-                        <span class="text-success text-sm font-weight-bolder ">xxxxxxxxxxx</span>
+                        <span class="text-success text-sm font-weight-bolder"><?= $PTN['desa'] ?></span><br>
+                        <p class="text-sm mb-0 text-capitalize">Asal Sekolah</p>
+                        <span class="text-success text-sm font-weight-bolder "><?= $PTN['asal_sekolah'] ?></span>
                     </div>
                 </div>
                 <div class="card-footer p-0">
@@ -98,15 +98,15 @@
                 <div class="card-body px-0">
                     <div class="card-header m-0">
                         <p class="text-sm mb-0 text-capitalize">Nomor PKH</p>
-                        <span class="text-success text-sm font-weight-bolder ">xxxxxxxxxxx</span>
+                        <span class="text-success text-sm font-weight-bolder "><?= $PTN['no_pkh'] ?></span>
                         <p class="text-sm mb-0 text-capitalize">Jalur Masuk PTN</p>
-                        <span class="text-success text-sm font-weight-bolder">xxxxxxxxxxx</span><br>
+                        <span class="text-success text-sm font-weight-bolder"><?= $PTN['jalur_masukptn'] ?></span><br>
                         <p class="text-sm mb-0 text-capitalize">Universitas</p>
-                        <span class="text-success text-sm font-weight-bolder">xxx</span><br>
+                        <span class="text-success text-sm font-weight-bolder"><?= $PTN['universitas'] ?></span><br>
                         <p class="text-sm mb-0 text-capitalize">Program Studi</p>
-                        <span class="text-success text-sm font-weight-bolder">xxxx</span><br>
+                        <span class="text-success text-sm font-weight-bolder"><?= $PTN['program_studi'] ?></span><br>
                         <p class="text-sm mb-0 text-capitalize">Status KIP K</p>
-                        <span class="text-success text-sm font-weight-bolder ">xxx</span>
+                        <span class="text-success text-sm font-weight-bolder "><?= $PTN['status_kip'] ?></span>
                     </div>
                 </div>
                 <div class="card-footer p-0">

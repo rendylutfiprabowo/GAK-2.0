@@ -74,12 +74,7 @@ $routes->get('/LandingPage', 'LandingPage::LandingPage');
 
 // ----------------------------------------------------------
 
-<<<<<<< Updated upstream
-
-=======
-$routes->get('/', 'Home::index');
->>>>>>> Stashed changes
-$routes->get('/dashboard', 'Dashboard::index');
+// $routes->get('/dashboard', 'Dashboard::index');
 
 
 $routes->get('/logout', 'Home::logout');

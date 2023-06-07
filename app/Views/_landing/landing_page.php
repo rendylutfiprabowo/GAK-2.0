@@ -25,7 +25,7 @@
   <link href="/css/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/css/remixicon/remixicon.css" rel="stylesheet">
   <link href="/css/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
+
 
   <!-- Template Main CSS File -->
   <link href="<?= base_url(); ?>/css/style.css" rel="stylesheet">
@@ -721,11 +721,11 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Sitemap</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tentang Kami</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Program Kerja</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Cerita Kami</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Kepengurusan</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Beranda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">Tentang Kami</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Program Kerja</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Cerita Kami</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#team">Kepengurusan</a></li>
             </ul>
           </div>
 

@@ -41,7 +41,7 @@
                             <p>Mohon upload dengan sesuai dengan template / format (format file xlsx)</p>
                             <a href="/caring/downloadtemplate"><button class="btn bg-gradient-warning">Download Template</button></a>
                             <div class="input-group input-group-dynamic mb-3">
-                                <form method="post" action="/datapelanggan/caring/edit/import" enctype="multipart/form-data">
+                                <form method="post" action="/PKHLolosPTN/import" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label for="file">Pilih File Disini</label><br>
                                         <input type="file" name="fileexcel" class="btn bg-gradient-secondary " id="file" required accept=".xls, .Xlsx" required />
@@ -58,7 +58,7 @@
             </div>
 
             <a style="margin-right: 8px;" href="<?= site_url('/datapelanggan/caring/edit/export') ?>" class="btn btn-outline-primary  export mb-0 mt-sm-0 mt-1" data-type=".xlsx" type="button" name="button"><i class="material-icons">file_download</i> Export</a>
-            <a href="/datapelanggan/caring/clearall" class="btn btn-outline-primary  export mb-0 mt-sm-0 mt-1" data-type=".xlsx" type="button" name="button"><i class="material-icons">delete_sweep</i> Clear Data</a>
+            <a href="/PKHLolosPTN/clearall" class="btn btn-outline-primary  export mb-0 mt-sm-0 mt-1" data-type=".xlsx" type="button" name="button"><i class="material-icons">delete_sweep</i> Clear Data</a>
             <a href="/datapelanggan/caring/clearall" class="btn btn-outline-primary  export mb-0 mt-sm-0 mt-1" data-type=".xlsx" type="button" name="button"><i class="material-icons">delete_sweep</i> Pengajuan SR</a>
 
         </div>
