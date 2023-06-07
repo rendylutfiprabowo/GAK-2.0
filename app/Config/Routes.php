@@ -46,8 +46,17 @@ $routes->get('/register', 'Register::index');
 //Admin
 $routes->get('/AdminDashboard', 'AdminDashboard::AdminDashboard');
 $routes->get('/PKHLolosPTN', 'AdminLolosptn::index');
-$routes->get('/PKHLolosPTN/Detail', 'AdminLolosptn::detail');
-$routes->get('/PKHLolosPTN/Edit', 'AdminLolosptn::edit');
+$routes->get('/PKHLolosPTN/detail/(:num)', 'AdminLolosPTN::detail/$1');
+$routes->get('/PKHLolosPTN/delete/(:num)', 'AdminLolosPTN::delete/$1');
+$routes->post('/PKHLolosPTN/import', 'AdminLolosPTN::import');
+$routes->get('/PKHLolosPTN/export', 'AdminLolosPTN::export');
+$routes->get('/PKHLolosPTN/clearall', 'AdminLolosPTN::clearall');
+$routes->get('/PKHLolosPTN/edit', 'AdminLolosPTN::edit');
+$routes->get('/PKHLolosPTN/edit/(:num)', 'AdminLolosPTN::edit/$1');
+$routes->post('/update/(:num)', 'AdminLolosPTN::update/$1');
+// $routes->get('/PKHLolosPTN/Detail', 'AdminLolosptn::detail');
+// $routes->get('/PKHLolosPTN/Edit', 'AdminLolosptn::edit');
+
 
 
 //siswa
@@ -65,7 +74,11 @@ $routes->get('/LandingPage', 'LandingPage::LandingPage');
 
 // ----------------------------------------------------------
 
+<<<<<<< Updated upstream
 
+=======
+$routes->get('/', 'Home::index');
+>>>>>>> Stashed changes
 $routes->get('/dashboard', 'Dashboard::index');
 
 
