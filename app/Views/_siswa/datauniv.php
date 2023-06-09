@@ -1,40 +1,45 @@
 <?= $this->extend('_siswa/templatesiswa'); ?>
 <?= $this->section('content'); ?>
 
-<!-- Begin Page Content -->
-<div class="container-fluid">
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-3">
+                <div class="card-body p-3">
 
-    <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Data Universitas</h1>
+                    <div class="container-fluid">
+                        <!-- Page Heading -->
+                        <h1 class="mt-3">DATA UNIVERSITAS</h1>
+                        <p style="border-bottom: 2px solid gray;">Jika anda <b>sudah lulus tes masuk kuliah, mohon isi </b>form berikut sesuai dengan data universitas anda!. <b>Jika belum mohon abaikan</b>! Terima Kasih!</p>
+                        <form action="">
+                            <div class="input-group input-group-outline my-3">
+                                <label class="form-label">Nama Perguruan Tinggi</label>
+                                <input type="email" class="form-control">
+                            </div>
 
-    <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Universitas</label>
+                            <div class="input-group input-group-outline my-3">
+                                <label class="form-label">Program Studi</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static mb-4">
+                                <label for="exampleFormControlSelect1" class="ms-0">Tahun Masuk</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-primary me-md-2" type="button">Simpan dan Lanjutkan</button>
+                            </div>
+                        </form>
 
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">Jurusan</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="jurusan">
-    </div>
-    <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Tahun Masuk</label>
-
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-    </div>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-primary me-md-2" type="button">Simpan dan Lanjutkan</button>
-    </div>
-
 </div>
-<!-- /.container-fluid -->
 <?= $this->endSection(); ?>

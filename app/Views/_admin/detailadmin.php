@@ -27,7 +27,7 @@
             <?php endif;   ?>
 
             <a href="/PKHLolosPTN" style="margin-right: 8px;" class="btn bg-gradient-warning  mb-0"> <i class="material-icons">arrow_back</i></a>
-            <a href="/PKHLolosPTNedit/<?= $PTN['id_siswa'] ?>class=" btn bg-gradient-primary mb-0"> <i class="material-icons">edit</i> Edit </a>
+            <a href="/PKHLolosPTN/edit/<?= $PTN['id_siswa'] ?>" class=" btn bg-gradient-primary mb-0"> <i class="material-icons">edit</i> Edit </a>
 
         </div>
     </div>

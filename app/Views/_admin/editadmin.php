@@ -23,14 +23,14 @@
                         <div class="col-lg-6 col-md-6 my2">
                             <div class="input-group input-group-outline my-3">
                                 <label for="email_address" class="form-label">Email</label>
-                                <input name="email_address" id="email_address" type="email_address" class="form-control" value="<?= $PTN['email_address'] ?>>
+                                <input name="email_address" id="email_address" type="email_address" class="form-control" value="<?= $PTN['email_address'] ?>">
                             </div>
                         </div>
                         <div class=" col-lg-6 col-md-6 my2">
                                 <div class="form-group my-2">
                                     <div class="input-group input-group-outline my-3">
                                         <label for="nama" class="form-label">Nama Siswa</label>
-                                        <input name="nama" id="nama" type="text" class="form-control" disabled="<?= $PTN['no_whatshap'] ?>">
+                                        <input name="nama" id="nama" type="text" class="form-control" disabled="<?= $PTN['nama'] ?>">
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary mt-2" value="submit">Simpan Data</button>
-                        <a href="/datapelanggan/caring/detail/xx"><button type="button" class="btn bg-gradient-secondary mt-2 ms-2">Batal</button></a>
+                        <a href="/PKHLolosPTN/detail/<?= $PTN['id_siswa'] ?>"><button type="button" class="btn bg-gradient-secondary mt-2 ms-2">Batal</button></a>
                     </div>
                 </div>
             </div>
