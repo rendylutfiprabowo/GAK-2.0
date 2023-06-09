@@ -35,6 +35,8 @@ class Login extends BaseController
             ]);
             $ses_data = [
                 'title' => 'Login',
+                'username' => $dataUser->username,
+                'user' => $dataUser->user,
                 'logged_in'     => true,
             ];
             $this->session->set($ses_data);
