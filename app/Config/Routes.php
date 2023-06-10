@@ -41,7 +41,7 @@ $routes->get('/', 'LandingPage::index');
 $routes->get('/login', 'Home::login');
 $routes->post('/login/process', 'Login::process');
 $routes->get('/register', 'Register::index');
-
+$routes->post('/register/process', 'Register::signingUp');
 
 //Admin
 $routes->get('/AdminDashboard', 'AdminDashboard::AdminDashboard');

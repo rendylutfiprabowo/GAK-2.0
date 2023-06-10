@@ -27,7 +27,7 @@ class Login extends BaseController
         $dataUser = $users->where([
             'username' => $username,
         ])->first();
-        if ($password == $dataUser->password) {
+        if (password_verify($password, $dataUser->password)) {
             session()->set([
                 'username' => $dataUser->username,
                 'user' => $dataUser->user,

@@ -71,7 +71,7 @@
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                     <h1 class="mb-3">Registrasi Daftar Akun</h1>
                     <p>Silahkan masukan data sesuai dengan <b>identitas diri</b> kalian.</p>
-                    <form role="form" class="text-start" method="post" action="/login/process">
+                    <form role="form" class="text-start" method="post" action="/register/process">
                         <div class="form-group">
                             <label class="mb-1" for="username">Username</label>
                             <input type="text" class="form-control" name="username" id="username" placeholder="Username">
