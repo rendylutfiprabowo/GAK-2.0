@@ -41,7 +41,7 @@ $routes->get('/', 'LandingPage::index');
 $routes->get('/login', 'Home::login');
 $routes->post('/login/process', 'Login::process');
 $routes->get('/register', 'Register::index');
-
+$routes->post('/register/process', 'Register::signingUp');
 
 //Admin
 $routes->get('/AdminDashboard', 'AdminDashboard::AdminDashboard');
@@ -53,7 +53,7 @@ $routes->get('/PKHLolosPTN/export', 'AdminLolosPTN::export');
 $routes->get('/PKHLolosPTN/clearall', 'AdminLolosPTN::clearall');
 $routes->get('/PKHLolosPTN/edit', 'AdminLolosPTN::edit');
 $routes->get('/PKHLolosPTN/edit/(:num)', 'AdminLolosPTN::edit/$1');
-$routes->post('/update/(:num)', 'AdminLolosPTN::update/$1');
+$routes->post('/PKHLolosPTN/update/(:num)', 'AdminLolosPTN::update/$1');
 // $routes->get('/PKHLolosPTN/Detail', 'AdminLolosptn::detail');
 // $routes->get('/PKHLolosPTN/Edit', 'AdminLolosptn::edit');
 
