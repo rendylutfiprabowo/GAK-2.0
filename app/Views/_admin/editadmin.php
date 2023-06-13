@@ -28,7 +28,7 @@
                         <div class=" col-lg-6 col-md-6 my2">
                             <div class="form-group my-2">
                                 <div class="input-group input-group-outline my-3">
-                                    <input placeholder="Nama Siswa" name="nama" id="nama" type="text" class="form-control" disabled="<?= $PTN['nama'] ?>">
+                                    <input placeholder="Nama Siswa" name="nama" id="nama" type="text" class="form-control" readonly value="<?= $PTN['nama'] ?>">
                                 </div>
                             </div>
                         </div>
