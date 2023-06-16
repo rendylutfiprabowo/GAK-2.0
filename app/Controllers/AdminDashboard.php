@@ -8,19 +8,43 @@ use App\Models\Caring2;
 use App\Models\Visit1;
 use App\Models\Visit2;
 use App\Models\AgenModel;
+use App\Models\UserModel;
+use App\Models\Biodata;
+use App\Models\Universitas;
+use App\Models\Prestasi;
+use App\Models\Upload;
 
 
 class AdminDashboard extends BaseController
 {
-    public function AdminDashboard()
-    {
-        return view('_admin/dashboard');
-    }
-
     function __construct()
     {
         parent::__construct();
+        $this->user = new UserModel();
+        $this->biodata = new Biodata();
+        $this->universitas = new Universitas();
+        $this->prestasi = new Prestasi();
+        $this->upload = new Upload();
     }
+
+    public function AdminDashboard()
+    {
+        $jumlah_siswa = $this->user->countAllResults();
+        $jumlah_biodata = $this->biodata->countAllResults();
+        $jumlah_universitas = $this->universitas->countAllResults();
+        $jumlah_prestasi = $this->prestasi->countAllResults();
+        $jumlah_upload = $this->upload->countAllResults();         
+
+        $data = [
+            'jumlahSiswa' => $jumlah_siswa,
+            'jumlahBiodata' => $jumlah_biodata,
+            'jumlahUniversitas' => $jumlah_universitas,
+            'jumlahPrestasi' => $jumlah_prestasi,
+            'jumlahUpload' => $jumlah_upload,
+        ];
+        return view('_admin/dashboard', $data);
+    }
+
     public function index()
     {
         //DATA HASIL CARING 1 BULAN

@@ -66,7 +66,7 @@ $routes->post('/StoreBiodata', 'SiswaBiodata::store');
 $routes->get('/DataUniversitas', 'SiswaDataUniv::index');
 $routes->post('/StoreDataUniversitas', 'SiswaDataUniv::storeuniv');
 $routes->get('/Prestasi', 'SiswaPrestasi::index');
-$routes->post('/StorePrestasi', 'SiswaPrestasi::stroreprestasi');
+$routes->post('/StorePrestasi', 'SiswaPrestasi::storeprestasi');
 $routes->get('/UploadDokumen', 'SiswaUpload::index');
 $routes->post('/StoreDokumen', 'SiswaUpload::storeup');
 

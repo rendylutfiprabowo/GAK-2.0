@@ -40,7 +40,7 @@
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>Nama Lengkap</label>
-                                            <input type="text" name="nama" class="form-control ahay" value="">
+                                            <input type="text" name="nama" class="form-control ahay" value=" $PTN['id_siswa'] ">
                                         </div>
                                     </div>
                                 </div>
