@@ -17,22 +17,22 @@
                         <div class="container-fluid">
 
                             <div class="input-group input-group-dynamic mb-3">
-                                <form method="post" action="/datapelanggan/caring/edit/import" enctype="multipart/form-data">
+                                <form method="post" action="/StoreDokumen" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <h6>SKTM</h6>
-                                        <input type="file" name="fileexcel" class="btn bg-gradient-secondary " id="file" required accept=".xls, .Xlsx" required />
+                                        <input type="file" name="sktm" class="btn bg-gradient-secondary " id="file" required accept=".jpg, .png" required />
                                     </div>
                                     <div class="form-group">
                                         <h6>KTP Orang Tua</h6>
-                                        <input type="file" name="fileexcel" class="btn bg-gradient-secondary " id="file" required accept=".xls, .Xlsx" required />
+                                        <input type="file" name="ktp_ortu" class="btn bg-gradient-secondary " id="file" required accept=".jpg, .png" required />
                                     </div>
                                     <div class="form-group">
                                         <h6>SK Pendapatan Orang Tua</h6>
-                                        <input type="file" name="fileexcel" class="btn bg-gradient-secondary " id="file" required accept=".xls, .Xlsx" required />
+                                        <input type="file" name="sk_pendapatan" class="btn bg-gradient-secondary " id="file" required accept=".jpg, .png" required />
                                     </div>
                                     <div class="form-group">
                                         <h6>Dokumen Pendukung Lainnya</h6>
-                                        <input type="file" name="fileexcel" class="btn bg-gradient-secondary " id="file" required accept=".xls, .Xlsx" required />
+                                        <input type="file" name="dokumen" class="btn bg-gradient-secondary " id="file" required accept=".jpg, .png" required />
                                     </div>
                             </div>
                             <div class="modal-footer">

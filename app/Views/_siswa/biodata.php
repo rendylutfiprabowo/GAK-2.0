@@ -6,7 +6,7 @@
         font-weight: bold;
         font-size: large;
         color: #f01c64;
-       text-transform: uppercase;
+        text-transform: uppercase;
     }
 
     .ihiy {
@@ -23,15 +23,15 @@
 
                     <div class="container-fluid">
                         <!-- Page Heading -->
-                        <h1 class="mt-3" >BIODATA DIRI</h1>
+                        <h1 class="mt-3">BIODATA DIRI</h1>
                         <p style="border-bottom: 2px solid gray;">Mohon <b>$username siswa</b> isi biodata berikut sesuai dengan data diri anda! Terima Kasih!</p>
-                        <form action="#">
+                        <form action="/StoreBiodata" method="post">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 my2">
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>Email address</label>
-                                            <input type="email" class="form-control ahay ahay" required value="asda@gmail">
+                                            <input type="email" name="email_address" class="form-control ahay ahay">
                                             <p class="ihiy"><b>Petunjuk : </b></p>
                                         </div>
                                     </div>
@@ -40,7 +40,7 @@
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>Nama Lengkap</label>
-                                            <input type="text" class="form-control ahay" required value="Rendy Lutfi">
+                                            <input type="text" name="nama" class="form-control ahay" value="">
                                         </div>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>Nomor Kartu PKH</label>
-                                            <input type="text" class="form-control ahay" required value="08096785875">
+                                            <input type="text" name="no_pkh" class="form-control ahay">
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>Nama Pendamping PKH</label>
-                                            <input type="text" class="form-control ahay" required value="Yanto Yanti">
+                                            <input type="text" name="nama_pendamping" class="form-control ahay">
                                         </div>
                                     </div>
                                 </div>
@@ -68,13 +68,7 @@
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label for="exampleFormControlSelect1" class="ms-0">Asal Wilayah</label>
-                                            <select class="form-control ahay" required value="tester value" id="exampleFormControlSelect1">
-                                                <option>Bandarlampung</option>
-                                                <option>Pdasdasd</option>
-                                                <option>sad</option>
-                                                <option>asd</option>
-                                                <option>asdasd</option>
-                                            </select>
+                                            <input type="text" name="asal_wilayah" class="form-control ahay">
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +76,7 @@
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>Asal Sekolah</label>
-                                            <input type="text" class="form-control ahay" required value="SMA 1 BANDARLAMPUNG">
+                                            <input type="text" name="asal_sekolah" class="form-control ahay">
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +86,7 @@
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>Nama Ibu</label>
-                                            <input type="text" class="form-control ahay" required value="tester value">
+                                            <input type="text" name="nama_ibu" class="form-control ahay">
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +94,7 @@
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>No WhatsApp Siswa</label>
-                                            <input type="text" class="form-control ahay" required value="tester value">
+                                            <input type="text" name="no_whatshap" class="form-control ahay">
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +107,7 @@
 
 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button class="btn btn-primary me-md-2" type="button">Simpan dan Lanjutkan</button>
+                                <button class="btn btn-primary me-md-2" type="submit">Simpan dan Lanjutkan</button>
                             </div>
                         </form>
 

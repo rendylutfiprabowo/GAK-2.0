@@ -62,9 +62,14 @@ $routes->post('/PKHLolosPTN/update/(:num)', 'AdminLolosPTN::update/$1');
 //siswa
 $routes->get('/SiswaDashboard', 'SiswaDashboard::index');
 $routes->get('/Biodata', 'SiswaBiodata::index');
-$routes->get('//DataUniversitas', 'SiswaDataUniv::index');
+$routes->post('/StoreBiodata', 'SiswaBiodata::store');
+$routes->get('/DataUniversitas', 'SiswaDataUniv::index');
+$routes->post('/StoreDataUniversitas', 'SiswaDataUniv::storeuniv');
 $routes->get('/Prestasi', 'SiswaPrestasi::index');
+$routes->post('/StorePrestasi', 'SiswaPrestasi::stroreprestasi');
 $routes->get('/UploadDokumen', 'SiswaUpload::index');
+$routes->post('/StoreDokumen', 'SiswaUpload::storeup');
+
 
 //LandingPage
 $routes->get('/LandingPage', 'LandingPage::LandingPage');

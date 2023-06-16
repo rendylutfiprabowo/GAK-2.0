@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class Biodata extends Model
+{
+    protected $table = "biodata";
+    protected $primaryKey = "id_siswa";
+    protected $returnType = "array";
+    protected $useTimestamps = false;
+    protected $allowedFields = ['email_address', 'nama', 'no_pkh', 'nama_pendamping', 'asal_wilayah', 'asal_sekolah', 'nama_ibu', 'no_whatshap',];
+
+    public function getBiodata($where = false)
+    {
+        if ($where === false) {
+            return $this->findAll();
+        } else {
+            return $this->getWhere($where);
+        }
+    }
+}
