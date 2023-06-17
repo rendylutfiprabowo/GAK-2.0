@@ -48,7 +48,7 @@
           <li><a class="nav-link scrollto" href="#about">Tentang Kami</a></li>
           <li><a class="nav-link scrollto" href="#services">Program Kerja</a></li>
           <li><a class="nav-link   scrollto" href="#portfolio">Cerita Kami</a></li>
-          <li><a class="nav-link scrollto" href="#team">Kepengurusan</a></li>
+          <li><a class="nav-link scrollto" href="#team">Tim</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <li><a class="getstarted scrollto" href="/register">Daftar</a></li>
         </ul>
@@ -186,7 +186,7 @@
 
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("https://infopublik.id/assets/upload/headline//wkwkk.jpg");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("<?= base_url(); ?>/img/gak_satu.jpeg");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
         </div>
 
       </div>
@@ -331,103 +331,92 @@
         </div>
 
         <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
+          <li data-filter="*" class="filter-active">Kegiatan</li>
+          <li data-filter=".filter-app">Eksternal</li>
+          <li data-filter=".filter-card">Internal</li>
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="https://dinsos.metrokota.go.id/wp-content/uploads/sites/51/2021/11/photo1638158323-800x480.jpeg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?= base_url(); ?>/img/keg-satu.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="https://cdn.antaranews.com/cache/800x533/2021/03/28/IMG-20210328-WA0056.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>GAK Menyelenggarakan Motivasi Edukasi Lanjut Kuliah di Kelurahan Gulak-Galik, Teluk Betung Utara</h4>
+              <p>Juni 2023</p>
+              <a href="<?= base_url(); ?>/img/keg-satu.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Kegiatan GAK TOUR 2023"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="https://poin.co.id/wp-content/uploads/2023/02/GAK.jpeg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?= base_url(); ?>/img/gak_satu.jpeg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1FeETTs6fnRyVfHZlw7rNpR3MGH_E4_GQzmrRN7cJFrd6WmGbQNycZUivo15VC7gKBgk&usqp=CAU" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Mahasiswa Internship Campus Leaders Program 6 Project GAK</h4>
+              <p>Feb-Jun 2023</p>
+              <a href="<?= base_url(); ?>/img/gak_satu.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Mahasiswa Internship Campus Leaders Program 6 Project GAK"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1FeETTs6fnRyVfHZlw7rNpR3MGH_E4_GQzmrRN7cJFrd6WmGbQNycZUivo15VC7gKBgk&usqp=CAU" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?= base_url(); ?>/img/gak_dua.jpeg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="<?= base_url(); ?>/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>GAK Menyelenggarakan Motivasi Edukasi Lanjut Kuliah di Kelurahan Waydadi Baru</h4>
+              <p>Juni 2023</p>
+              <a href="<?= base_url(); ?>/img/gak_dua.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="GAK Menyelenggarakan Motivasi Edukasi Lanjut Kuliah di Kelurahan Waydadi Baru"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-img"><img src="https://cdn.antaranews.com/cache/800x533/2021/03/28/IMG-20210328-WA0056.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="<?= base_url(); ?>/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Slamet Riyadi, Founder Gerakan Ayo Kuliah (GAK)</h4>
+              <a href="https://cdn.antaranews.com/cache/800x533/2021/03/28/IMG-20210328-WA0056.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Slamet  Riyadi, Founder Gerakan Ayo Kuliah (GAK)"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-img"><img src="https://diary.co.id/wp-content/uploads/2020/01/IMG-20200126-WA0018-678x381.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="<?= base_url(); ?>/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Pendamping KPM PKH Lampung</h4>
+              <a href="<?= base_url(); ?>/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Pendamping KPM PKH Lampung"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="<?= base_url(); ?>/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?= base_url(); ?>/img/gak_empat.jpeg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="<?= base_url(); ?>/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Silaturahmi Keluarga GAK</h4>
+              <p>Jun 2023</p>
+              <a href="<?= base_url(); ?>/img/gak_empat.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Silaturahmi Keluarga GAK"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="<?= base_url(); ?>/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?= base_url(); ?>/img/gak_tiga.jpeg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="<?= base_url(); ?>/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Onboarding Mahasiswa Internship CLP Batch 6 BCF di GAK</h4>
+              <p>Feb 2023</p>
+              <a href="<?= base_url(); ?>/img/gak_tiga.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Onboarding Mahasiswa Internship CLP Batch 6 BCF di GAK"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="<?= base_url(); ?>/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="<?= base_url(); ?>/img/gak_lima.jpeg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="<?= base_url(); ?>/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Kuliah Umum GAK CLP Batch 6 Bersama Bapak Adian Saputra Pimpinan Redaksi Wartalampung.id</h4>
+              <p>April 2023</p>
+              <a href="<?= base_url(); ?>/img/gak_lima.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Kuliah Umum GAK CLP Batch 6 Bersama Bapak Adian Saputra Pimpinan Redaksi Wartalampung.id"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="<?= base_url(); ?>/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="<?= base_url(); ?>/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+
 
         </div>
 
@@ -439,17 +428,17 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Kepengurusan</h2>
+          <h2>Tim IT Database <br> Gerakan Ayo Kuliah (GAK)</h2>
         </div>
 
         <div class="row">
 
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="<?= base_url(); ?>/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?= base_url(); ?>/img/team/team-1.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Slamet Riyadi, S.IP,. M.IP</h4>
-                <span>Founder Gerakan Ayo Kuliah</span>
+                <h4>Edo Laksana Widodo</h4>
+                <span>Universitas Lampung</span>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -462,10 +451,10 @@
 
           <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="<?= base_url(); ?>/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?= base_url(); ?>/img/team/team-2.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Tiwi Novelia</h4>
-                <span>Sekretaris</span>
+                <h4>Rendy Lutfi Prabowo</h4>
+                <span>Universitas Lampung</span>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -478,10 +467,10 @@
 
           <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="<?= base_url(); ?>/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?= base_url(); ?>/img/team/team-3.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Muhammad Juniardi</h4>
-                <span>Koordinator Harian</span>
+                <h4>Yoga Murpadinata</h4>
+                <span>Universitas Indonesia</span>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -494,10 +483,10 @@
 
           <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="<?= base_url(); ?>/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?= base_url(); ?>/img/team/team-4.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Sinta Nuryati</h4>
-                <span>Bendahara</span>
+                <h4>Asha Imalia Zahra</h4>
+                <span>Universitas Lampung</span>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -625,6 +614,56 @@
 
             </article>
           </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+
+              <div class="post-img">
+                <img src="https://kemensos.go.id/uploads/topics/16068281182513.jpeg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">
+                <a href="blog-details.html">KEMENSOS Galakkan 'Gerakan Ayo Kuliah' Anak KPM PKH</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <div class="post-meta">
+                  <p class="post-author">oleh : Kemensos.go.id</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">Nov 30, 2020</time>
+                  </p>
+                </div>
+              </div>
+
+              <a href="https://kemensos.go.id/kemensos-galakkan-gerakan-ayo-kuliah-anak-kpm-pkh" class="buy-btn">Lihat Selengkapnya</a>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article>
+
+              <div class="post-img">
+                <img src="https://cdn-2.tstatic.net/lampung/foto/bank/images/gerakan-ayo-kuliah-pkh-lampung-juarai-lead-indonesia-2018.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">
+                <a href="blog-details.html">Gerakan Ayo Kuliah PKH Lampung juarai LEAD Indonesia 2018</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <div class="post-meta">
+                  <p class="post-author">oleh : Eka Ahmad Sholichin</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01">Jan 5, 2019</time>
+                  </p>
+                </div>
+              </div>
+
+              <a href="https://lampung.tribunnews.com/2019/01/05/gerakan-ayo-kuliah-pkh-lampung-juarai-lead-indonesia-2018" class="buy-btn">Lihat Selengkapnya</a>
+
+            </article>
+          </div><!-- End post list item -->
         </div>
 
     </section>
@@ -735,7 +774,7 @@
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.instagram.com/gerakanayokuliahofficial/" class="instagram"><i class="bx bxl-instagram"></i></a>
               <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
