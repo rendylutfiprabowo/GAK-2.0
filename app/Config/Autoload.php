@@ -17,6 +17,7 @@ use CodeIgniter\Config\AutoloadConfig;
  */
 class Autoload extends AutoloadConfig
 {
+    
     /**
      * -------------------------------------------------------------------
      * Namespaces
@@ -31,6 +32,7 @@ class Autoload extends AutoloadConfig
      * else you will need to modify all of those classes for this to work.
      *
      * Prototype:
+
      *```
      *   $psr4 = [
      *       'CodeIgniter' => SYSTEMPATH,
@@ -41,9 +43,11 @@ class Autoload extends AutoloadConfig
      * @var array<string, array<int, string>|string>
      * @phpstan-var array<string, string|list<string>>
      */
+     
     public $psr4 = [
         APP_NAMESPACE => APPPATH, // For custom app namespace
         'Config'      => APPPATH . 'Config',
+        
     ];
 
     /**

@@ -8,6 +8,9 @@
 
                     <div class="container-fluid">
                         <!-- Page Heading -->
+                        <h1 class="mt-3">DASHBOARD</h1>
+                        <div class="table-responsive p-0">
+                        </div>
                     </div>
                 </div>
             </div>

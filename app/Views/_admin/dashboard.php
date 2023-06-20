@@ -1,96 +1,112 @@
 <?= $this->extend('_admin/templateadmin') ?>
 <?= $this->section('content') ?>
 
-<div class="row">
-  <div class="col-6 col-lg-2 col-md-6">
-    <div class="card">
-      <div class="card-body px-4 py-4-5">
-        <div class="row">
-          <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-            <div class="stats-icon purple mb-2">
-              <i class="iconly-boldShow"></i>
-            </div>
-          </div>
-          <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-            <h6 class="text-muted font-semibold">Siswa</h6>
-            <h6 class="font-extrabold mb-0"><?= $jumlahSiswa ?></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-6 col-lg-2 col-md-6">
-    <div class="card">
-      <div class="card-body px-4 py-4-5">
-        <div class="row">
-          <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-            <div class="stats-icon blue mb-2">
-              <i class="iconly-boldProfile"></i>
-            </div>
-          </div>
-          <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-            <h6 class="text-muted font-semibold">Biodata</h6>
-            <h6 class="font-extrabold mb-0"><?= $jumlahBiodata ?></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-6 col-lg-2 col-md-6">
-    <div class="card">
-      <div class="card-body px-4 py-4-5">
-        <div class="row">
-          <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-            <div class="stats-icon green mb-2">
-              <i class="iconly-boldAdd-User"></i>
-            </div>
-          </div>
-          <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-            <h6 class="text-muted font-semibold">Data Univ</h6>
-            <h6 class="font-extrabold mb-0"><?= $jumlahUniversitas ?></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-6 col-lg-2 col-md-6">
-    <div class="card">
-      <div class="card-body px-4 py-4-5">
-        <div class="row">
-          <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-            <div class="stats-icon red mb-2">
-              <i class="iconly-boldBookmark"></i>
-            </div>
-          </div>
-          <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-            <h6 class="text-muted font-semibold">Prestasi</h6>
-            <h6 class="font-extrabold mb-0"><?= $jumlahPrestasi ?></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<style>
+  .yay1 {
+    font-size: 50px;
+  }
+</style>
 
-  <div class="col-6 col-lg-2 col-md-6">
-    <div class="card">
-      <div class="card-body px-4 py-4-5">
-        <div class="row">
-          <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-            <div class="stats-icon red mb-2">
-              <i class="iconly-boldBookmark"></i>
-            </div>
-          </div>
-          <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-            <h6 class="text-muted font-semibold">Dokumen</h6>
-            <h6 class="font-extrabold mb-0"><?= $jumlahUpload ?></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="container-fluid py-4">
+
+  <!-- Page Heading -->
+  <h1 class="mt-3" style="border-bottom: 2px solid gray;">DASHBOARD</h1>
+  <div class="row my-4">
+    <!-- card siswa login -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                Jumlah Siswa Login</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlahSiswa ?></div>
+            </div>
+            <div class="col-auto">
+              <i class="yay1 material-icons">people</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- card biodata -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-success shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                Biodata</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlahBiodata ?></div>
+            </div>
+            <div class="col-auto">
+              <i class="yay1 material-icons">account_circle</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- card univ -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-info shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Data Universitas
+              </div>
+              <div class="row no-gutters align-items-center">
+                <div class="col-auto">
+                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $jumlahUniversitas ?></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="yay1 material-icons">business</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--card prestasi -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-warning shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                Prestasi</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlahPrestasi ?></div>
+            </div>
+            <div class="col-auto">
+              <i class="yay1 material-icons">school</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- card upload -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-warning shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                Dokumen</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlahUpload ?></div>
+            </div>
+            <div class="col-auto">
+              <i class="yay1 material-icons">folder_shared</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-lg-6 col-md-6 ">
       <div class="card my-4">

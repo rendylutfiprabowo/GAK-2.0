@@ -3,6 +3,10 @@
 <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js">
 <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.css">
+
 <div class="container-fluid py-4">
   <div class="row">
     <div class="col-12">
@@ -10,12 +14,47 @@
         <div class="card-body p-3">
 
           <div class="container-fluid">
+
+            <script>
+              $(function() {
+
+                <?php if (session()->has("success")) { ?>
+                  Swal.fire({
+                    icon: 'success',
+                    title: 'Great!',
+                    text: '<?= session("success") ?>'
+                  })
+                <?php } ?>
+              });
+            </script>
             <!-- Page Heading -->
             <h1 class="mt-3">PRESTASI</h1>
             <p style="border-bottom: 2px solid gray;">Jika anda <b>sudah lulus tes masuk kuliah, mohon isi </b>form berikut sesuai dengan data universitas anda!. <b>Jika belum mohon abaikan</b>! Terima Kasih!</p>
             <div class="table-responsive p-0">
 
-              <button style="margin-right: 8px;" type="button" class="btn btn-outline-primary  mb-0" data-bs-toggle="modal" data-bs-target="#import"><i class="material-icons">add</i>
+
+              <div class="modal-body">
+                <div class="input-group input-group-static mb-4">
+                  <label>Nama Prestasi</label>
+                  <input type="text" name="nama_prestasi" class="form-control ahay ahay">
+                </div>
+                <p>Mohon upload sesuai dengan format file .jpg, .png</p>
+                <div class="input-group input-group-dynamic mb-3">
+                  <form method="post" action="/StorePrestasi" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label for="file">Pilih File Disini</label><br>
+                      <input type="file" name="upload_prestasi" class="btn bg-gradient-secondary " id="file" required accept=".jpg, .png" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn bg-gradient-secondary " data-bs-dismiss="modal">Batal</button>
+                  <button type="submit" class="btn bg-gradient-primary ">Upload</button>
+                </div>
+                </form>
+              </div>
+
+
+              <!-- <button style="margin-right: 8px;" type="button" class="btn btn-outline-primary  mb-0" data-bs-toggle="modal" data-bs-target="#import"><i class="material-icons">add</i>
                 Tambah Data
               </button>
               <div class="modal fade" id="import" tabindex="-1" aria-hidden="true">
@@ -47,7 +86,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
             </div>
           </div>

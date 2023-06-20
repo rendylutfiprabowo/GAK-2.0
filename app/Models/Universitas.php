@@ -20,4 +20,12 @@ class Universitas extends Model
             return $this->getWhere($where);
         }
     }
+
+    public function show($id_siswa)
+    {
+        $model = new Universitas();
+        $data['universitas'] = $model->find($id_siswa);
+
+        return view('_siswa/datauniv_detail', $data);
+    }
 }
