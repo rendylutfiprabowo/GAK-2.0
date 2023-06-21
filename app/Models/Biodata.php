@@ -20,4 +20,12 @@ class Biodata extends Model
             return $this->getWhere($where);
         }
     }
+
+    public function show($id_siswa)
+    {
+        $model = new Biodata();
+        $data['biodata'] = $model->find($id_siswa);
+
+        return view('_siswa/biodata_detail', $data);
+    }
 }

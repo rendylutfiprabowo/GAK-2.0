@@ -26,7 +26,14 @@ class SiswaPrestasi extends BaseController
                 'upload_prestasi' => $filesprestasi,
             ]);
             $prestasi->move('gambarSertifikat/', $filesprestasi);
-            return view('_siswa/prestasi');
+
+            $session = session();
+            $session->setFlashdata('success', 'Data Prestasi Kamu, berhasil disimpan!');
+
+            // Redirect ke halaman yang diinginkan
+            return redirect()->to('Prestasi');
+
+            // return view('_siswa/prestasi');
         } else {
             return redirect()->to(base_url('AdminDashboard'));
         }

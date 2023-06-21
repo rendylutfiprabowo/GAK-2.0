@@ -27,9 +27,23 @@ class SiswaDataUniv extends BaseController
             $data = $this->request->getPost();
             $this->universitas->insert($data);
 
-            return view('_siswa/datauniv');
+            $session = session();
+            $session->setFlashdata('success', 'Data Universitas Kamu, berhasil disimpan!');
+
+            // Redirect ke halaman yang diinginkan
+            return redirect()->to('DataUniversitas');
+
+            // return view('_siswa/datauniv');
         } else {
             return redirect()->to(base_url('AdminDashboard'));
         }
+    }
+
+    public function detail($id)
+    {
+        $model = new Universitas();
+        $universitas = $model->find($id);
+
+        return view('_siswa/datauniv_detail', ['universitas' => $universitas]);
     }
 }

@@ -44,7 +44,13 @@ class SiswaUpload extends BaseController
             $skpendapatan->move('gambarSK/',  $filesk);
             $dokumenlainnya->move('gambarDokumen/', $filedokumen);
 
-            return view('_siswa/upload');
+            $session = session();
+            $session->setFlashdata('success', 'Dokumen Kamu, berhasil disimpan!');
+
+            // Redirect ke halaman yang diinginkan
+            return redirect()->to('UploadDokumen');
+
+            // return view('_siswa/upload');
         } else {
             return redirect()->to(base_url('AdminDashboard'));
         }
