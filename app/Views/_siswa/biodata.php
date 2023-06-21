@@ -24,7 +24,7 @@
                     <div class="container-fluid">
                         <!-- Page Heading -->
                         <h1 class="mt-3">BIODATA DIRI</h1>
-                        <p style="border-bottom: 2px solid gray;">Mohon <b>$username siswa</b> isi biodata berikut sesuai dengan data diri anda! Terima Kasih!</p>
+                        <p style="border-bottom: 2px solid gray;">Mohon isi biodata berikut sesuai dengan data diri anda! Terima Kasih!</p>
                         <form action="/StoreBiodata" method="post">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 my2">

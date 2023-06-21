@@ -144,7 +144,7 @@
     }
 
     var randomColors = [];
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 16; i++) {
         randomColors.push(getRandomColor());
     }
 </script>
