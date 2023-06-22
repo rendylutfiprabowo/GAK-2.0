@@ -30,14 +30,6 @@
         <hr class="horizontal light mt-0 mb-2">
         <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
             <ul class="navbar-nav">
-
-
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="/SiswaDashboard">
-                        <i class="material-icons">poll</i>
-                        <span class="sidenav-normal  ms-3  ps-1">Dashboard</span>
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link text-white " href="/Biodata">
                         <i class="material-icons">account_circle</i>
