@@ -20,9 +20,9 @@ class AdminLolosptn extends BaseController
                 'PTN' => $PTN,
             ];
             return view('_admin/lolosptn', $data);
-        } elseif(session()->get('user') == '1') {
+        } elseif (session()->get('user') == '1') {
             return redirect()->to(base_url('Biodata'));
-        }else {
+        } else {
             return redirect()->to(base_url('login'));
         }
     }
@@ -38,9 +38,9 @@ class AdminLolosptn extends BaseController
             ];
             if (session()->logged_in)  return view('_admin/detailadmin', $data);
             else return redirect()->to('login');
-        } elseif(session()->get('user') == '1') {
+        } elseif (session()->get('user') == '1') {
             return redirect()->to(base_url('Biodata'));
-        }else {
+        } else {
             return redirect()->to(base_url('login'));
         }
     }
@@ -57,9 +57,9 @@ class AdminLolosptn extends BaseController
                 ];
                 return view('_admin/editadmin', $data);
             } else return redirect()->to('login');
-        } elseif(session()->get('user') == '1') {
+        } elseif (session()->get('user') == '1') {
             return redirect()->to(base_url('Biodata'));
-        }else {
+        } else {
             return redirect()->to(base_url('login'));
         }
     }
@@ -106,9 +106,9 @@ class AdminLolosptn extends BaseController
             } else {
                 return $this->detail($id);
             }
-        } elseif(session()->get('user') == '1') {
+        } elseif (session()->get('user') == '1') {
             return redirect()->to(base_url('Biodata'));
-        }else {
+        } else {
             return redirect()->to(base_url('login'));
         }
     }
@@ -123,9 +123,9 @@ class AdminLolosptn extends BaseController
                 session()->setFlashdata('message', 'Di Hapus');
                 return redirect()->to('/PKHLolosPTN');
             }
-        } elseif(session()->get('user') == '1') {
+        } elseif (session()->get('user') == '1') {
             return redirect()->to(base_url('Biodata'));
-        }else {
+        } else {
             return redirect()->to(base_url('login'));
         }
     }
@@ -137,9 +137,9 @@ class AdminLolosptn extends BaseController
             $AdminModel->truncate();
             session()->setFlashdata('message', 'Di Hapus Semua');
             return redirect()->to('/PKHLolosPTN');
-        } elseif(session()->get('user') == '1') {
+        } elseif (session()->get('user') == '1') {
             return redirect()->to(base_url('Biodata'));
-        }else {
+        } else {
             return redirect()->to(base_url('login'));
         }
     }
@@ -222,9 +222,9 @@ class AdminLolosptn extends BaseController
             header('Cache-Control: max-age=0');
             $writer->save('php://output');
             exit();
-        } elseif(session()->get('user') == '1') {
+        } elseif (session()->get('user') == '1') {
             return redirect()->to(base_url('Biodata'));
-        }else {
+        } else {
             return redirect()->to(base_url('login'));
         }
     }
@@ -268,9 +268,9 @@ class AdminLolosptn extends BaseController
                 session()->setFlashdata('message', 'Di Import');
                 return redirect()->to('/PKHLolosPTN');
             }
-        } elseif(session()->get('user') == '1') {
+        } elseif (session()->get('user') == '1') {
             return redirect()->to(base_url('Biodata'));
-        }else {
+        } else {
             return redirect()->to(base_url('login'));
         }
     }
