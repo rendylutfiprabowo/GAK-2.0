@@ -126,7 +126,7 @@
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                    Jumlah Siswa Login</div>
+                    Jumlah Akun Siswa</div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlahSiswa ?></div>
                 </div>
                 <div class="col-auto">
@@ -144,7 +144,7 @@
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                    Biodata</div>
+                    Jumlah Biodata Terisi</div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlahBiodata ?></div>
                 </div>
                 <div class="col-auto">
@@ -184,7 +184,7 @@
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                    Prestasi</div>
+                    Siswa Berprestasi</div>
                   <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlahPrestasi ?></div>
                 </div>
                 <div class="col-auto">
@@ -287,6 +287,80 @@
         </div>
       </div>
 
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 ">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Persentase Status KIP Kuliah</h6>
+              </div>
+            </div>
+            <div class="card-body pb-0 p-3 mt-4">
+              <!-- <div class="alert alert-warning text-white" role="alert">
+            <span class="alert-icon align-middle">
+              <span class="material-icons text-md">
+                warning
+              </span>
+            </span>
+            <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
+          </div> -->
+
+              <div class="row">
+                <div class="col-12 text-start">
+                  <div class="chart">
+                    <canvas id="chart-pie1" class="chart-canvas" width="500" height="200"></canvas>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
+              <div class="w-60">
+                <p class="text-sm mt-4">
+                  Jadi, total untuk ?????????????? <b>xxx</b>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 ">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Persentase Per Kampus</h6>
+              </div>
+            </div>
+            <div class="card-body pb-0 p-3 mt-4">
+              <!-- <div class="alert alert-warning text-white" role="alert">
+            <span class="alert-icon align-middle">
+              <span class="material-icons text-md">
+                warning
+              </span>
+            </span>
+            <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
+          </div> -->
+
+              <div class="row">
+                <div class="col-12 text-start">
+                  <div class="chart">
+                    <canvas id="chart-pie1" class="chart-canvas" width="500" height="200"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
+              <div class="w-60">
+                <p class="text-sm mt-4">
+                  Jadi, total untuk ?????????????? <b>xxx</b>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col-12">
@@ -434,16 +508,16 @@
   new Chart(ctx2, {
     type: "bar",
     data: {
-      labels: ['Bandar Lampung', 'Lampung Barat', 'Lampung Selatan', 'Lampung Tengah', 'Lampung Timur', 'Lampung Utara', 'Mesuji', 'Metro', 'Pesawaran', 'Pringsewu', 'Tanggamus', 'Tulang Bawang', 'Way Kanan'],
+      labels: <?php echo json_encode($map1); ?>,
       datasets: [{
-        label: "nama kabupaten",
+        label: "Nama Kabupaten",
         weight: 0,
         cutout: 0,
         tension: 0.9,
         pointRadius: 0.5,
         borderWidth: 1,
         backgroundColor: ['#17c1e8'],
-        data: ['17', '1', '4', '3', '5', '3', '1', '1', '1', '3', '9', '5', '14'],
+        data: <?php echo json_encode($totalmap1); ?>,
         fill: true
       }],
     },
