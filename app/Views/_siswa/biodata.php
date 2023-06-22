@@ -58,7 +58,7 @@
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>Email address</label>
-                                            <input type="email" name="email_address" class="form-control ahay ahay">
+                                            <input type="email" name="email_address" class="form-control ahay ahay" value="ini dari database">
                                             <p class="ihiy"><b>Petunjuk : </b></p>
                                         </div>
                                     </div>
