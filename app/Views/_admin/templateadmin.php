@@ -18,6 +18,8 @@
     <link id="pagestyle" href="/assets/material/assets/css/material-dashboard.min.css?v=3.0.6" rel="stylesheet" />
 </head>
 
+
+
 <body class="g-sidenav-show bg-gray-200">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
@@ -133,143 +135,8 @@
 <script src="/assets/material/assets/js/plugins/dragula/dragula.min.js"></script>
 <script src="/assets/material/assets/js/plugins/jkanban/jkanban.js"></script>
 
-<script>
-    function getRandomColor() {
-        var letters = "0123456789ABCDEF";
-        var color = "#";
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
 
-    var randomColors = [];
-    for (var i = 0; i < 16; i++) {
-        randomColors.push(getRandomColor());
-    }
-</script>
 
-<script>
-    var ctx1 = document.getElementById("chart-pie1").getContext("2d");
-    var ctx2 = document.getElementById("bar-chart1").getContext("2d");
-
-    new Chart(ctx1, {
-        type: "pie",
-        data: {
-            labels: ['Bandar Lampung', 'Lampung Barat', 'Lampung Selatan', 'Lampung Tengah', 'Lampung Timur', 'Lampung Utara', 'Mesuji', 'Metro', 'Pesawaran', 'Pringsewu', 'Tanggamus', 'Tulang Bawang', 'Way Kanan'],
-            datasets: [{
-                label: "Caring 1 Bulan",
-                weight: 10,
-                cutout: 0,
-                tension: 0.9,
-                pointRadius: 0,
-                borderWidth: 0,
-                backgroundColor: randomColors,
-                data: ['17', '1', '4', '3', '5', '3', '1', '1', '1', '3', '9', '5', '14'],
-                fill: true
-                // data pake rumus persentasi : data / total data *100%
-            }],
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            marker: true,
-            plugins: {
-                legend: {
-                    display: true,
-
-                }
-            },
-            interaction: {
-                intersect: true,
-                mode: 'index',
-            },
-            scales: {
-                y: {
-                    grid: {
-                        drawBorder: false,
-                        display: true,
-                        drawOnChartArea: false,
-                        drawTicks: false,
-                        color: '#c1c4ce5c'
-                    },
-                    ticks: {
-                        display: false
-                    }
-                },
-                x: {
-                    grid: {
-                        drawBorder: false,
-                        display: false,
-                        drawOnChartArea: false,
-                        drawTicks: false,
-                        color: '#c1c4ce5c'
-                    },
-                    ticks: {
-                        display: false,
-                    }
-                },
-            },
-        },
-    });
-
-    new Chart(ctx2, {
-        type: "bar",
-        data: {
-            labels: ['Bandar Lampung', 'Lampung Barat', 'Lampung Selatan', 'Lampung Tengah', 'Lampung Timur', 'Lampung Utara', 'Mesuji', 'Metro', 'Pesawaran', 'Pringsewu', 'Tanggamus', 'Tulang Bawang', 'Way Kanan'],
-            datasets: [{
-                label: "nama kabupaten",
-                weight: 0,
-                cutout: 0,
-                tension: 0.9,
-                pointRadius: 0.5,
-                borderWidth: 1,
-                backgroundColor: ['#17c1e8'],
-                data: ['17', '1', '4', '3', '5', '3', '1', '1', '1', '3', '9', '5', '14'],
-                fill: true
-            }],
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: true,
-                }
-            },
-            interaction: {
-                intersect: true,
-                mode: 'index',
-            },
-            scales: {
-                y: {
-                    grid: {
-                        drawBorder: true,
-                        display: false,
-                        drawOnChartArea: false,
-                        drawTicks: false,
-                        color: '#c1c4ce5c'
-                    },
-                    ticks: {
-                        display: true
-                    }
-                },
-                x: {
-                    grid: {
-                        drawBorder: false,
-                        display: false,
-                        drawOnChartArea: false,
-                        drawTicks: false,
-                        color: '#c1c4ce5c'
-                    },
-                    ticks: {
-                        display: true,
-                    }
-                },
-            },
-        },
-    });
-</script>
 <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {

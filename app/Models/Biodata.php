@@ -28,4 +28,13 @@ class Biodata extends Model
 
         return view('_siswa/biodata_detail', $data);
     }
+
+    public function getAsal_wilayah(){
+        $builder = $this->db->table("biodata");
+        $builder->select("asal_wilayah");
+        $builder->selectCount("id_siswa", "total");
+        $builder->groupBy("asal_wilayah");
+        $data = $builder->get()->getResult();
+        return $data;
+    }
 }
