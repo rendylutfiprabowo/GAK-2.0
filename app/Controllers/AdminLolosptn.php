@@ -9,6 +9,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class AdminLolosptn extends BaseController
 {
+
     public function index()
     {
         if (session()->get('user') == '0') {
@@ -19,8 +20,10 @@ class AdminLolosptn extends BaseController
                 'PTN' => $PTN,
             ];
             return view('_admin/lolosptn', $data);
-        } else {
-            return redirect()->to(base_url('SiswaDashboard'));
+        } elseif(session()->get('user') == '1') {
+            return redirect()->to(base_url('Biodata'));
+        }else {
+            return redirect()->to(base_url('login'));
         }
     }
 
@@ -35,8 +38,10 @@ class AdminLolosptn extends BaseController
             ];
             if (session()->logged_in)  return view('_admin/detailadmin', $data);
             else return redirect()->to('login');
-        } else {
-            return redirect()->to(base_url('SiswaDashboard'));
+        } elseif(session()->get('user') == '1') {
+            return redirect()->to(base_url('Biodata'));
+        }else {
+            return redirect()->to(base_url('login'));
         }
     }
 
@@ -52,8 +57,10 @@ class AdminLolosptn extends BaseController
                 ];
                 return view('_admin/editadmin', $data);
             } else return redirect()->to('login');
-        } else {
-            return redirect()->to(base_url('SiswaDashboard'));
+        } elseif(session()->get('user') == '1') {
+            return redirect()->to(base_url('Biodata'));
+        }else {
+            return redirect()->to(base_url('login'));
         }
     }
 
@@ -99,8 +106,10 @@ class AdminLolosptn extends BaseController
             } else {
                 return $this->detail($id);
             }
-        } else {
-            return redirect()->to(base_url('SiswaDashboard'));
+        } elseif(session()->get('user') == '1') {
+            return redirect()->to(base_url('Biodata'));
+        }else {
+            return redirect()->to(base_url('login'));
         }
     }
 
@@ -114,8 +123,10 @@ class AdminLolosptn extends BaseController
                 session()->setFlashdata('message', 'Di Hapus');
                 return redirect()->to('/PKHLolosPTN');
             }
-        } else {
-            return redirect()->to(base_url('SiswaDashboard'));
+        } elseif(session()->get('user') == '1') {
+            return redirect()->to(base_url('Biodata'));
+        }else {
+            return redirect()->to(base_url('login'));
         }
     }
 
@@ -126,8 +137,10 @@ class AdminLolosptn extends BaseController
             $AdminModel->truncate();
             session()->setFlashdata('message', 'Di Hapus Semua');
             return redirect()->to('/PKHLolosPTN');
-        } else {
-            return redirect()->to(base_url('SiswaDashboard'));
+        } elseif(session()->get('user') == '1') {
+            return redirect()->to(base_url('Biodata'));
+        }else {
+            return redirect()->to(base_url('login'));
         }
     }
 
@@ -209,8 +222,10 @@ class AdminLolosptn extends BaseController
             header('Cache-Control: max-age=0');
             $writer->save('php://output');
             exit();
-        } else {
-            return redirect()->to(base_url('SiswaDashboard'));
+        } elseif(session()->get('user') == '1') {
+            return redirect()->to(base_url('Biodata'));
+        }else {
+            return redirect()->to(base_url('login'));
         }
     }
 
@@ -253,8 +268,10 @@ class AdminLolosptn extends BaseController
                 session()->setFlashdata('message', 'Di Import');
                 return redirect()->to('/PKHLolosPTN');
             }
-        } else {
-            return redirect()->to(base_url('SiswaDashboard'));
+        } elseif(session()->get('user') == '1') {
+            return redirect()->to(base_url('Biodata'));
+        }else {
+            return redirect()->to(base_url('login'));
         }
     }
 }
