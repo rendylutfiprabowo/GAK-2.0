@@ -62,7 +62,7 @@
             <a href="/PKHLolosPTN/pengajuan" class="btn btn-outline-primary  export mb-0 mt-sm-0 mt-1" data-type=".xlsx" type="button" name="button"><i class="material-icons">file_download</i> Pengajuan SR</a>
 
         </div>
-    </div>9
+    </div>
 
     <div class="row">
         <div class="col-12">
