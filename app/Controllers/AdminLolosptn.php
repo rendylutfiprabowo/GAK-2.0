@@ -17,6 +17,7 @@ class AdminLolosptn extends BaseController
             $PTN = $detailModel->findAll();
             $data = [
                 'title' => 'PKH Lolos PTN',
+                'title2' => '',
                 'PTN' => $PTN,
             ];
             return view('_admin/lolosptn', $data);
@@ -34,6 +35,7 @@ class AdminLolosptn extends BaseController
             $PTN = $detailModel->find($id);
             $data = [
                 'title' => 'PKH Lolos PTN',
+                'title2' => 'Detail',
                 'PTN' => $PTN,
             ];
             if (session()->logged_in)  return view('_admin/detailadmin', $data);
@@ -53,6 +55,7 @@ class AdminLolosptn extends BaseController
                 $PTN = $detailModel->find($id);
                 $data = [
                     'title' => 'PKH Lolos PTN',
+                    'title2' => 'Edit',
                     'PTN' => $PTN,
                 ];
                 return view('_admin/editadmin', $data);

@@ -49,7 +49,7 @@ class AdminDashboard extends BaseController
             $mappingjalur = $lolosPTN->getJalur();
 
             $data = [
-                // 'title' => $title,
+                'title' => 'Dashboard Admin',
                 'mappingUniv' => $mappinguniv,
                 'mappingJalur' => $mappingjalur,
                 'mappingKab' => $mappingkab,

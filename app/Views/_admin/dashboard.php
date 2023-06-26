@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="/img/hero-img.png" style="background-color: white; border-radius: 25px;">
   <title>
-    Gerakan Ayo Kuliah || *Nama halaman
+    Gerakan Ayo Kuliah || <?= $title; ?>
   </title>
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -61,9 +61,9 @@
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page"> *Nama halaman</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page"> <?= $title; ?></li>
           </ol>
-          <h6 class="font-weight-bolder mb-0"> *Nama halaman</h6>
+          <h6 class="font-weight-bolder mb-0"> <?= $title; ?></h6>
         </nav>
         <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
           <a href="javascript:;" class="nav-link text-body p-0">
