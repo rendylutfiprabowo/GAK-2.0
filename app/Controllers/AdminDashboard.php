@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\UserModel;
 use App\Models\Biodata;
+use App\Models\LolosPTN;
 use App\Models\Universitas;
 use App\Models\Prestasi;
 use App\Models\Upload;
@@ -19,12 +20,14 @@ class AdminDashboard extends BaseController
 
     public function AdminDashboard()
     {
+        $user = new UserModel();
+        $biodata = new Biodata();
+        $universitas = new Universitas();
+        $prestasi = new Prestasi();
+        $upload = new Upload();
+        $lolosPTN = new LolosPTN();
+
         if (session()->get('user') == '0') {
-            $user = new UserModel();
-            $biodata = new Biodata();
-            $universitas = new Universitas();
-            $prestasi = new Prestasi();
-            $upload = new Upload();
 
             // jumlah siswa
             $jumlah_siswa = $user->countAllResults();
@@ -41,10 +44,14 @@ class AdminDashboard extends BaseController
             // jumlah upload
             $jumlah_upload = $upload->countAllResults();
 
-            $mappingkab = $biodata->getAsal_wilayah();
-
+            $mappingkab = $lolosPTN->getAsal_kab();
+            $mappinguniv = $lolosPTN->getUniv();
+            $mappingjalur = $lolosPTN->getJalur();
 
             $data = [
+                // 'title' => $title,
+                'mappingUniv' => $mappinguniv,
+                'mappingJalur' => $mappingjalur,
                 'mappingKab' => $mappingkab,
                 'jumlahSiswa' => $jumlah_siswa,
                 'jumlahBiodata' => $jumlah_biodata,

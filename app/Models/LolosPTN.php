@@ -20,4 +20,34 @@ class LolosPTN extends Model
             return $this->getWhere($where);
         }
     }
+
+    public function getAsal_kab()
+    {
+        $builder = $this->db->table("lolosptn");
+        $builder->select("kabupaten_kota");
+        $builder->selectCount("id_siswa", "total");
+        $builder->groupBy("kabupaten_kota");
+        $data = $builder->get()->getResult();
+        return $data;
+    }
+
+    public function getUniv()
+    {
+        $builder = $this->db->table("lolosptn");
+        $builder->select("universitas");
+        $builder->selectCount("id_siswa", "total");
+        $builder->groupBy("universitas");
+        $data = $builder->get()->getResult();
+        return $data;
+    }
+
+    public function getJalur()
+    {
+        $builder = $this->db->table("lolosptn");
+        $builder->select("jalur_masukptn");
+        $builder->selectCount("id_siswa", "total");
+        $builder->groupBy("jalur_masukptn");
+        $data = $builder->get()->getResult();
+        return $data;
+    }
 }

@@ -109,8 +109,20 @@
 
     <?php
     foreach ($mappingKab as $m1) {
-      $map1[] = $m1->asal_wilayah;
+      $map1[] = $m1->kabupaten_kota;
       $totalmap1[] = (float) $m1->total;
+    }
+    ?>
+    <?php
+    foreach ($mappingUniv as $m2) {
+      $map2[] = $m2->universitas;
+      $totalmap2[] = (float) $m2->total;
+    }
+    ?>
+    <?php
+    foreach ($mappingJalur as $m3) {
+      $map3[] = $m3->jalur_masukptn;
+      $totalmap3[] = (float) $m3->total;
     }
     ?>
 
@@ -213,79 +225,7 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg-6 col-md-6 ">
-          <div class="card my-4">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Persentase Per Kabupaten</h6>
-              </div>
-            </div>
-            <div class="card-body pb-0 p-3 mt-4">
-              <!-- <div class="alert alert-warning text-white" role="alert">
-            <span class="alert-icon align-middle">
-              <span class="material-icons text-md">
-                warning
-              </span>
-            </span>
-            <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
-          </div> -->
 
-              <div class="row">
-                <div class="col-12 text-start">
-                  <div class="chart">
-                    <canvas id="chart-pie1" class="chart-canvas" width="500" height="200"></canvas>
-                  </div>
-                </div>
-
-
-              </div>
-            </div>
-            <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
-              <div class="w-60">
-                <p class="text-sm mt-4">
-                  Jadi, total untuk ?????????????? <b>xxx</b>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-6 ">
-          <div class="card my-4">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Persentase Per Kampus</h6>
-              </div>
-            </div>
-            <div class="card-body pb-0 p-3 mt-4">
-              <!-- <div class="alert alert-warning text-white" role="alert">
-            <span class="alert-icon align-middle">
-              <span class="material-icons text-md">
-                warning
-              </span>
-            </span>
-            <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
-          </div> -->
-
-              <div class="row">
-                <div class="col-12 text-start">
-                  <div class="chart">
-                    <canvas id="chart-pie1" class="chart-canvas" width="500" height="200"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
-              <div class="w-60">
-                <p class="text-sm mt-4">
-                  Jadi, total untuk ?????????????? <b>xxx</b>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
 
       <div class="row">
@@ -293,26 +233,26 @@
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Persentase Status KIP Kuliah</h6>
+                <h6 class="text-white text-capitalize ps-3">Persentase Perguruan Tinggi</h6>
               </div>
             </div>
             <div class="card-body pb-0 p-3 mt-4">
-            <?php
-                  if ($mappingKab == null) {
-                    $map1 = 0;
-                    $totalmap1 = 0;
-                  ?>
-                    <div class="alert alert-warning text-white" role="alert">
-                      <span class="alert-icon align-middle">
-                        <span class="material-icons text-md">
-                          warning
-                        </span>
-                      </span>
-                      <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
-                    </div>
-                  <?php
-                  }
-                  ?>
+              <?php
+              if ($mappingUniv == null) {
+                $map2 = 0;
+                $totalmap2 = 0;
+              ?>
+                <div class="alert alert-warning text-white" role="alert">
+                  <span class="alert-icon align-middle">
+                    <span class="material-icons text-md">
+                      warning
+                    </span>
+                  </span>
+                  <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
+                </div>
+              <?php
+              }
+              ?>
 
               <div class="row">
                 <div class="col-12 text-start">
@@ -327,7 +267,7 @@
             <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
               <div class="w-60">
                 <p class="text-sm mt-4">
-                  Jadi, total untuk ?????????????? <b>xxx</b>.
+                  
                 </p>
               </div>
             </div>
@@ -338,23 +278,14 @@
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                <h6 class="text-white text-capitalize ps-3">Persentase Per Kampus</h6>
+                <h6 class="text-white text-capitalize ps-3">Persentase Jalur Masuk</h6>
               </div>
             </div>
             <div class="card-body pb-0 p-3 mt-4">
-              <!-- <div class="alert alert-warning text-white" role="alert">
-            <span class="alert-icon align-middle">
-              <span class="material-icons text-md">
-                warning
-              </span>
-            </span>
-            <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
-          </div> -->
-
               <div class="row">
                 <div class="col-12 text-start">
                   <div class="chart">
-                    <canvas id="chart-pie1" class="chart-canvas" width="500" height="200"></canvas>
+                    <canvas id="chart-pie2" class="chart-canvas" width="500" height="200"></canvas>
                   </div>
                 </div>
               </div>
@@ -362,7 +293,7 @@
             <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
               <div class="w-60">
                 <p class="text-sm mt-4">
-                  Jadi, total untuk ?????????????? <b>xxx</b>.
+                  
                 </p>
               </div>
             </div>
@@ -453,20 +384,21 @@
 <script>
   var ctx1 = document.getElementById("chart-pie1").getContext("2d");
   var ctx2 = document.getElementById("bar-chart1").getContext("2d");
+  var ctx3 = document.getElementById("chart-pie2").getContext("2d");
 
   new Chart(ctx1, {
     type: "pie",
     data: {
-      labels: <?php echo json_encode($map1); ?>,
+      labels: <?php echo json_encode($map2); ?>,
       datasets: [{
-        label: "wwkkkwkw",
+        label: "yy",
         weight: 10,
         cutout: 0,
         tension: 0.9,
         pointRadius: 0,
         borderWidth: 0,
         backgroundColor: randomColors,
-        data: <?php echo json_encode($totalmap1); ?>,
+        data: <?php echo json_encode($totalmap2); ?>,
         fill: true
       }],
     },
@@ -518,7 +450,7 @@
     data: {
       labels: <?php echo json_encode($map1); ?>,
       datasets: [{
-        label: "Nama Kabupaten",
+        label: "Jumlah Kabupaten",
         weight: 0,
         cutout: 0,
         tension: 0.9,
@@ -564,6 +496,65 @@
           },
           ticks: {
             display: true,
+          }
+        },
+      },
+    },
+  });
+
+  new Chart(ctx3, {
+    type: "pie",
+    data: {
+      labels: <?php echo json_encode($map3); ?>,
+      datasets: [{
+        label: "wwkkkwkw",
+        weight: 10,
+        cutout: 0,
+        tension: 0.9,
+        pointRadius: 0,
+        borderWidth: 0,
+        backgroundColor: randomColors,
+        data: <?php echo json_encode($totalmap3); ?>,
+        fill: true
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      marker: true,
+      plugins: {
+        legend: {
+          display: true,
+
+        }
+      },
+      interaction: {
+        intersect: true,
+        mode: 'index',
+      },
+      scales: {
+        y: {
+          grid: {
+            drawBorder: false,
+            display: true,
+            drawOnChartArea: false,
+            drawTicks: false,
+            color: '#c1c4ce5c'
+          },
+          ticks: {
+            display: false
+          }
+        },
+        x: {
+          grid: {
+            drawBorder: false,
+            display: false,
+            drawOnChartArea: false,
+            drawTicks: false,
+            color: '#c1c4ce5c'
+          },
+          ticks: {
+            display: false,
           }
         },
       },
