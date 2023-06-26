@@ -11,7 +11,8 @@ class UserSeeder extends Seeder
         $data = [
             'username' => 'admin',
             'password' => password_hash('admin', PASSWORD_BCRYPT),
+            'user' => 0,
         ];
-        $this->db->table('admin')->insertBatch($data);
+        $this->db->table('user')->insertBatch($data);
     }
 }
