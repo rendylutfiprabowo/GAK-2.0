@@ -10,7 +10,7 @@ class Biodata extends Model
     protected $primaryKey = "id_siswa";
     protected $returnType = "array";
     protected $useTimestamps = false;
-    protected $allowedFields = ['email_address', 'nama', 'no_pkh', 'nama_pendamping', 'asal_wilayah', 'asal_sekolah', 'nama_ibu', 'no_whatshap',];
+    protected $allowedFields = ['email_address', 'nama', 'no_pkh', 'nama_pendamping', 'asal_wilayah', 'asal_sekolah', 'nama_ibu', 'no_whatshap','user_id'];
 
     public function getBiodata($where = false)
     {
@@ -36,5 +36,10 @@ class Biodata extends Model
         $builder->groupBy("asal_wilayah");
         $data = $builder->get()->getResult();
         return $data;
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(UserModel::class, 'user_id', 'id');
     }
 }

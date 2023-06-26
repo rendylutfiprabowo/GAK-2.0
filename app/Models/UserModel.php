@@ -8,6 +8,7 @@ class UserModel extends Model
 {
     protected $table = "user";
     protected $returnType = "object";
+    protected $primaryKey = "id";
     protected $allowedFields = ['username', 'password', 'user'];
 
     public function getUser($where = false)
@@ -17,5 +18,10 @@ class UserModel extends Model
         } else {
             return $this->getWhere($where);
         }
+    }
+
+    public function biodata()
+    {
+        return $this->hasOne(Biodata::class, 'user_id', 'id');
     }
 }
