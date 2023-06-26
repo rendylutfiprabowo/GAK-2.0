@@ -225,9 +225,6 @@
         </div>
       </div>
 
-
-
-
       <div class="row">
         <div class="col-lg-6 col-md-6 ">
           <div class="card my-4">
@@ -267,7 +264,7 @@
             <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
               <div class="w-60">
                 <p class="text-sm mt-4">
-                  
+
                 </p>
               </div>
             </div>
@@ -282,6 +279,22 @@
               </div>
             </div>
             <div class="card-body pb-0 p-3 mt-4">
+              <?php
+              if ($mappingJalur == null) {
+                $map3 = 0;
+                $totalmap3 = 0;
+              ?>
+                <div class="alert alert-warning text-white" role="alert">
+                  <span class="alert-icon align-middle">
+                    <span class="material-icons text-md">
+                      warning
+                    </span>
+                  </span>
+                  <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
+                </div>
+              <?php
+              }
+              ?>
               <div class="row">
                 <div class="col-12 text-start">
                   <div class="chart">
@@ -293,7 +306,7 @@
             <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
               <div class="w-60">
                 <p class="text-sm mt-4">
-                  
+
                 </p>
               </div>
             </div>
@@ -305,6 +318,22 @@
         <div class="col-12">
           <div class="card mb-3">
             <div class="card-body p-3">
+              <?php
+              if ($mappingKab == null) {
+                $map1 = 0;
+                $totalmap1 = 0;
+              ?>
+                <div class="alert alert-warning text-white" role="alert">
+                  <span class="alert-icon align-middle">
+                    <span class="material-icons text-md">
+                      warning
+                    </span>
+                  </span>
+                  <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
+                </div>
+              <?php
+              }
+              ?>
               <div class="chart">
                 <canvas id="bar-chart1" class="chart-canvas" height="300px"></canvas>
               </div>
