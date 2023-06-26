@@ -46,8 +46,6 @@
                         <form action="StoreDataUniversitas" method="post">
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                 <button class="btn btn-primary me-md-2" type="submit">Simpan</button>
-                                <a href="<?= base_url('UniversitasDetail/1') ?>" class="btn btn-warning btn-xs">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>Lihat Data</a>
                             </div>
                             <div class="form-group my-2">
                                 <div class="input-group input-group-static mb-4">

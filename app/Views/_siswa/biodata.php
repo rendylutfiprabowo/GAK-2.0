@@ -50,15 +50,13 @@
                         <form action="/StoreBiodata" method="post">
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                 <button class="btn btn-primary me-md-2" type="submit">Simpan</button>
-                                <a href="<?= base_url('BiodataDetail/1') ?>" class="btn btn-warning btn-xs">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>Lihat Data</a>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 my2">
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>Email address</label>
-                                            <input type="email" name="email_address" class="form-control ahay ahay" value="ini dari database">
+                                            <input type="email" name="email_address" class="form-control ahay ahay">
                                             <p class="ihiy"><b>Petunjuk : </b></p>
                                         </div>
                                     </div>
@@ -67,7 +65,7 @@
                                     <div class="form-group my-2">
                                         <div class="input-group input-group-static mb-4">
                                             <label>Nama Lengkap</label>
-                                            <input type="text" name="nama" class="form-control ahay" value=" ">
+                                            <input type="text" name="nama" class="form-control ahay" >
                                         </div>
                                     </div>
                                 </div>
