@@ -56,7 +56,7 @@ class Biodata extends Migration
 
         ]);
         $this->forge->addKey('id_siswa', true);
-        $this->forge->addForeignKey('user_id', 'user', 'id', 'CASCADE', 'CASCADE');
+        // $this->forge->addForeignKey('user_id', 'user', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('biodata');
     }
 
