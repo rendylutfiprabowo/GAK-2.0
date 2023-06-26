@@ -314,9 +314,14 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row mt-4">
         <div class="col-12">
           <div class="card mb-3">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Penyebaran Siswa Lanjut Kuliah Per Kabupaten / Kota 2023</h6>
+              </div>
+            </div>
             <div class="card-body p-3">
               <?php
               if ($mappingKab == null) {
@@ -479,7 +484,7 @@
     data: {
       labels: <?php echo json_encode($map1); ?>,
       datasets: [{
-        label: "Jumlah Kabupaten",
+        label: "Jumlah Per Kabupaten / Kota",
         weight: 0,
         cutout: 0,
         tension: 0.9,
