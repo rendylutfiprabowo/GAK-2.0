@@ -297,14 +297,22 @@
               </div>
             </div>
             <div class="card-body pb-0 p-3 mt-4">
-              <!-- <div class="alert alert-warning text-white" role="alert">
-            <span class="alert-icon align-middle">
-              <span class="material-icons text-md">
-                warning
-              </span>
-            </span>
-            <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
-          </div> -->
+            <?php
+                  if ($mappingKab == null) {
+                    $map1 = 0;
+                    $totalmap1 = 0;
+                  ?>
+                    <div class="alert alert-warning text-white" role="alert">
+                      <span class="alert-icon align-middle">
+                        <span class="material-icons text-md">
+                          warning
+                        </span>
+                      </span>
+                      <span class="alert-text"><strong>Mohon Import Data Lebih Dahulu!</strong> Karena data masih kosong</span>
+                    </div>
+                  <?php
+                  }
+                  ?>
 
               <div class="row">
                 <div class="col-12 text-start">
