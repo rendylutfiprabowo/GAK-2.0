@@ -251,13 +251,7 @@
         </div>
 
         <div class="row">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-award-fill"></i></div>
-              <h4><a href="">Beasiswa Pendidikan</a></h4>
-              <p>Beasiswa pendidikan berupa pendampingan untuk mendapatkan beasiswa KIPK dan beasiswa lainnya di bangku perkuliahan</p>
-            </div>
-          </div>
+          
 
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
@@ -280,14 +274,6 @@
               <div class="icon"><i class="bx bx-layer"></i></div>
               <h4><a href="">Pendampingan & Advokasi</a></h4>
               <p>Pendampingan dan Advokasi berupa surat rekomendasi gubernur untuk mendapatkan beasiswa</p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-boxes"></i></i></div>
-              <h4><a href="">Pelatihan Softskill & Hardskill</a></h4>
-              <p>Bekerja sama dengan mitra Bakrie Center Foundation mengadakan pelatihan softskill dan hardskill kepada anak PKH maupun mahasiswa magang GAK</p>
             </div>
           </div>
 

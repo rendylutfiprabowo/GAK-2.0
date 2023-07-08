@@ -43,7 +43,7 @@ class Login extends BaseController
             if (session()->get('user') == '0') {
                 return redirect()->to(base_url('AdminDashboard'));
             } else {
-                return redirect()->to(base_url('SiswaDashboard'));
+                return redirect()->to(base_url('Biodata'));
             }
         } else {
             session()->setFlashdata('error', 'Username & Password Salah');
