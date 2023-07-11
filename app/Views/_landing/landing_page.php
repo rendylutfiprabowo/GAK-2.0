@@ -49,6 +49,7 @@
           <li><a class="nav-link scrollto" href="#services">Program Kerja</a></li>
           <li><a class="nav-link   scrollto" href="#portfolio">Cerita Kami</a></li>
           <li><a class="nav-link scrollto" href="#team">Tim</a></li>
+          <li><a class="nav-link   scrollto" href="#recent-posts">Kegiatan</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <li><a class="getstarted scrollto" href="/register">Daftar</a></li>
         </ul>
@@ -251,7 +252,7 @@
         </div>
 
         <div class="row">
-          
+
 
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
@@ -296,12 +297,8 @@
 
         <div class="row">
           <div class="col-lg-14 text-center text-lg-start">
-            <h3>Gerakan Ayo Kuliah Tour 2022</h3>
-            <p> Kegiatan Sosialisasi dan Edukasi anak PKH di Provinsi Lampung dilaksanakan
-              dengan sistem datang ke sekolah (Goes to School) atau ke kecamatan/kabupaten tujuan.
-              Kegiatan ini diisi dengan pemberian informasi dan bimbingan kepada siswa PKH terkait
-              motivasi lanjut kuliah, pemahaman terkait perguruan tinggi, dan hal hal yang harus
-              dipersiapkan untuk melanjutkan ke perguruan tinggi.</p>
+            <h3>Gerakan Ayo Kuliah EMAS 2023</h3>
+            <p> Kegiatan <b>Edukasi, Motivasi dan Advokasi</b> anak PKH di Provinsi Lampung dilaksanakan dengan sistem datang ke kecamatan/kabupaten tujuan. Kegiatan ini diisi dengan pemberian informasi dan bimbingan kepada siswa PKH terkait motivasi lanjut kuliah, pemahaman terkait perguruan tinggi, dan hal hal yang harus dipersiapkan untuk melanjutkan ke perguruan tinggi.</p>
           </div>
         </div>
 
