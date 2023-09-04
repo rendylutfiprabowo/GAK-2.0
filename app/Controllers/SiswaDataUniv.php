@@ -15,7 +15,11 @@ class SiswaDataUniv extends BaseController
     public function index()
     {
         if (session()->get('user') == '1') {
-            return view('_siswa/datauniv');
+            $data = [
+                'title' => 'Data Universitas'];
+        
+            
+            return view('_siswa/datauniv',$data);
         } else {
             return redirect()->to(base_url('AdminDashboard'));
         }

@@ -15,7 +15,9 @@ class SiswaUpload extends BaseController
     public function index()
     {
         if (session()->get('user') == '1') {
-            return view('_siswa/upload');
+            $data = [
+                'title' => 'Upload'];
+        return view('_siswa/upload',$data);
         } else {
             return redirect()->to(base_url('AdminDashboard'));
         }

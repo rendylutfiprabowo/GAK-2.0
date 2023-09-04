@@ -11,7 +11,8 @@ class Home extends BaseController
 
     function index()
     {
-        if (session()->logged_in) return view('_admin/dashboard');
+        if (session()->logged_in) 
+        return view('_admin/dashboard');
         else return redirect()->to('login');
     }
     

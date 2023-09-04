@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Gerakan Ayo Kuliah</title>
+  <title>Gerakan Ayo Kuliah || <?= $title; ?></title>
   <link rel="icon" href="/img/hero-img.png">
   <meta content="" name="description">
   <meta content="" name="keywords">

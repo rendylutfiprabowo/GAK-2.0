@@ -14,7 +14,9 @@ class SiswaPrestasi extends BaseController
 
     public function index()
     {
-        return view('_siswa/prestasi');
+        $data = [
+            'title' => 'Prestasi'];
+    return view('_siswa/prestasi',$data);
     }
 
     public function storeprestasi()

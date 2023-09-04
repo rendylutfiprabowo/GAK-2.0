@@ -16,8 +16,10 @@ class Register extends BaseController
     }
 
     public function index()
-    {
-        return view('register');
+    {$data = [
+        'title' => 'PKH Lolos PTN'];
+
+        return view('register',$data);
     }
 
     public function signingUp()

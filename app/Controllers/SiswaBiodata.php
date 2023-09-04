@@ -15,7 +15,10 @@ class SiswaBiodata extends BaseController
     public function index()
     {
         if (session()->get('user') == '1') {
-            return view('_siswa/biodata');
+            $data = [
+                'title' => 'Biodata'];
+        
+            return view('_siswa/biodata',$data);
         } else {
             return redirect()->to(base_url('AdminDashboard'));
         }
