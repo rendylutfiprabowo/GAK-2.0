@@ -57,4 +57,7 @@ class Exceptions extends BaseConfig
      * @var array
      */
     public $sensitiveDataInTrace = [];
+
+    public $logDeprecations = true;
+    public $deprecationLogLevel = E_DEPRECATED;
 }
