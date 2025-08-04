@@ -411,7 +411,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Tim IT Database <br> Gerakan Ayo Kuliah (GAK)</h2>
+          <h2>Tim IT & Database Administrator <br> Gerakan Ayo Kuliah (GAK) 2023</h2>
         </div>
 
         <div class="row">
