@@ -19,10 +19,10 @@
             </div>
             <div class="card-body px-0 mx-4 ">
                 <div class="m-0 p-0">
-                    
-                        <button type="submit" class="btn btn-primary mt-5" value="submit">Simpan Data</button>
-                        <a href="/PKHLolosPTN/detail/<?= $PTN['id_siswa'] ?>"><button type="button" class="btn bg-gradient-secondary mt-5 ms-2">Batal</button></a>
-                    
+
+                    <button type="submit" class="btn btn-primary mt-5" value="submit">Simpan Data</button>
+                    <a href="/PKHLolosPTN/detail/<?= $PTN['id_siswa'] ?>"><button type="button" class="btn bg-gradient-secondary mt-5 ms-2">Batal</button></a>
+
                     <div class="row mt-3">
                         <div class="col-lg-6 col-md-6 my2">
                             <div class="form-group my-2">
@@ -113,12 +113,13 @@
                         <div class="form-group my-2">
 
                             <div class="form-group my-2">
-                                <label for="program_studi">Status KIP K</label>
-                                <select placeholder="Status KIP K" name="status_kip" class="form-select" aria-label="Default select example">
-                                    <option value="xxxxxxx" selected>"<?= $PTN['status_kip'] ?>"</option>
-
+                                <label for="status_kip">Status KIP K</label>
+                                <select name="status_kip" class="form-select" aria-label="Default select example">
+                                    <option value="YA" <?= ($PTN['status_kip'] === 'YA') ? 'selected' : '' ?>>YA</option>
+                                    <option value="TIDAK" <?= ($PTN['status_kip'] === 'TIDAK') ? 'selected' : '' ?>>TIDAK</option>
                                 </select>
                             </div>
+
                         </div>
                     </div>
                 </div>

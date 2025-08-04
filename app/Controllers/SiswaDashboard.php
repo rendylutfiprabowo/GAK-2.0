@@ -8,6 +8,11 @@ class SiswaDashboard extends BaseController
 {
     public function index()
     {
-        return view('_siswa/dashboard');
+        $title = 'Dashboard Siswa';
+
+        $data = [
+            'title' => $title,
+        ];
+        return view('_siswa/dashboard', $data);
     }
 }
