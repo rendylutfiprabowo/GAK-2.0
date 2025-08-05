@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="/img/hero-img.png" style="background-color: white; border-radius: 25px;">
     <title>
-        Gerakan Ayo Kuliah  || <?= $title; ?>
+        Gerakan Ayo Kuliah || <?= $title; ?>
     </title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -30,6 +30,13 @@
         <hr class="horizontal light mt-0 mb-2">
         <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
             <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/SiswaDashboard">
+                        <i class="material-icons">dashboard</i>
+                        <span class="sidenav-normal  ms-3  ps-1">Dashboard</span>
+                    </a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link text-white " href="/Biodata">
                         <i class="material-icons">account_circle</i>
@@ -88,7 +95,7 @@
                         </li>
                         <li class="breadcrumb-item text-sm text-dark active" aria-current="page"><?= $title; ?></li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">  </h6>
+                    <h6 class="font-weight-bolder mb-0"> </h6>
                 </nav>
                 <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
                     <a href="javascript:;" class="nav-link text-body p-0">

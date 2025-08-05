@@ -44,33 +44,36 @@ $routes->get('/register', 'Register::index');
 $routes->post('/register/process', 'Register::signingUp');
 
 //Admin
-$routes->get('/AdminDashboard', 'AdminDashboard::AdminDashboard');
-$routes->get('/PKHLolosPTN', 'AdminLolosptn::index');
-$routes->get('/PKHLolosPTN/detail/(:num)', 'AdminLolosPTN::detail/$1');
-$routes->get('/PKHLolosPTN/delete/(:num)', 'AdminLolosPTN::delete/$1');
-$routes->post('/PKHLolosPTN/import', 'AdminLolosPTN::import');
-$routes->get('/PKHLolosPTN/export', 'AdminLolosPTN::export');
-$routes->get('/PKHLolosPTN/clearall', 'AdminLolosPTN::clearall');
-$routes->get('/PKHLolosPTN/edit', 'AdminLolosPTN::edit');
-$routes->get('/PKHLolosPTN/edit/(:num)', 'AdminLolosPTN::edit/$1');
-$routes->post('/PKHLolosPTN/update/(:num)', 'AdminLolosPTN::update/$1');
-// $routes->get('/PKHLolosPTN/Detail', 'AdminLolosptn::detail');
-// $routes->get('/PKHLolosPTN/Edit', 'AdminLolosptn::edit');
+// $routes->get('/AdminDashboard', 'AdminDashboard::index', ['filter' => 'auth:0']); // hanya admin
+// $routes->get('/SiswaDashboard', 'SiswaDashboard::index', ['filter' => 'auth:1']); // hanya siswa
+
+$routes->get('/AdminDashboard', 'AdminDashboard::AdminDashboard', ['filter' => 'auth:0']);
+$routes->get('/PKHLolosPTN', 'AdminLolosptn::index', ['filter' => 'auth:0']);
+$routes->get('/PKHLolosPTN/detail/(:num)', 'AdminLolosPTN::detail/$1', ['filter' => 'auth:0']);
+$routes->get('/PKHLolosPTN/delete/(:num)', 'AdminLolosPTN::delete/$1', ['filter' => 'auth:0']);
+$routes->post('/PKHLolosPTN/import', 'AdminLolosPTN::import', ['filter' => 'auth:0']);
+$routes->get('/PKHLolosPTN/export', 'AdminLolosPTN::export', ['filter' => 'auth:0']);
+$routes->get('/PKHLolosPTN/clearall', 'AdminLolosPTN::clearall', ['filter' => 'auth:0']);
+$routes->get('/PKHLolosPTN/edit', 'AdminLolosPTN::edit', ['filter' => 'auth:0']);
+$routes->get('/PKHLolosPTN/edit/(:num)', 'AdminLolosPTN::edit/$1', ['filter' => 'auth:0']);
+$routes->post('/PKHLolosPTN/update/(:num)', 'AdminLolosPTN::update/$1', ['filter' => 'auth:0']);
+// $routes->get('/PKHLolosPTN/Detail', 'AdminLolosptn::detail', ['filter' => 'auth:0']);
+// $routes->get('/PKHLolosPTN/Edit', 'AdminLolosptn::edit', ['filter' => 'auth:0']);
 
 
 
 //siswa
-$routes->get('/SiswaDashboard', 'SiswaDashboard::index');
-$routes->get('/Biodata', 'SiswaBiodata::index');
-$routes->post('/StoreBiodata', 'SiswaBiodata::store');
-$routes->get('/BiodataDetail/(:num)', 'SiswaBiodata::detail/$1');
-$routes->get('/DataUniversitas', 'SiswaDataUniv::index');
-$routes->post('/StoreDataUniversitas', 'SiswaDataUniv::storeuniv');
-$routes->get('/UniversitasDetail/(:num)', 'SiswaDataUniv::detail/$1');
-$routes->get('/Prestasi', 'SiswaPrestasi::index');
-$routes->post('/StorePrestasi', 'SiswaPrestasi::storeprestasi');
-$routes->get('/UploadDokumen', 'SiswaUpload::index');
-$routes->post('/StoreDokumen', 'SiswaUpload::storeup');
+$routes->get('/SiswaDashboard', 'SiswaDashboard::index', ['filter' => 'auth:1']);
+$routes->get('/Biodata', 'SiswaBiodata::index', ['filter' => 'auth:1']);
+$routes->post('/StoreBiodata', 'SiswaBiodata::store', ['filter' => 'auth:1']);
+$routes->get('/BiodataDetail/(:num)', 'SiswaBiodata::detail/$1', ['filter' => 'auth:1']);
+$routes->get('/DataUniversitas', 'SiswaDataUniv::index', ['filter' => 'auth:1']);
+$routes->post('/StoreDataUniversitas', 'SiswaDataUniv::storeuniv', ['filter' => 'auth:1']);
+$routes->get('/UniversitasDetail/(:num)', 'SiswaDataUniv::detail/$1', ['filter' => 'auth:1']);
+$routes->get('/Prestasi', 'SiswaPrestasi::index', ['filter' => 'auth:1']);
+$routes->post('/StorePrestasi', 'SiswaPrestasi::storeprestasi', ['filter' => 'auth:1']);
+$routes->get('/UploadDokumen', 'SiswaUpload::index', ['filter' => 'auth:1']);
+$routes->post('/StoreDokumen', 'SiswaUpload::storeup', ['filter' => 'auth:1']);
 
 
 //LandingPage
