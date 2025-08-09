@@ -7,10 +7,10 @@ use CodeIgniter\Model;
 class Upload extends Model
 {
     protected $table = "upload";
-    protected $primaryKey = "id_siswafoto";
+    protected $primaryKey = "id_siswa";
     protected $returnType = "array";
     protected $useTimestamps = false;
-    protected $allowedFields = ['sktm', 'ktp_ortu', 'sk_pendapatan', 'dokumen',];
+    protected $allowedFields = ['sktm', 'ktp_ortu', 'sk_pendapatan', 'dokumen', 'user_id'];
 
     public function getUpload($where = false)
     {

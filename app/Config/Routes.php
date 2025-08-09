@@ -20,7 +20,7 @@ $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
-$routes->set404Override('/eror');
+// $routes->set404Override('/eror');
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -37,6 +37,8 @@ $routes->set404Override('/eror');
 // route since we don't have to scan directories.
 
 //sebelum login
+$routes->get('/eror', 'Home::eror');
+
 $routes->get('/', 'LandingPage::index');
 $routes->get('/login', 'Home::login');
 $routes->post('/login/process', 'Login::process');
@@ -57,21 +59,30 @@ $routes->get('/PKHLolosPTN/clearall', 'AdminLolosPTN::clearall', ['filter' => 'a
 $routes->get('/PKHLolosPTN/edit', 'AdminLolosPTN::edit', ['filter' => 'auth:0']);
 $routes->get('/PKHLolosPTN/edit/(:num)', 'AdminLolosPTN::edit/$1', ['filter' => 'auth:0']);
 $routes->post('/PKHLolosPTN/update/(:num)', 'AdminLolosPTN::update/$1', ['filter' => 'auth:0']);
-// $routes->get('/PKHLolosPTN/Detail', 'AdminLolosptn::detail', ['filter' => 'auth:0']);
-// $routes->get('/PKHLolosPTN/Edit', 'AdminLolosptn::edit', ['filter' => 'auth:0']);
+$routes->post('/PendampingPKH', 'AdminPendampingPKH::index', ['filter' => 'auth:0']);
 
 
 
 //siswa
 $routes->get('/SiswaDashboard', 'SiswaDashboard::index', ['filter' => 'auth:1']);
+
 $routes->get('/Biodata', 'SiswaBiodata::index', ['filter' => 'auth:1']);
-$routes->post('/StoreBiodata', 'SiswaBiodata::store', ['filter' => 'auth:1']);
-$routes->get('/BiodataDetail/(:num)', 'SiswaBiodata::detail/$1', ['filter' => 'auth:1']);
+$routes->get('/Biodata/Edit', 'SiswaBiodata::edit', ['filter' => 'auth:1']);
+$routes->post('/Biodata/Edit/GetKecamatan', 'SiswaBiodata::getKecamatan');
+$routes->post('/Biodata/Edit/GetDesa', 'SiswaBiodata::getDesa');
+$routes->post('/Biodata/Edit/Store', 'SiswaBiodata::store', ['filter' => 'auth:1']);
+
 $routes->get('/DataUniversitas', 'SiswaDataUniv::index', ['filter' => 'auth:1']);
-$routes->post('/StoreDataUniversitas', 'SiswaDataUniv::storeuniv', ['filter' => 'auth:1']);
-$routes->get('/UniversitasDetail/(:num)', 'SiswaDataUniv::detail/$1', ['filter' => 'auth:1']);
+$routes->get('/DataUniversitas/Edit', 'SiswaDataUniv::edit', ['filter' => 'auth:1']);
+$routes->post('/DataUniversitas/Edit/Store', 'SiswaDataUniv::storeuniv', ['filter' => 'auth:1']);
+
 $routes->get('/Prestasi', 'SiswaPrestasi::index', ['filter' => 'auth:1']);
-$routes->post('/StorePrestasi', 'SiswaPrestasi::storeprestasi', ['filter' => 'auth:1']);
+$routes->get('/Prestasi/Add', 'SiswaPrestasi::add', ['filter' => 'auth:1']);
+$routes->post('/Prestasi/Add/Store', 'SiswaPrestasi::storeprestasi', ['filter' => 'auth:1']);
+$routes->get('/Prestasi/Edit/(:num)', 'SiswaPrestasi::edit/$1', ['filter' => 'auth:1']);
+$routes->post('/Prestasi/Edit/Update/(:num)', 'SiswaPrestasi::update/$1', ['filter' => 'auth:1']);
+$routes->get('/Prestasi/Delete/(:num)', 'SiswaPrestasi::delete/$1', ['filter' => 'auth:1']);
+
 $routes->get('/UploadDokumen', 'SiswaUpload::index', ['filter' => 'auth:1']);
 $routes->post('/StoreDokumen', 'SiswaUpload::storeup', ['filter' => 'auth:1']);
 
@@ -88,7 +99,6 @@ $routes->get('/LandingPage', 'LandingPage::LandingPage');
 
 
 $routes->get('/logout', 'Home::logout');
-$routes->get('/eror', 'Home::eror');
 
 
 

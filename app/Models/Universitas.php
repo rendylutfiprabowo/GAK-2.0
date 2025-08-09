@@ -10,7 +10,7 @@ class Universitas extends Model
     protected $primaryKey = "id_siswa";
     protected $returnType = "array";
     protected $useTimestamps = false;
-    protected $allowedFields = ['universitas', 'program_studi', 'tahun_masuk',];
+    protected $allowedFields = ['id_daftaruniversitas', 'id_daftarprodi', 'id_jalurmasuk', 'tahun_masuk', 'kip_sma', 'kip_kuliah', 'user_id'];
 
     public function getUniversitas($where = false)
     {
@@ -20,6 +20,24 @@ class Universitas extends Model
             return $this->getWhere($where);
         }
     }
+
+    public function getUniversitasWithRelasi($userId)
+    {
+        return $this
+            ->select('
+            universitas.*,
+            daftaruniversitas.nama_daftaruniversitas,
+            daftarprodi.nama_daftarprodi,
+            jalurmasuk.nama_jalurmasuk
+        ')
+            ->join('daftaruniversitas', 'daftaruniversitas.id_daftaruniversitas = universitas.id_daftaruniversitas', 'left')
+            ->join('daftarprodi', 'daftarprodi.id_daftarprodi = universitas.id_daftarprodi', 'left')
+            ->join('jalurmasuk', 'jalurmasuk.id_jalurmasuk = universitas.id_jalurmasuk', 'left')
+            ->where('universitas.id_siswa', $userId)
+            ->first();
+    }
+
+
 
     public function show($id_siswa)
     {

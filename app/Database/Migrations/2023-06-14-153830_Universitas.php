@@ -15,17 +15,37 @@ class Universitas extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'universitas' => [
+            'id_daftaruniversitas' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'program_studi' => [
+            'id_daftarprodi' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'id_jalurmasuk' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
             'tahun_masuk' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
+            ],
+            'kip_sma' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+                'default'    => '0',
+            ],
+            'kip_kuliah' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+                'default'    => '0',
+            ],
+            'user_id' => [
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true,
+                'null' => true,
             ],
         ]);
         $this->forge->addKey('id_siswa', true);

@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="/assets/material/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="/assets/material/assets/css/nucleo-svg.css" rel="stylesheet" />
-
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link id="pagestyle" href="/assets/material/assets/css/material-dashboard.min.css?v=3.0.6" rel="stylesheet" />
@@ -30,12 +29,12 @@
         <hr class="horizontal light mt-0 mb-2">
         <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link text-white " href="/SiswaDashboard">
                         <i class="material-icons">dashboard</i>
                         <span class="sidenav-normal  ms-3  ps-1">Dashboard</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
                     <a class="nav-link text-white " href="/Biodata">

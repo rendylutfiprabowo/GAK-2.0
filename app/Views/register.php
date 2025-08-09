@@ -31,6 +31,8 @@
 
 </head>
 
+
+
 <body>
 
     <!-- ======= Header ======= -->
@@ -74,12 +76,12 @@
                     <form role="form" class="text-start" method="post" action="/register/process">
                         <div class="form-group">
                             <label class="mb-1" for="username">Username</label>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username" value="<?= old('username') ?>">
                         </div>
                         <br>
                         <div class="form-group">
                             <label class="mb-1" for="password">Password</label>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="<?= old('password') ?>">
                         </div>
                         <div class="text-center text-lg-start mt-3">
                             <button type="submit" class="btn btn-primary">Daftar</button>
@@ -149,6 +151,31 @@
         </div>
     </footer><!-- End Footer -->
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <?php if (session()->getFlashdata('success')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil!',
+                text: '<?= session()->getFlashdata('success'); ?>',
+                confirmButtonColor: '#37517e'
+            });
+        </script>
+    <?php endif; ?>
+
+    <?php if (session()->getFlashdata('error')): ?>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: '<?= session()->getFlashdata('error'); ?>',
+                confirmButtonColor: '#d33'
+            });
+        </script>
+    <?php endif; ?>
+
+
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -165,5 +192,6 @@
     <script src="/js/main.js"></script>
 
 </body>
+
 
 </html>

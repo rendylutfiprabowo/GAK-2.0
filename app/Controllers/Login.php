@@ -20,40 +20,44 @@ class Login extends BaseController
 
     public function process()
     {
-
         $users = new UserModel();
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
 
-        $dataUser = $users->where(['username' => $username,])->first();
+        // Ambil data user berdasarkan username
+        $dataUser = $users->where(['username' => $username])->first();
 
-        if (password_verify($password, $dataUser->password)) {
-            session()->set([
-                'username' => $dataUser->username,
-                'user' => $dataUser->user,
-                'logged_in' => TRUE
-            ]);
-            $ses_data = [
-                'title' => 'Login',
-                'username' => $dataUser->username,
-                'user' => $dataUser->user,
-                'logged_in'     => true,
-            ];
-            $this->session->set($ses_data);
-            if (session()->get('user') == '0') {
-                return redirect()->to(base_url('AdminDashboard'));
-            } elseif ((session()->get('user') == '1')) {
-                return redirect()->to(base_url('SiswaDashboard'));
-            }
-        } else {
-            session()->setFlashdata('error', 'Username & Password Salah');
-            return redirect()->back();
+        if (!$dataUser) {
+            session()->setFlashdata('error', 'Username tidak ditemukan');
+            return redirect()->back()->withInput();
         }
-    }
 
-    function logout()
-    {
-        session()->destroy();
-        return redirect()->to('login');
+        if (!password_verify($password, $dataUser->password)) {
+            session()->setFlashdata('error', 'Password salah');
+            return redirect()->back()->withInput();
+        }
+
+
+        // Jika berhasil login
+        session()->set([
+            'user_id'  => $dataUser->id,
+            'username' => $dataUser->username,
+            'user' => $dataUser->user,
+            'logged_in' => TRUE
+        ]);
+
+        $ses_data = [
+            'title' => 'Login',
+            'username' => $dataUser->username,
+            'user' => $dataUser->user,
+            'logged_in' => true,
+        ];
+        $this->session->set($ses_data);
+
+        if (session()->get('user') == '0') {
+            return redirect()->to(base_url('AdminDashboard'));
+        } elseif (session()->get('user') == '1') {
+            return redirect()->to(base_url('Biodata'));
+        }
     }
 }

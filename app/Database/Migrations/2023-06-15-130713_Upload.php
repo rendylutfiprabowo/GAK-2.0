@@ -9,7 +9,7 @@ class Upload extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id_siswafoto' => [
+            'id_siswa' => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
@@ -31,8 +31,14 @@ class Upload extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'user_id' => [
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true,
+                'null' => true,
+            ],
         ]);
-        $this->forge->addKey('id_siswafoto', true);
+        $this->forge->addKey('id_siswa', true);
         $this->forge->createTable('upload');
     }
 

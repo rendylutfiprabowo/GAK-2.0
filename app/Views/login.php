@@ -42,12 +42,15 @@
     </style>
 
 </head>
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <body>
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
+             
 
             <h1 class="logo me-auto"><img src="<?= base_url(); ?>/img/hero-img.png" alt=""></h1>
 
@@ -178,5 +181,31 @@
     <script src="/js/main.js"></script>
 
 </body>
+
+
+<?php if (session()->getFlashdata('error')): ?>
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Login Gagal',
+            text: '<?= session()->getFlashdata('error') ?>',
+            showConfirmButton: true,
+            confirmButtonText: 'Coba Lagi',
+            confirmButtonColor: '#d33'
+        });
+    </script>
+<?php endif; ?>
+
+<?php if (session()->getFlashdata('success')): ?>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Berhasil!',
+            text: '<?= session()->getFlashdata('success') ?>',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    </script>
+<?php endif; ?>
 
 </html>
