@@ -1,62 +1,106 @@
-# CodeIgniter 4 Application Starter
+# 🎓 GAK Web Apps (Gerakan Ayo Kuliah)
 
-## What is CodeIgniter?
+A web-based application designed to support **Ayo Kuliah Lampung** initiative, aimed at mapping and monitoring **SMA students from PKH families** so they can continue their education to college with KIP Kuliah funding.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+This app has **two main roles**:
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+* **Siswa (Student)**: Fill in biodata and other data needed by PKH facilitators.
+* **Admin**: Map, monitor, and guide students from underprivileged families to pursue higher education.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+---
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+## 🚀 Main Features
 
-## Installation & updates
+* Student biodata management
+* PKH student data mapping
+* Monitoring & guidance dashboard for admins
+* Role-based access: **Siswa** and **Admin**
+* Modular structure with **CodeIgniter 4**
+* Excel/CSV support via PhpSpreadsheet (optional for reporting)
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+---
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+## 🛠️ Installation
 
-## Setup
+1. Clone the repository or download ZIP:
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+```bash
+git clone https://github.com/rendylutfiprabowo/GAK-2.0
+```
 
-## Important Change with index.php
+Or download [ZIP here](https://github.com/rendylutfiprabowo/GAK-2.0/archive/refs/heads/main.zip)
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+2. Navigate to project directory:
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+```bash
+cd GAK-2.0
+```
 
-**Please** read the user guide for a better explanation of how CI4 works!
+3. Unzip `assets` folder into `/public`:
 
-## Repository Management
+```
+/public/assets/material
+```
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+4. Configure `.env` file according to your database
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+5. Install dependencies via Composer:
 
-## Server Requirements
+```bash
+composer update
+```
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+6. Generate application encryption key:
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+```bash
+php spark key:generate
+```
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+7. Run the local server:
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+```bash
+php spark serve
+```
+
+8. Open your browser at `http://localhost:8080`
+
+---
+
+## 🖼️ Project Folder Structure
+
+```
+├── app/
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Views/
+├── public/
+│   └── assets/          # CSS, JS, images, material assets
+├── writable/
+├── .env
+├── composer.json
+└── README.md
+```
+
+---
+
+## 🧪 Tools & Technologies
+
+* PHP ^7.4 || ^8.0
+* CodeIgniter 4.x (`codeigniter4/appstarter`)
+* PhpSpreadsheet
+* MySQL/MariaDB
+* Composer
+
+---
+
+## 🧑‍💻 Developer
+
+**Rendy Lutfi Prabowo**
+GitHub: [@rendylutfiprabowo](https://github.com/rendylutfiprabowo)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — feel free to use and modify it as needed.
+ 
