@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class JalurMasuk extends Model
+class DaftarJalurMasuk extends Model
 {
-    protected $table            = 'jalurmasuk';
+    protected $table            = 'daftarjalurmasuk';
     protected $primaryKey       = 'id_jalurmasuk';
     protected $useAutoIncrement = true;
     protected $useTimestamps = false;

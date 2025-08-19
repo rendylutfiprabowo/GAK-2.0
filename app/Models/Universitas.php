@@ -28,12 +28,12 @@ class Universitas extends Model
             universitas.*,
             daftaruniversitas.nama_daftaruniversitas,
             daftarprodi.nama_daftarprodi,
-            jalurmasuk.nama_jalurmasuk
+            daftarjalurmasuk.nama_jalurmasuk
         ')
             ->join('daftaruniversitas', 'daftaruniversitas.id_daftaruniversitas = universitas.id_daftaruniversitas', 'left')
             ->join('daftarprodi', 'daftarprodi.id_daftarprodi = universitas.id_daftarprodi', 'left')
-            ->join('jalurmasuk', 'jalurmasuk.id_jalurmasuk = universitas.id_jalurmasuk', 'left')
-            ->where('universitas.id_siswa', $userId)
+            ->join('daftarjalurmasuk', 'daftarjalurmasuk.id_jalurmasuk = universitas.id_jalurmasuk', 'left')
+            ->where('universitas.user_id', $userId)
             ->first();
     }
 

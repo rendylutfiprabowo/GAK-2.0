@@ -58,9 +58,32 @@ $routes->get('/PKHLolosPTN/export', 'AdminLolosPTN::export', ['filter' => 'auth:
 $routes->get('/PKHLolosPTN/clearall', 'AdminLolosPTN::clearall', ['filter' => 'auth:0']);
 $routes->get('/PKHLolosPTN/edit', 'AdminLolosPTN::edit', ['filter' => 'auth:0']);
 $routes->get('/PKHLolosPTN/edit/(:num)', 'AdminLolosPTN::edit/$1', ['filter' => 'auth:0']);
+$routes->post('/PKHLolosPTN/edit/storeAddPrestasi/(:num)', 'AdminLolosPTN::storeAddPrestasi/$1', ['filter' => 'auth:0']);
+$routes->get('PKHLolosPTN/edit/deletePrestasi/(:num)', 'AdminLolosPTN::deletePrestasi/$1', ['filter' => 'auth:0']);
 $routes->post('/PKHLolosPTN/update/(:num)', 'AdminLolosPTN::update/$1', ['filter' => 'auth:0']);
+$routes->post('/PKHLolosPTN/updatePrestasi/(:num)', 'AdminLolosPTN::updatePrestasi/$1', ['filter' => 'auth:0']);
 $routes->post('/PendampingPKH', 'AdminPendampingPKH::index', ['filter' => 'auth:0']);
+$routes->get('/getKecamatan/(:num)', 'AdminLolosptn::getKecamatan/$1');
+$routes->get('/getDesa/(:num)', 'AdminLolosptn::getDesa/$1');
+$routes->get('/MasterData', 'MasterData::index', ['filter' => 'auth:0']);
+$routes->get('/masterdata', 'Masterdata::index');
 
+$routes->post('/masterdata/desa/update/(:num)', 'Masterdata::desaUpdate/$1');
+$routes->get('/masterdata/desa/Delete/(:num)', 'Masterdata::desaDelete/$1');
+$routes->post('/masterdata/jalurMasuk/update/(:num)', 'Masterdata::jalurMasukUpdate/$1');
+$routes->get('/masterdata/jalurMasuk/Delete/(:num)', 'Masterdata::jalurMasukDelete/$1');
+$routes->post('/masterdata/kabupaten/update/(:num)', 'Masterdata::kabupatenUpdate/$1');
+$routes->get('/masterdata/kabupaten/Delete/(:num)', 'Masterdata::kabupatenDelete/$1');
+$routes->post('/masterdata/prodi/update/(:num)', 'Masterdata::prodiUpdate/$1');
+$routes->get('/masterdata/prodi/Delete/(:num)', 'Masterdata::prodiDelete/$1');
+$routes->post('/masterdata/SMA/update/(:num)', 'Masterdata::SMAUpdate/$1');
+$routes->get('/masterdata/SMA/Delete/(:num)', 'Masterdata::SMADelete/$1');
+$routes->post('/masterdata/daftaruniversitas/update/(:num)', 'Masterdata::daftaruniversitasUpdate/$1');
+$routes->get('/masterdata/daftaruniversitas/Delete/(:num)', 'Masterdata::daftaruniversitasDelete/$1');
+$routes->post('/masterdata/kecamatan/update/(:num)', 'Masterdata::kecamatanUpdate/$1');
+$routes->get('/masterdata/kecamatan/Delete/(:num)', 'Masterdata::kecamatanDelete/$1');
+$routes->post('/masterdata/pendampingpkh/update/(:num)', 'Masterdata::pendampingpkhUpdate/$1');
+$routes->get('/masterdata/pendampingpkh/Delete/(:num)', 'Masterdata::pendampingpkhDelete/$1');
 
 
 //siswa
@@ -68,9 +91,12 @@ $routes->get('/SiswaDashboard', 'SiswaDashboard::index', ['filter' => 'auth:1'])
 
 $routes->get('/Biodata', 'SiswaBiodata::index', ['filter' => 'auth:1']);
 $routes->get('/Biodata/Edit', 'SiswaBiodata::edit', ['filter' => 'auth:1']);
-$routes->post('/Biodata/Edit/GetKecamatan', 'SiswaBiodata::getKecamatan');
-$routes->post('/Biodata/Edit/GetDesa', 'SiswaBiodata::getDesa');
+$routes->post('/Biodata/Edit/GetKecamatan', 'SiswaBiodata::getKecamatan', ['filter' => 'auth:1']);
+$routes->post('/Biodata/Edit/GetDesa', 'SiswaBiodata::getDesa', ['filter' => 'auth:1']);
 $routes->post('/Biodata/Edit/Store', 'SiswaBiodata::store', ['filter' => 'auth:1']);
+$routes->get('/wilayah/kecamatan/(:num)', 'WilayahController::getKecamatanByKabupaten/$1', ['filter' => 'auth:1']);
+$routes->get('/wilayah/desa/(:num)', 'WilayahController::getDesaByKecamatan/$1', ['filter' => 'auth:1']);
+
 
 $routes->get('/DataUniversitas', 'SiswaDataUniv::index', ['filter' => 'auth:1']);
 $routes->get('/DataUniversitas/Edit', 'SiswaDataUniv::edit', ['filter' => 'auth:1']);

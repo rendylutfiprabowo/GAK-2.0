@@ -18,7 +18,27 @@
     <link id="pagestyle" href="/assets/material/assets/css/material-dashboard.min.css?v=3.0.6" rel="stylesheet" />
 </head>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<?php if (session()->has('success')): ?>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Great!',
+            text: '<?= session('success') ?>'
+        });
+    </script>
+<?php endif; ?>
+
+<?php if (session()->has('error')): ?>
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops!',
+            text: '<?= session('error') ?>'
+        });
+    </script>
+<?php endif; ?>
 
 <body class="g-sidenav-show bg-gray-200">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -45,6 +65,12 @@
                     <a class="nav-link text-white " href="/PKHLolosPTN">
                         <i class="material-icons">people</i>
                         <span class="sidenav-normal  ms-3  ps-1">PKH Lolos PTN</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/MasterData">
+                        <i class="material-icons">lock_outline</i>
+                        <span class="sidenav-normal  ms-3  ps-1">Data Master</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -113,9 +139,10 @@
                                     <div class="copyright text-center text-sm text-muted text-lg-start">
                                         © <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
                                         <script>
-                                            document.write(new Date().getFullYear())
-                                        </script> by
-                                        <a class="font-weight-bold" target="_blank">Bakrie Center Foundation | Gerakan Ayo Kuliah Lampung 2023</a>
+                                            document.write(2023)
+                                        </script>
+
+                                        <a class="font-weight-bold" target="_blank">Bakrie Center Foundation | Gerakan Ayo Kuliah Lampung </a>
                                     </div>
                                 </div>
                             </div>

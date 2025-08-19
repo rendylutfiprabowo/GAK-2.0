@@ -4,7 +4,7 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class DesaSeeder extends Seeder
+class DaftarDesaSeeder extends Seeder
 {
     public function run()
     {
@@ -31,7 +31,7 @@ class DesaSeeder extends Seeder
         fclose($handle);
 
         if (!empty($data)) {
-            $this->db->table('desa')->insertBatch($data);
+            $this->db->table('daftardesa')->insertBatch($data);
         }
     }
 }

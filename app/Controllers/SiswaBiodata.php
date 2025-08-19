@@ -3,12 +3,13 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Database\Seeds\DaftarDesaSeeder;
 use App\Models\Biodata;
-use App\Models\Desa;
-use App\Models\Kabupaten;
-use App\Models\Kecamatan;
-use App\Models\PendampingPKH;
-use App\Models\SMA;
+use App\Models\DaftarDesa;
+use App\Models\DaftarKabupaten;
+use App\Models\DaftarKecamatan;
+use App\Models\DaftarPendampingPKH;
+use App\Models\DaftarSMA;
 
 class SiswaBiodata extends BaseController
 {
@@ -33,10 +34,8 @@ class SiswaBiodata extends BaseController
                     break;
                 }
             }
-        } else {
-            $notif = 'Data biodata belum diisi. Silakan lengkapi biodata Anda terlebih dahulu.';
-        }
- 
+        }  
+
         return view('_siswa/biodata', [
             'title' => 'Biodata',
             'biodata' => $biodata,
@@ -44,13 +43,10 @@ class SiswaBiodata extends BaseController
         ]);
     }
 
-
-
-
     public function getKecamatan()
     {
         $id_kabupaten = $this->request->getPost('id_kabupaten');
-        $model = new \App\Models\Kecamatan();
+        $model = new DaftarKecamatan();
         $data = $model->where('id_kabupaten', $id_kabupaten)->findAll();
         return $this->response->setJSON($data);
     }
@@ -58,7 +54,7 @@ class SiswaBiodata extends BaseController
     public function getDesa()
     {
         $id_kecamatan = $this->request->getPost('id_kecamatan');
-        $model = new \App\Models\Desa();
+        $model = new DaftarDesa();
         $data = $model->where('id_kecamatan', $id_kecamatan)->findAll();
         return $this->response->setJSON($data);
     }
@@ -73,19 +69,19 @@ class SiswaBiodata extends BaseController
             $biodata = $biodataModel->where('user_id', $userId)->first();
         }
 
-        $modelPendamping = new PendampingPKH();
+        $modelPendamping = new DaftarPendampingPKH();
         $pendampingList = $modelPendamping->select('id_pendampingpkh, nama_pendamping_pkh')->findAll();
 
-        $modelKabupaten = new Kabupaten();
+        $modelKabupaten = new DaftarKabupaten();
         $kabupatenList = $modelKabupaten->select('id_kabupaten, nama_kabupaten')->findAll();
 
-        $modelKecamatan = new Kecamatan();
+        $modelKecamatan = new DaftarKecamatan();
         $kecamatanList = $modelKecamatan->select('id_kecamatan, nama_kecamatan')->findAll();
 
-        $modelDesa = new Desa();
+        $modelDesa = new DaftarDesa();
         $desaList = $modelDesa->select('id_desa, nama_desa')->findAll();
 
-        $modelSMA = new SMA();
+        $modelSMA = new DaftarSMA();
         $SMAList = $modelSMA->select('id_SMA, nama_SMA')->findAll();
 
         $kecamatanList = [];
@@ -99,10 +95,6 @@ class SiswaBiodata extends BaseController
             $desaList = $modelDesa->where('id_kecamatan', $biodata['id_kecamatan'])->findAll();
         }
 
-        // foreach ($SMAList as $pendamping) {
-        //     echo $pendamping['nama_SMA'] . '<br>';
-        // }
-        // die();
 
         $data = [
             'title' => 'Edit Biodata',
@@ -164,5 +156,4 @@ class SiswaBiodata extends BaseController
         $session->setFlashdata('success', 'Biodata kamu berhasil diperbarui!');
         return redirect()->to('/Biodata');
     }
- 
 }

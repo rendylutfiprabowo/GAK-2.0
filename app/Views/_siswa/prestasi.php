@@ -11,6 +11,17 @@
   <div class="card mb-3">
     <div class="card-body p-3">
       <div class="container-fluid">
+        <script>
+          $(function() {
+            <?php if (session()->has("success")) { ?>
+              Swal.fire({
+                icon: 'success',
+                title: 'Great!',
+                text: '<?= session("success") ?>'
+              })
+            <?php } ?>
+          });
+        </script>
         <div class="table-responsive">
           <h1 class="mt-3">DATA PRESTASI</h1>
           <p style="border-bottom: 2px solid gray;">Jika anda <b>memiliki prestasi, mohon isi </b>form berikut sesuai dengan data prestasi anda!. <b>Jika tidak ada, mohon abaikan</b>! Terima Kasih!</p>
@@ -56,14 +67,10 @@
                 </tr>
               <?php endif; ?>
             </tbody>
-
           </table>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- /.container-fluid -->
-
 <?= $this->endSection(); ?>

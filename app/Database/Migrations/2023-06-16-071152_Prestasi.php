@@ -34,18 +34,30 @@ class Prestasi extends Migration
                 'NULL' => true,
             ],
             'id_siswa' => [
-                'type'           => 'INT',
-                'constraint'     => 11,
+                'type'           => 'INT', 
                 'unsigned'       => true,
             ],
             'user_id' => [
-                'type' => 'INT',
-                'constraint' => 11,
+                'type' => 'INT', 
                 'unsigned' => true,
             ],
 
         ]);
         $this->forge->addKey('id_prestasisiswa', true);
+        $this->forge->addForeignKey(
+            'id_siswa',          // kolom di tabel biodata
+            'biodata',             // refer ke tabel ini
+            'id_siswa',          // refer ke kolom ini
+            'CASCADE',                   // ON DELETE
+            'CASCADE'                    // ON UPDATE
+        );
+        $this->forge->addForeignKey(
+            'user_id',          // kolom di tabel biodata
+            'user',             // refer ke tabel ini
+            'user_id',          // refer ke kolom ini
+            'CASCADE',                   // ON DELETE
+            'CASCADE'                    // ON UPDATE
+        );
         $this->forge->createTable('prestasi');
     }
 

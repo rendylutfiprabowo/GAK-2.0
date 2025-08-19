@@ -16,16 +16,16 @@ class Universitas extends Migration
                 'auto_increment' => true,
             ],
             'id_daftaruniversitas' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'           => 'INT', 
+                'unsigned'       => true,
             ],
             'id_daftarprodi' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'INT', 
+                'unsigned'       => true,
             ],
             'id_jalurmasuk' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'INT', 
+                'unsigned'       => true,
             ],
             'tahun_masuk' => [
                 'type'       => 'VARCHAR',
@@ -42,13 +42,40 @@ class Universitas extends Migration
                 'default'    => '0',
             ],
             'user_id' => [
-                'type' => 'INT',
-                'constraint' => 11,
+                'type' => 'INT', 
                 'unsigned' => true,
-                'null' => true,
             ],
         ]);
         $this->forge->addKey('id_siswa', true);
+
+        $this->forge->addForeignKey(
+            'id_daftaruniversitas',          // kolom di tabel biodata
+            'daftaruniversitas',             // refer ke tabel ini
+            'id_daftaruniversitas',          // refer ke kolom ini
+            'CASCADE',                   // ON DELETE
+            'CASCADE'                    // ON UPDATE
+        );
+        $this->forge->addForeignKey(
+            'id_daftarprodi',          // kolom di tabel biodata
+            'daftarprodi',             // refer ke tabel ini
+            'id_daftarprodi',          // refer ke kolom ini
+            'CASCADE',                   // ON DELETE
+            'CASCADE'                    // ON UPDATE
+        );
+        $this->forge->addForeignKey(
+            'id_jalurmasuk',          // kolom di tabel biodata
+            'daftarjalurmasuk',             // refer ke tabel ini
+            'id_jalurmasuk',          // refer ke kolom ini
+            'CASCADE',                   // ON DELETE
+            'CASCADE'                    // ON UPDATE
+        );
+        $this->forge->addForeignKey(
+            'user_id',          // kolom di tabel biodata
+            'user',             // refer ke tabel ini
+            'user_id',          // refer ke kolom ini
+            'CASCADE',                   // ON DELETE
+            'CASCADE'                    // ON UPDATE
+        );
         $this->forge->createTable('universitas');
     }
 

@@ -25,13 +25,16 @@
             <div class="card mb-3">
                 <div class="card-body p-3">
                     <div class="container-fluid">
-
-                        <?php if (!empty($notif)) : ?>
-                            <div class="alert alert-warning my-4">
-                                <?= $notif ?>
-                            </div>
-                        <?php endif; ?>
                         <script>
+                            $(function() {
+                                <?php if (!empty($notif)) { ?>
+                                    Swal.fire({
+                                        icon: 'warning',
+                                        title: 'Perhatian!',
+                                        text: '<?= $notif ?>'
+                                    });
+                                <?php } ?>
+                            });
                             $(function() {
 
                                 <?php if (session()->has("success")) { ?>
@@ -43,16 +46,12 @@
                                 <?php } ?>
                             });
                         </script>
-
-
-
                         <!-- Page Heading -->
                         <h1 class="mt-3">BIODATA DIRI</h1>
                         <p style="border-bottom: 2px solid gray;"></p>
 
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <a href="/Biodata/Edit" class="btn btn-primary me-md-2">Edit</a>
-
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 my2">
@@ -126,7 +125,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-lg-6 col-md-6 my2">
                                 <div class="form-group my-2">
@@ -151,17 +149,4 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(function() {
-        <?php if (!empty($notif)) { ?>
-            Swal.fire({
-                icon: 'warning',
-                title: 'Perhatian!',
-                text: '<?= $notif ?>'
-            });
-        <?php } ?>
-    });
-</script>
-
 <?= $this->endSection(); ?>

@@ -48,6 +48,12 @@
           </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link text-white " href="/MasterData">
+            <i class="material-icons">lock_outline</i>
+            <span class="sidenav-normal  ms-3  ps-1">Data Master</span>
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link text-white " href="/logout">
             <i class="material-icons">input</i>
             <span class="sidenav-normal  ms-3  ps-1">Logout</span>

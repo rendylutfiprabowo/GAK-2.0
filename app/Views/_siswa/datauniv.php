@@ -19,14 +19,21 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.css">
 
-
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
             <div class="card mb-3">
                 <div class="card-body p-3">
-
                     <script>
+                        $(function() {
+                            <?php if (!empty($notif)) { ?>
+                                Swal.fire({
+                                    icon: 'warning',
+                                    title: 'Perhatian!',
+                                    text: '<?= $notif ?>'
+                                });
+                            <?php } ?>
+                        });
                         $(function() {
 
                             <?php if (session()->has("success")) { ?>
@@ -40,12 +47,6 @@
                     </script>
 
                     <div class="container-fluid">
-                        <?php if (!empty($notif)) : ?>
-                            <div class="alert alert-warning my-4">
-                                <?= $notif ?>
-                            </div>
-                        <?php endif; ?>
-
                         <!-- Page Heading -->
                         <h1 class="mt-3">DATA UNIVERSITAS</h1>
                         <p style="border-bottom: 2px solid gray;">Jika anda <b>sudah lulus tes masuk kuliah, mohon isi </b>form berikut sesuai dengan data universitas anda!. <b>Jika belum mohon abaikan</b>! Terima Kasih!</p>
@@ -116,16 +117,4 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(function() {
-        <?php if (!empty($notif)) { ?>
-            Swal.fire({
-                icon: 'warning',
-                title: 'Perhatian!',
-                text: '<?= $notif ?>'
-            });
-        <?php } ?>
-    });
-</script>
 <?= $this->endSection(); ?>

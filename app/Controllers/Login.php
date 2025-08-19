@@ -40,7 +40,7 @@ class Login extends BaseController
 
         // Jika berhasil login
         session()->set([
-            'user_id'  => $dataUser->id,
+            'user_id'  => $dataUser->user_id,
             'username' => $dataUser->username,
             'user' => $dataUser->user,
             'logged_in' => TRUE

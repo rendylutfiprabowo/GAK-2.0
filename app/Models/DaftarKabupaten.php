@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Kabupaten extends Model
+class DaftarKabupaten extends Model
 {
-    protected $table            = 'kabupaten';
+    protected $table            = 'daftarkabupaten';
     protected $primaryKey       = 'id_kabupaten';
     protected $useAutoIncrement = true;
     protected $useTimestamps = false;

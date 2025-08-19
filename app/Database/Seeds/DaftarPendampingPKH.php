@@ -4,7 +4,7 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class PendampingPKH extends Seeder
+class DaftarPendampingPKH extends Seeder
 {
     public function run()
     {
@@ -22,6 +22,6 @@ class PendampingPKH extends Seeder
                 'id_kabupaten' => 11,
             ],
         ];
-        $this->db->table('pendampingpkh')->insertBatch($data);
+        $this->db->table('daftarpendampingpkh')->insertBatch($data);
     }
 }

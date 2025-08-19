@@ -130,7 +130,7 @@
                 </div>
             </div>
         </nav>
-        <!-- template area  -->
+
         <?= $this->renderSection('content') ?>
         <!-- end template area  -->
         <div class="container-fluid">

@@ -4,7 +4,7 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class JalurMasukSeeder extends Seeder
+class DaftarJalurMasukSeeder extends Seeder
 {
     public function run()
     {
@@ -27,7 +27,7 @@ class JalurMasukSeeder extends Seeder
         fclose($handle);
 
         if (!empty($data)) {
-            $this->db->table('jalurmasuk')->insertBatch($data);
+            $this->db->table('daftarjalurmasuk')->insertBatch($data);
         }
     }
 }

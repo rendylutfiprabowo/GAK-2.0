@@ -42,8 +42,6 @@ class SiswaUpload extends BaseController
         return view('_siswa/upload', $data);
     }
 
-
-
     public function storeup()
     {
         $userId = session()->get('user_id');

@@ -7,18 +7,6 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.css">
 
-<script>
-  $(function() {
-
-    <?php if (session()->has("success")) { ?>
-      Swal.fire({
-        icon: 'success',
-        title: 'Great!',
-        text: '<?= session("success") ?>'
-      })
-    <?php } ?>
-  });
-</script>
 
 <div class="container-fluid py-4">
   <div class="row">
@@ -30,8 +18,9 @@
             <p class="mb-0">Mohon <b>sertakan sertifikat juara sebagai bukti prestasi anda. Bukan sertifikat partisipasi.</b></p>
             <p class="ihiy m-0 p-0" style="font-size:10pt;border-bottom: 2px solid gray;"><b>note: </b>Hanya berlaku untuk prestasi selama 5 tahun terakhir saja!</p>
             <form action="/Prestasi/Edit/Update/<?= $prestasi['id_prestasisiswa'] ?>" method="post" enctype="multipart/form-data">
-              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="submit" class="btn btn-primary me-md-2 mt-3">Update</button>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+                <button type="submit" class="btn btn-primary me-md-2">Update Data</button>
+                <a href="/Prestasi" class="btn bg-gradient-secondary ms-2">Batal</a>
               </div>
               <div class="row">
                 <div class="col-md-6">
@@ -80,7 +69,6 @@
                 </div>
               </div>
             </form>
-
           </div>
         </div>
       </div>

@@ -4,28 +4,36 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class JalurMasuk extends Migration
+class User extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_jalurmasuk' => [
+            'user_id' => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'nama_jalurmasuk' => [
+            'username' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255', 
+            ],
+            'password' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'user' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
         ]);
-        $this->forge->addKey('id_jalurmasuk', true);
-        $this->forge->createTable('jalurmasuk');
+        $this->forge->addKey('user_id', true);
+        $this->forge->createTable('user');
     }
 
     public function down()
     {
-        $this->forge->dropTable('jalurmasuk');
+        $this->forge->dropTable('user');
     }
 }

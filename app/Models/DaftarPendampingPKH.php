@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class PendampingPKH extends Model
+class DaftarPendampingPKH extends Model
 {
-    protected $table            = 'pendampingpkh';
+    protected $table            = 'daftarpendampingpkh';
     protected $primaryKey       = 'id_pendampingpkh';
     protected $useAutoIncrement = true;
     protected $useTimestamps = false;
@@ -15,8 +15,8 @@ class PendampingPKH extends Model
 
     public function getWithKabupaten()
     {
-        return $this->select('pendampingpkh.*, kabupaten.nama_kabupaten')
-            ->join('kabupaten', 'kabupaten.id_kabupaten = pendampingpkh.id_kabupaten')
+        return $this->select('daftarpendampingpkh.*, daftarkabupaten.nama_kabupaten')
+            ->join('daftarkabupaten', 'daftarkabupaten.id_kabupaten = daftarpendampingpkh.id_kabupaten')
             ->findAll();
     }
 }

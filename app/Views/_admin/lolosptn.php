@@ -12,20 +12,6 @@
 <div class="container-fluid py-4">
     <div class="ms-auto my-auto mt-lg-0 mt-4 mb-4">
         <div class="ms-auto my-auto">
-
-            <?php if (session()->get('message')) : ?>
-                <div class="alert alert-success alert-dismissible text-white fade show" role="alert">
-                    <span class="alert-icon align-middle">
-                        <span class="material-icons text-md">
-                            thumb_up_off_alt
-                        </span>
-                    </span>
-                    <span class="alert-text">Data Berhasil <strong><?= session()->getFlashdata('message'); ?>!</strong></span>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            <?php endif;   ?>
             <button style="margin-right: 8px;" type="button" class="btn btn-outline-primary  mb-0" data-bs-toggle="modal" data-bs-target="#import"><i class="material-icons">file_upload</i>
                 Import
             </button>
@@ -39,7 +25,7 @@
                         </div>
                         <div class="modal-body">
                             <p>Mohon upload dengan sesuai dengan template / format (format file xlsx)</p>
-                            <a href="/caring/downloadtemplate"><button class="btn bg-gradient-warning">Download Template</button></a>
+                            <a href="/PKHLolosPTN/export"><button class="btn bg-gradient-warning">Download Template</button></a>
                             <div class="input-group input-group-dynamic mb-3">
                                 <form method="post" action="/PKHLolosPTN/import" enctype="multipart/form-data">
                                     <div class="form-group">
@@ -59,8 +45,6 @@
 
             <a style="margin-right: 8px;" href="<?= site_url('/PKHLolosPTN/export') ?>" class="btn btn-outline-primary  export mb-0 mt-sm-0 mt-1" data-type=".xlsx" type="button" name="button"><i class="material-icons">file_download</i> Export</a>
             <a href="/PKHLolosPTN/clearall" class="btn btn-outline-primary  export mb-0 mt-sm-0 mt-1" data-type=".xlsx" type="button" name="button"><i class="material-icons">delete_sweep</i> Clear Data</a>
-            <!-- <a href="/PKHLolosPTN/pengajuan" class="btn btn-outline-primary  export mb-0 mt-sm-0 mt-1" data-type=".xlsx" type="button" name="button"><i class="material-icons">file_download</i> Pengajuan SR</a> -->
-
         </div>
     </div>
 
@@ -78,26 +62,33 @@
                             <table id="example1" class="table table-hover align-items-center mb-0">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th class="text-center text-uppercase text-xxs font-weight-bolder">
-                                            <p><b>NAMA SISWA</b></p>
+                                        <th class="text-center text-xxs font-weight-bolder">
+                                            <p><b>USERNAME</b></p>
                                         </th>
                                         <th class="text-center text-uppercase text-xxs font-weight-bolder">
-                                            <p><b>NOMOR PKH</b></p>
+                                            <p><b>NAMA</b></p>
                                         </th>
                                         <th class="text-center text-uppercase text-xxs font-weight-bolder">
-                                            <p><b>Status PKH</b></p>
+                                            <p><b>NO. PKH</b></p>
                                         </th>
                                         <th class="text-center text-uppercase text-xxs font-weight-bolder">
-                                            <p><b>Detail</b></p>
+                                            <p><b>KIP SMA</b></p>
+                                        </th>
+                                        <th class="text-center text-uppercase text-xxs font-weight-bolder">
+                                            <p><b>KIP KULIAH</b></p>
+                                        </th>
+                                        <th class="text-center text-uppercase text-xxs font-weight-bolder">
+                                            <p><b>NOMOR WA</b></p>
+                                        </th>
+                                        </th>
+                                        <th class="text-center text-uppercase text-xxs font-weight-bolder">
+                                            <p><b>AKSI</b></p>
                                         </th>
                                     </tr>
                                 </thead>
                         </div>
                         <tbody>
-
-                            <?php
-                            foreach ($PTN as $dp) {
-                            ?>
+                            <?php foreach ($PTN as $dp): ?>
                                 <tr>
                                     <td>
                                         <div class="d-flex px-2 py-1">
@@ -105,30 +96,45 @@
                                                 <img src="/img/user.png" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
                                             </div>
                                             <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="mb-0 text-sm"><?php echo $dp['nama']; ?></h6>
+                                                <h6 class="mb-0 text-sm"><?= esc($dp['username']) ?></h6>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <h6 class="mb-0 text-sm"><?php echo $dp['no_pkh']; ?></h6>
+                                        <div class="d-flex px-2 py-1">
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="mb-0 text-sm"><?= esc($dp['nama']) ?? 'BIODATA BELUM LENGKAP' ?></h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h6 class="mb-0 text-sm"><?= esc($dp['no_pkh']) ?? 'BIODATA BELUM LENGKAP' ?></h6>
                                     </td>
                                     <td class="align-middle text-center">
-                                        <h6 class="mb-0 text-sm"><?php echo $dp['status_kip']; ?></h6>
+                                        <h6 class="mb-0 text-sm">
+                                            <?= (!empty($dp['kip_sma']) && $dp['kip_sma'] != '0') ? 'YA' : 'TIDAK' ?>
+                                        </h6>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <h6 class="mb-0 text-sm">
+                                            <?= (!empty($dp['kip_kuliah']) && $dp['kip_kuliah'] != '0') ? 'YA' : 'TIDAK' ?>
+                                        </h6>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <h6 class="mb-0 text-sm"><?= esc($dp['no_whatshap']) ?></h6>
                                     </td>
                                     <td class="align-middle text-center">
                                         <a href="/PKHLolosPTN/detail/<?= $dp['id_siswa'] ?>">
-                                            <span style="justify-content: center;" class="badge badge-sm bg-gradient-info"><i class="material-icons">info</i></span>
+                                            <span class="badge badge-sm bg-gradient-info"><i class="material-icons">info</i></span>
                                         </a>
                                         <a href="/PKHLolosPTN/delete/<?= $dp['id_siswa'] ?>">
-                                            <span style="justify-content: center;" class="badge badge-sm bg-gradient-warning"><i class="material-icons">delete</i></span>
+                                            <span class="badge badge-sm bg-gradient-warning"><i class="material-icons">delete</i></span>
                                         </a>
                                     </td>
                                 </tr>
-                            <?php
-                            }
-                            ?>
-
+                            <?php endforeach; ?>
                         </tbody>
+
                         </table>
                     </div>
                 </div>

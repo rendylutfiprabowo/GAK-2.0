@@ -4,32 +4,28 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class SMA extends Migration
+class DaftarKabupaten extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_SMA' => [
+            'id_kabupaten' => [
                 'type'           => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'nama_SMA' => [
+            'nama_kabupaten' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
-            ],
-            'id_kabupaten' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
+            ]
         ]);
-        $this->forge->addKey('id_SMA', true);
-        $this->forge->createTable('SMA');
+        $this->forge->addKey('id_kabupaten', true);
+        $this->forge->createTable('daftarkabupaten');
     }
 
     public function down()
     {
-        $this->forge->dropTable('SMA');
+        $this->forge->dropTable('daftarkabupaten');
     }
 }

@@ -4,7 +4,7 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class SmaSeeder extends Seeder
+class DaftarSmaSeeder extends Seeder
 {
     public function run()
     {
@@ -29,7 +29,7 @@ class SmaSeeder extends Seeder
         fclose($handle);
 
         if (!empty($data)) {
-            $this->db->table('sma')->insertBatch($data);
+            $this->db->table('daftarsma')->insertBatch($data);
         }
     }
 }

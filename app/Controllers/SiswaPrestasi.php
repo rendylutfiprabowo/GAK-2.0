@@ -54,7 +54,7 @@ class SiswaPrestasi extends BaseController
 
         if (!$biodata) {
             session()->setFlashdata('error', 'Biodata tidak ditemukan. Silakan isi biodata dulu.');
-            return redirect()->to('biodata');
+            return redirect()->to('biodata1');
         }
 
         $idSiswa = $biodata['id_siswa'];
@@ -98,7 +98,7 @@ class SiswaPrestasi extends BaseController
         $userId = session()->get('user_id');
         // Ambil id_siswa dari tabel biodata berdasarkan user_id
         $user = $this->user
-            ->where('id', $userId)
+            ->where('user_id', $userId)
             ->first();
         $biodata = $this->biodata
             ->where('user_id', $userId)
@@ -134,7 +134,7 @@ class SiswaPrestasi extends BaseController
         $userId = session()->get('user_id');
         // Ambil id_siswa dari tabel biodata berdasarkan user_id
         $user = $this->user
-            ->where('id', $userId)
+            ->where('user_id', $userId)
             ->first();
         $biodata = $this->biodata
             ->where('user_id', $userId)

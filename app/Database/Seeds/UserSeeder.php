@@ -14,11 +14,11 @@ class UserSeeder extends Seeder
                 'password' => password_hash('admin123', PASSWORD_BCRYPT),
                 'user' => 0,
             ],
-            [
-                'username' => 'neo',
-                'password' => password_hash('neo123', PASSWORD_BCRYPT),
-                'user'     => 1,
-            ]
+            // [
+            //     'username' => 'neo',
+            //     'password' => password_hash('neo123', PASSWORD_BCRYPT),
+            //     'user'     => 1,
+            // ]
         ];
         $this->db->table('user')->insertBatch($data);
     }

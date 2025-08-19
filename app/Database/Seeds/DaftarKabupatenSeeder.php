@@ -4,7 +4,7 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class KabupatenSeeder extends Seeder
+class DaftarKabupatenSeeder extends Seeder
 {
     public function run()
     {
@@ -27,6 +27,6 @@ class KabupatenSeeder extends Seeder
 
         fclose($handle);
 
-        $this->db->table('kabupaten')->insertBatch(array_values($data));
+        $this->db->table('daftarkabupaten')->insertBatch(array_values($data));
     }
 }

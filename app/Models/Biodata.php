@@ -43,16 +43,16 @@ class Biodata extends Model
     {
         return $this
             ->select('biodata.*, 
-                  pendampingpkh.nama_pendamping_pkh as nama_pendamping, 
-                  kabupaten.nama_kabupaten, 
-                  kecamatan.nama_kecamatan, 
-                  desa.nama_desa, 
-                  sma.nama_SMA')
-            ->join('pendampingpkh', 'pendampingpkh.id_pendampingpkh = biodata.id_pendampingpkh', 'left')
-            ->join('kabupaten', 'kabupaten.id_kabupaten = biodata.id_kabupaten', 'left')
-            ->join('kecamatan', 'kecamatan.id_kecamatan = biodata.id_kecamatan', 'left')
-            ->join('desa', 'desa.id_desa = biodata.id_desa', 'left')
-            ->join('sma', 'sma.id_SMA = biodata.id_SMA', 'left')
+                  daftarpendampingpkh.nama_pendamping_pkh as nama_pendamping, 
+                  daftarkabupaten.nama_kabupaten, 
+                  daftarkecamatan.nama_kecamatan, 
+                  daftardesa.nama_desa, 
+                  daftarsma.nama_SMA')
+            ->join('daftarpendampingpkh', 'daftarpendampingpkh.id_pendampingpkh = biodata.id_pendampingpkh', 'left')
+            ->join('daftarkabupaten', 'daftarkabupaten.id_kabupaten = biodata.id_kabupaten', 'left')
+            ->join('daftarkecamatan', 'daftarkecamatan.id_kecamatan = biodata.id_kecamatan', 'left')
+            ->join('daftardesa', 'daftardesa.id_desa = biodata.id_desa', 'left')
+            ->join('daftarsma', 'daftarsma.id_SMA = biodata.id_SMA', 'left')
             ->where('biodata.user_id', $userId)
             ->first();
     }
@@ -60,6 +60,6 @@ class Biodata extends Model
 
     public function user()
     {
-        return $this->belongsTo(UserModel::class, 'user_id', 'id');
+        return $this->belongsTo(UserModel::class, 'user_id', 'user_id');
     }
 }

@@ -25,42 +25,29 @@
         <div class="col-12">
             <div class="card mb-3">
                 <div class="card-body p-3">
-
-                    <script>
-                        $(function() {
-
-                            <?php if (session()->has("success")) { ?>
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: 'Great!',
-                                    text: '<?= session("success") ?>'
-                                })
-                            <?php } ?>
-                        });
-                    </script>
-
                     <div class="container-fluid">
                         <!-- Page Heading -->
                         <h1 class="mt-3">EDIT DATA UNIVERSITAS</h1>
                         <p style="border-bottom: 2px solid gray;">Mohon isi biodata berikut sesuai dengan data diri anda! Terima Kasih!</p>
-
-
-
+ 
                         <form action="/DataUniversitas/Edit/Store" method="post">
                             <div class="row align-items-center mb-0">
                                 <!-- Bagian kiri: 2 switch -->
                                 <div class="col d-flex align-items-center gap-4">
                                     <div class="form-check form-switch">
-                                        <input   class="form-check-input" name="kip_sma" type="checkbox" id="kip_sma" <?= (!empty($univ['kip_sma']) && $univ['kip_sma'] == 1) ? 'checked' : '' ?>>
+                                        <input class="form-check-input" name="kip_sma" type="checkbox" id="kip_sma" <?= (!empty($univ['kip_sma']) && $univ['kip_sma'] == 1) ? 'checked' : '' ?>>
                                         <label class="form-check-label" for="kip_sma">KIP SMA</label>
                                     </div>
                                     <div class="form-check form-switch">
-                                        <input   class="form-check-input" name="kip_kuliah" type="checkbox" id="kip_kuliah" <?= (!empty($univ['kip_kuliah']) && $univ['kip_kuliah'] == 1) ? 'checked' : '' ?>>
+                                        <input class="form-check-input" name="kip_kuliah" type="checkbox" id="kip_kuliah" <?= (!empty($univ['kip_kuliah']) && $univ['kip_kuliah'] == 1) ? 'checked' : '' ?>>
                                         <label class="form-check-label" for="kip_kuliah">KIP Kuliah</label>
                                     </div>
                                 </div>
                                 <div class="col-auto ms-auto mb-0">
-                                    <button class="btn btn-primary mb-0 " type="submit">Simpan</button>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <button type="submit" class="btn btn-primary me-md-2">Simpan Data</button>
+                                        <a href="/DataUniversitas" class="btn bg-gradient-secondary ms-2">Batal</a>
+                                    </div>
                                 </div>
                             </div>
 

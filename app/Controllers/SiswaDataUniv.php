@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\Biodata;
+use App\Models\DaftarJalurMasuk;
 use App\Models\DaftarProdi;
 use App\Models\DaftarUniversitas;
 use App\Models\JalurMasuk;
@@ -23,7 +24,8 @@ class SiswaDataUniv extends BaseController
         $userId = session()->get('user_id');
         $modelUniversitas = new Universitas();
         $universitasList = $modelUniversitas->getUniversitasWithRelasi($userId);
-
+        // var_dump($userId);
+        // die();
         $notif = '';
         if (!empty($universitasList)) {
             foreach ($universitasList as $key => $value) {
@@ -60,7 +62,7 @@ class SiswaDataUniv extends BaseController
         $modelProdi       = new DaftarProdi();
         $listProdi = $modelProdi->findAll();
 
-        $modelJalur       = new JalurMasuk();
+        $modelJalur       = new DaftarJalurMasuk();
         $listJalurMasuk  = $modelJalur->findAll();
 
         // Ambil 1 baris data universitas (dengan join)
@@ -142,5 +144,4 @@ class SiswaDataUniv extends BaseController
 
         return redirect()->to('/DataUniversitas');
     }
- 
 }
