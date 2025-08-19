@@ -115,19 +115,17 @@
 
     <?php
     foreach ($mappingKab as $m1) {
-      $map1[] = $m1->kabupaten_kota;
+      $map1[] = $m1->nama_kabupaten;
       $totalmap1[] = (float) $m1->total;
     }
-    ?>
-    <?php
+
     foreach ($mappingUniv as $m2) {
-      $map2[] = $m2->universitas;
+      $map2[] = $m2->nama_daftaruniversitas;
       $totalmap2[] = (float) $m2->total;
     }
-    ?>
-    <?php
+
     foreach ($mappingJalur as $m3) {
-      $map3[] = $m3->jalur_masukptn;
+      $map3[] = $m3->nama_jalurmasuk;
       $totalmap3[] = (float) $m3->total;
     }
     ?>
@@ -179,7 +177,7 @@
             <div class="card-body">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Data Universitas
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Jumlah Data Universitas Terisi
                   </div>
                   <div class="row no-gutters align-items-center">
                     <div class="col-auto">
@@ -212,23 +210,7 @@
             </div>
           </div>
         </div>
-        <!-- card upload -->
-        <div class="col-xl-3 col-md-6 mb-4">
-          <div class="card border-left-warning shadow h-100 py-2">
-            <div class="card-body">
-              <div class="row no-gutters align-items-center">
-                <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                    Dokumen</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlahUpload ?></div>
-                </div>
-                <div class="col-auto">
-                  <i class="yay1 material-icons">folder_shared</i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
 
       <div class="row">

@@ -120,6 +120,13 @@
                 <div class="card-body px-0 ">
                     <div class="card-header m-0">
                         <div class="table-responsive p-0">
+                            <div class="d-grid gap-2 mt-0 mb-3 d-md-flex justify-content-md-start">
+                                <button class="btn btn-primary mb-0" data-bs-toggle="modal" data-bs-target="#modalAddDesa">
+                                    <i class="material-icons mr-0">add</i>
+                                    Tambah Data
+                                </button>
+                            </div>
+
                             <table id="tabel-desa" class="table table-hover align-items-center mb-0">
                                 <thead class="thead-light">
                                     <tr>
@@ -199,6 +206,12 @@
                 <div class="card-body px-0 ">
                     <div class="card-header m-0">
                         <div class="table-responsive p-0">
+                            <div class="d-grid gap-2 mt-0 mb-3 d-md-flex justify-content-md-start">
+                                <button class="btn btn-primary mb-0" data-bs-toggle="modal" data-bs-target="#modalAddJalur">
+                                    <i class="material-icons mr-0">add</i>
+                                    Tambah Data
+                                </button>
+                            </div>
                             <table id="tabel-jalurmasuk" class="table table-hover align-items-center mb-0">
                                 <thead class="thead-light">
                                     <tr>
@@ -258,6 +271,11 @@
                 <div class="card-body px-0 ">
                     <div class="card-header m-0">
                         <div class="table-responsive p-0">
+                            <div class="d-grid gap-2 mt-0 mb-3 d-md-flex justify-content-md-start">
+                                <button class="btn btn-primary mb-0" data-bs-toggle="modal" data-bs-target="#modalAddKabupaten">
+                                    <i class="material-icons mr-0">add</i> Tambah Kabupaten
+                                </button>
+                            </div>
                             <table id="tabel-kabupaten" class="table table-hover align-items-center mb-0">
                                 <thead class="thead-light">
                                     <tr>
@@ -318,6 +336,11 @@
                 <div class="card-body px-0 ">
                     <div class="card-header m-0">
                         <div class="table-responsive p-0">
+                            <div class="d-grid gap-2 mt-0 mb-3 d-md-flex justify-content-md-start">
+                                <button class="btn btn-primary mb-0" data-bs-toggle="modal" data-bs-target="#modalAddKecamatan">
+                                    <i class="material-icons mr-0">add</i> Tambah Kecamatan
+                                </button>
+                            </div>
                             <table id="tabel-kecamatan" class="table table-hover align-items-center mb-0">
                                 <thead class="thead-light">
                                     <tr>
@@ -388,6 +411,11 @@
                 <div class="card-body px-0 ">
                     <div class="card-header m-0">
                         <div class="table-responsive p-0">
+                            <div class="d-grid gap-2 mt-0 mb-3 d-md-flex justify-content-md-start">
+                                <button class="btn btn-primary mb-0" data-bs-toggle="modal" data-bs-target="#modalAddPendampingPKH">
+                                    <i class="material-icons mr-0">add</i> Tambah Pendamping PKH
+                                </button>
+                            </div>
                             <table id="tabel-pendampingpkh" class="table table-hover align-items-center mb-0">
                                 <thead class="thead-light">
                                     <tr>
@@ -481,6 +509,11 @@
                 <div class="card-body px-0 ">
                     <div class="card-header m-0">
                         <div class="table-responsive p-0">
+                            <div class="d-grid gap-2 mt-0 mb-3 d-md-flex justify-content-md-start">
+                                <button class="btn btn-primary mb-0" data-bs-toggle="modal" data-bs-target="#modalAddProdi">
+                                    <i class="material-icons mr-0">add</i> Tambah Prodi
+                                </button>
+                            </div>
                             <table id="tabel-prodi" class="table table-hover align-items-center mb-0">
                                 <thead class="thead-light">
                                     <tr>
@@ -539,6 +572,11 @@
                 <div class="card-body px-0 ">
                     <div class="card-header m-0">
                         <div class="table-responsive p-0">
+                            <div class="d-grid gap-2 mt-0 mb-3 d-md-flex justify-content-md-start">
+                                <button class="btn btn-primary mb-0" data-bs-toggle="modal" data-bs-target="#modalAddSMA">
+                                    <i class="material-icons mr-0">add</i> Tambah SMA
+                                </button>
+                            </div>
                             <table id="tabel-sma" class="table table-hover align-items-center mb-0">
                                 <thead class="thead-light">
                                     <tr>
@@ -610,6 +648,11 @@
                 <div class="card-body px-0 ">
                     <div class="card-header m-0">
                         <div class="table-responsive p-0">
+                            <div class="d-grid gap-2 mt-0 mb-3 d-md-flex justify-content-md-start">
+                                <button class="btn btn-primary mb-0" data-bs-toggle="modal" data-bs-target="#modalAddUniversitas">
+                                    <i class="material-icons mr-0">add</i> Tambah Universitas
+                                </button>
+                            </div>
                             <table id="tabel-universitas" class="table table-hover align-items-center mb-0">
                                 <thead class="thead-light">
                                     <tr>
@@ -661,6 +704,285 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Desa -->
+<div class="modal fade" id="modalAddDesa" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Tambah Desa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formAddDesa" action="/masterdata/desa/store" method="POST">
+                    <?= csrf_field() ?>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label for="id_kabupaten" class="form-label">Kabupaten / Kota</label>
+                        <select id="id_kabupaten" name="id_kabupaten" class="form-control" required>
+                            <option value="">-- Pilih Kabupaten --</option>
+                            <?php foreach ($daftarkabupaten as $kab): ?>
+                                <option value="<?= $kab['id_kabupaten'] ?>">
+                                    <?= $kab['nama_kabupaten'] ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label for="id_kecamatan" class="form-label">Kecamatan</label>
+                        <select id="id_kecamatan" name="id_kecamatan" class="form-control" required>
+                            <option value="">-- Pilih Kecamatan --</option>
+                        </select>
+                    </div>
+                    <script>
+                        $(document).ready(function() {
+                            $('#id_kabupaten').on('change', function() {
+                                var id_kabupaten = $(this).val();
+
+                                if (id_kabupaten) {
+                                    $.ajax({
+                                        url: '/masterdata/getKecamatan/' + id_kabupaten,
+                                        type: 'GET',
+                                        dataType: 'json',
+                                        success: function(data) {
+                                            $('#id_kecamatan').empty();
+                                            $('#id_kecamatan').append('<option value="">-- Pilih Kecamatan --</option>');
+                                            $.each(data, function(key, value) {
+                                                $('#id_kecamatan').append('<option value="' + value.id_kecamatan + '">' + value.nama_kecamatan + '</option>');
+                                            });
+                                        }
+                                    });
+                                } else {
+                                    $('#id_kecamatan').empty();
+                                    $('#id_kecamatan').append('<option value="">-- Pilih Kecamatan --</option>');
+                                }
+                            });
+                        });
+                    </script>
+
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label class="form-label">Nama Desa</label>
+                        <input type="text" name="nama_desa" class="form-control" required>
+                    </div>
+                    <div class="col-auto ms-auto mb-0">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Jalur Masuk -->
+<div class="modal fade" id="modalAddJalur" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Tambah Jalur Masuk</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formAddJalur" action="/masterdata/jalurMasuk/store" method="POST">
+                    <?= csrf_field() ?>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label class="form-label">Nama Jalur Masuk</label>
+                        <input type="text" name="nama_jalurmasuk" class="form-control" required>
+                    </div>
+                    <div class="col-auto ms-auto mb-0">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Kabupaten -->
+<div class="modal fade" id="modalAddKabupaten" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Tambah Kabupaten</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/masterdata/kabupaten/store" method="POST">
+                    <?= csrf_field() ?>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label class="form-label">Nama Kabupaten</label>
+                        <input type="text" name="nama_kabupaten" class="form-control" required>
+                    </div>
+                    <div class="col-auto ms-auto mb-0">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Kecamatan -->
+<div class="modal fade" id="modalAddKecamatan" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Tambah Kecamatan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/masterdata/kecamatan/store" method="POST">
+                    <?= csrf_field() ?>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label for="id_kabupaten" class="form-label">Kabupaten</label>
+                        <select name="id_kabupaten" class="form-control" required>
+                            <option value="">-- Pilih Kabupaten --</option>
+                            <?php foreach ($daftarkabupaten as $kab): ?>
+                                <option value="<?= $kab['id_kabupaten'] ?>"><?= $kab['nama_kabupaten'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label class="form-label">Nama Kecamatan</label>
+                        <input type="text" name="nama_kecamatan" class="form-control" required>
+                    </div>
+                    <div class="col-auto ms-auto mb-0">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Pendamping PKH -->
+<div class="modal fade" id="modalAddPendampingPKH" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Tambah Pendamping PKH</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/masterdata/pendampingpkh/store" method="POST">
+                    <?= csrf_field() ?>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label class="form-label">Nama Pendamping PKH</label>
+                        <input type="text" name="nama_pendamping_pkh" class="form-control" required>
+                    </div>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label class="form-label">Kontak Telepon</label>
+                        <input type="text" name="no_tel" class="form-control" required>
+                    </div>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label class="form-label">Alamat</label>
+                        <input type="text" name="alamat" class="form-control" required>
+                    </div>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label for="id_kabupaten" class="form-label">Kabupaten</label>
+                        <select name="id_kabupaten" class="form-control" required>
+                            <option value="">-- Pilih Kabupaten --</option>
+                            <?php foreach ($daftarkabupaten as $kab): ?>
+                                <option value="<?= $kab['id_kabupaten'] ?>"><?= $kab['nama_kabupaten'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="col-auto ms-auto mb-0">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Prodi -->
+<div class="modal fade" id="modalAddProdi" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Tambah Prodi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/masterdata/prodi/store" method="POST">
+                    <?= csrf_field() ?>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label class="form-label">Nama Prodi</label>
+                        <input type="text" name="nama_daftarprodi" class="form-control" required>
+                    </div>
+                    <div class="col-auto ms-auto mb-0">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah SMA -->
+<div class="modal fade" id="modalAddSMA" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Tambah SMA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/masterdata/SMA/store" method="POST">
+                    <?= csrf_field() ?>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label class="form-label">Nama SMA</label>
+                        <input type="text" name="nama_SMA" class="form-control" required>
+                    </div>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label for="id_kabupaten" class="form-label">Kabupaten</label>
+                        <select name="id_kabupaten" class="form-control" required>
+                            <option value="">-- Pilih Kabupaten --</option>
+                            <?php foreach ($daftarkabupaten as $kab): ?>
+                                <option value="<?= $kab['id_kabupaten'] ?>"><?= $kab['nama_kabupaten'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="col-auto ms-auto mb-0">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Universitas -->
+<div class="modal fade" id="modalAddUniversitas" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Tambah Universitas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/masterdata/daftaruniversitas/store" method="POST">
+                    <?= csrf_field() ?>
+                    <div class="input-group input-group-outline my-3 is-filled">
+                        <label class="form-label">Nama Universitas</label>
+                        <input type="text" name="nama_daftaruniversitas" class="form-control" required>
+                    </div>
+                    <div class="col-auto ms-auto mb-0">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

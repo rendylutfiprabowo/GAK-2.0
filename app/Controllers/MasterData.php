@@ -49,8 +49,32 @@ class Masterdata extends BaseController
             'daftarsma'        => $this->SMAModel->getWithWilayah(),
             'daftaruniversitas' => $this->universitasModel->findAll(),
         ];
- 
+
         return view('_admin/masterdata', $data);
+    }
+
+    public function desaStore()
+    {
+        // $data = $this->request->getPost();
+        // dd($data);
+
+        if ($this->request->getMethod() === 'post') {
+            $this->desaModel->insert([
+                'id_kabupaten' => $this->request->getPost('id_kabupaten'),
+                'id_kecamatan' => $this->request->getPost('id_kecamatan'),
+                'nama_desa' => $this->request->getPost('nama_desa'),
+            ]);
+            return redirect()->to('/masterdata')->with('success', 'Data Desa berhasil ditambahkan');
+        }
+    }
+
+    public function getKecamatan($id_kabupaten)
+    {
+        $kecamatan = $this->kecamatanModel
+            ->where('id_kabupaten', $id_kabupaten)
+            ->findAll();
+
+        return $this->response->setJSON($kecamatan);
     }
 
     public function desaUpdate($id)
@@ -69,6 +93,17 @@ class Masterdata extends BaseController
         return redirect()->to('/MasterData')->with('success', 'Data berhasil dihapus');
     }
 
+    // Tambah Data
+    public function jalurMasukstore()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $this->jalurmasukModel->insert([
+                'nama_jalurmasuk' => $this->request->getPost('nama_jalurmasuk')
+            ]);
+            return redirect()->to('/masterdata')->with('success', 'Data berhasil ditambahkan');
+        }
+    }
+
     public function jalurMasukUpdate($id)
     {
         $this->jalurmasukModel->update($id, [
@@ -84,6 +119,17 @@ class Masterdata extends BaseController
         return redirect()->to('/MasterData')->with('success', 'Data berhasil dihapus');
     }
 
+    public function kecamatanStore()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $this->kecamatanModel->insert([
+                'nama_kecamatan' => $this->request->getPost('nama_kecamatan'),
+                'id_kabupaten'   => $this->request->getPost('id_kabupaten'),
+            ]);
+            return redirect()->to('/masterdata')->with('success', 'Data Kecamatan berhasil ditambahkan');
+        }
+    }
+
     public function kecamatanUpdate($id)
     {
         $this->kecamatanModel->update($id, [
@@ -97,6 +143,19 @@ class Masterdata extends BaseController
     {
         $this->kecamatanModel->delete($id);
         return redirect()->to('/MasterData')->with('success', 'Data berhasil dihapus');
+    }
+
+    public function pendampingpkhStore()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $this->pendampingPKHModel->insert([
+                'nama_pendamping_pkh' => $this->request->getPost('nama_pendamping_pkh'),
+                'no_tel'              => $this->request->getPost('no_tel'),
+                'alamat'              => $this->request->getPost('alamat'),
+                'id_kabupaten'        => $this->request->getPost('id_kabupaten'),
+            ]);
+            return redirect()->to('/masterdata')->with('success', 'Data Pendamping PKH berhasil ditambahkan');
+        }
     }
 
     public function pendampingpkhUpdate($id)
@@ -117,6 +176,16 @@ class Masterdata extends BaseController
         return redirect()->to('/MasterData')->with('success', 'Data berhasil dihapus');
     }
 
+    public function kabupatenStore()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $this->kabupatenModel->insert([
+                'nama_kabupaten' => $this->request->getPost('nama_kabupaten'),
+            ]);
+            return redirect()->to('/masterdata')->with('success', 'Data Kabupaten berhasil ditambahkan');
+        }
+    }
+
     public function kabupatenUpdate($id)
     {
         $this->kabupatenModel->update($id, [
@@ -130,6 +199,16 @@ class Masterdata extends BaseController
     {
         $this->kabupatenModel->delete($id);
         return redirect()->to('/MasterData')->with('success', 'Data berhasil dihapus');
+    }
+
+    public function prodiStore()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $this->prodiModel->insert([
+                'nama_daftarprodi' => $this->request->getPost('nama_daftarprodi'),
+            ]);
+            return redirect()->to('/masterdata')->with('success', 'Data Prodi berhasil ditambahkan');
+        }
     }
 
     public function prodiUpdate($id)
@@ -147,6 +226,17 @@ class Masterdata extends BaseController
         return redirect()->to('/MasterData')->with('success', 'Data berhasil dihapus');
     }
 
+    public function SMAStore()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $this->SMAModel->insert([
+                'nama_SMA'     => $this->request->getPost('nama_SMA'),
+                'id_kabupaten' => $this->request->getPost('id_kabupaten'),
+            ]);
+            return redirect()->to('/masterdata')->with('success', 'Data SMA berhasil ditambahkan');
+        }
+    }
+
 
     public function SMAUpdate($id)
     {
@@ -162,6 +252,16 @@ class Masterdata extends BaseController
     {
         $this->SMAModel->delete($id);
         return redirect()->to('/MasterData')->with('success', 'Data berhasil dihapus');
+    }
+
+    public function daftaruniversitasStore()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $this->universitasModel->insert([
+                'nama_daftaruniversitas' => $this->request->getPost('nama_daftaruniversitas'),
+            ]);
+            return redirect()->to('/masterdata')->with('success', 'Data Universitas berhasil ditambahkan');
+        }
     }
 
     public function daftaruniversitasUpdate($id)

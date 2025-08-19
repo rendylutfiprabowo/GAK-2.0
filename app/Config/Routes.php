@@ -68,20 +68,30 @@ $routes->get('/getDesa/(:num)', 'AdminLolosptn::getDesa/$1');
 $routes->get('/MasterData', 'MasterData::index', ['filter' => 'auth:0']);
 $routes->get('/masterdata', 'Masterdata::index');
 
+$routes->post('/masterdata/desa/store', 'Masterdata::desastore');
+$routes->get('/masterdata/getKecamatan/(:num)', 'Masterdata::getKecamatan/$1');
+
 $routes->post('/masterdata/desa/update/(:num)', 'Masterdata::desaUpdate/$1');
 $routes->get('/masterdata/desa/Delete/(:num)', 'Masterdata::desaDelete/$1');
+$routes->post('/masterdata/jalurMasuk/store', 'Masterdata::jalurMasukstore');
 $routes->post('/masterdata/jalurMasuk/update/(:num)', 'Masterdata::jalurMasukUpdate/$1');
 $routes->get('/masterdata/jalurMasuk/Delete/(:num)', 'Masterdata::jalurMasukDelete/$1');
+$routes->post('/masterdata/kabupaten/store', 'Masterdata::kabupatenstore');
 $routes->post('/masterdata/kabupaten/update/(:num)', 'Masterdata::kabupatenUpdate/$1');
 $routes->get('/masterdata/kabupaten/Delete/(:num)', 'Masterdata::kabupatenDelete/$1');
+$routes->post('/masterdata/prodi/store', 'Masterdata::prodistore');
 $routes->post('/masterdata/prodi/update/(:num)', 'Masterdata::prodiUpdate/$1');
 $routes->get('/masterdata/prodi/Delete/(:num)', 'Masterdata::prodiDelete/$1');
+$routes->post('/masterdata/SMA/store', 'Masterdata::SMAstore');
 $routes->post('/masterdata/SMA/update/(:num)', 'Masterdata::SMAUpdate/$1');
 $routes->get('/masterdata/SMA/Delete/(:num)', 'Masterdata::SMADelete/$1');
+$routes->post('/masterdata/daftaruniversitas/store', 'Masterdata::daftaruniversitasstore');
 $routes->post('/masterdata/daftaruniversitas/update/(:num)', 'Masterdata::daftaruniversitasUpdate/$1');
 $routes->get('/masterdata/daftaruniversitas/Delete/(:num)', 'Masterdata::daftaruniversitasDelete/$1');
+$routes->post('/masterdata/kecamatan/store', 'Masterdata::kecamatanstore');
 $routes->post('/masterdata/kecamatan/update/(:num)', 'Masterdata::kecamatanUpdate/$1');
 $routes->get('/masterdata/kecamatan/Delete/(:num)', 'Masterdata::kecamatanDelete/$1');
+$routes->post('/masterdata/pendampingpkh/store', 'Masterdata::pendampingpkhstore');
 $routes->post('/masterdata/pendampingpkh/update/(:num)', 'Masterdata::pendampingpkhUpdate/$1');
 $routes->get('/masterdata/pendampingpkh/Delete/(:num)', 'Masterdata::pendampingpkhDelete/$1');
 

@@ -23,31 +23,28 @@ class LolosPTN extends Model
 
     public function getAsal_kab()
     {
-        $builder = $this->db->table("lolosptn");
-        $builder->select("kabupaten_kota");
-        $builder->selectCount("id_siswa", "total");
-        $builder->groupBy("kabupaten_kota");
-        $data = $builder->get()->getResult();
-        return $data;
+        $builder = $this->db->table("biodata b");
+        $builder->select("dk.nama_kabupaten, COUNT(b.id_siswa) as total");
+        $builder->join("daftarkabupaten dk", "dk.id_kabupaten = b.id_kabupaten");
+        $builder->groupBy("b.id_kabupaten, dk.nama_kabupaten");
+        return $builder->get()->getResult();
     }
 
     public function getUniv()
     {
-        $builder = $this->db->table("lolosptn");
-        $builder->select("universitas");
-        $builder->selectCount("id_siswa", "total");
-        $builder->groupBy("universitas");
-        $data = $builder->get()->getResult();
-        return $data;
+        $builder = $this->db->table("universitas u");
+        $builder->select("du.nama_daftaruniversitas, COUNT(u.id_siswa) as total");
+        $builder->join("daftaruniversitas du", "du.id_daftaruniversitas = u.id_daftaruniversitas");
+        $builder->groupBy("u.id_daftaruniversitas, du.nama_daftaruniversitas");
+        return $builder->get()->getResult();
     }
 
     public function getJalur()
     {
-        $builder = $this->db->table("lolosptn");
-        $builder->select("jalur_masukptn");
-        $builder->selectCount("id_siswa", "total");
-        $builder->groupBy("jalur_masukptn");
-        $data = $builder->get()->getResult();
-        return $data;
+        $builder = $this->db->table("universitas u");
+        $builder->select("dj.nama_jalurmasuk, COUNT(u.id_siswa) as total");
+        $builder->join("daftarjalurmasuk dj", "dj.id_jalurmasuk = u.id_jalurmasuk");
+        $builder->groupBy("u.id_jalurmasuk, dj.nama_jalurmasuk");
+        return $builder->get()->getResult();
     }
 }
