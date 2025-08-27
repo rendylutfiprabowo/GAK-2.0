@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\Biodata;
 use App\Models\Upload;
 
 class SiswaUpload extends BaseController
@@ -17,9 +18,14 @@ class SiswaUpload extends BaseController
     public function index()
     {
         $userId = session()->get('user_id'); // ambil user_id dari session
-        $dokumen = $this->upload->where('user_id', $userId)->first();
+        $biodataModel = new Biodata();
+        $data_siswa = $biodataModel->where('user_id', $userId)->first();
+
+        $nama = $data_siswa['nama'];
 
         $notif = '';
+        $dokumen = $this->upload->where('user_id', $userId)->first();
+
         if (!empty($dokumen)) {
             // cek apakah ada file yang kosong
             $requiredFiles = ['sktm', 'ktp_ortu', 'sk_pendapatan', 'dokumen'];
@@ -36,13 +42,14 @@ class SiswaUpload extends BaseController
         $data = [
             'title' => 'Upload Dokumen',
             'dokumen' => $dokumen,
-            'notif' => $notif
+            'notif' => $notif,
+            'nama' => $nama,
         ];
 
         return view('_siswa/upload', $data);
     }
 
-    public function storeup()
+    public function storeupold()
     {
         $userId = session()->get('user_id');
         $namaSiswa = session()->get('nama_siswa'); // pastikan ini ada
@@ -119,5 +126,100 @@ class SiswaUpload extends BaseController
 
         session()->setFlashdata('success', 'Dokumen Kamu berhasil disimpan!');
         return redirect()->to('UploadDokumen');
+    }
+
+    public function storeup()
+    {
+        $userId = session()->get('user_id');
+        $uploadModel = new Upload();
+        $biodataModel = new Biodata();
+        $data_siswa = $biodataModel->where('user_id', $userId)->first();
+        $id_siswa = $data_siswa['id_siswa'];
+        $namaSiswa = $data_siswa['nama'];
+        $namaSiswaSafe = preg_replace('/[^A-Za-z0-9_\-]/', '_', $namaSiswa);
+        $dataUpdate = ['user_id' => $userId];
+        $timestamp = date('Ymd_His');
+        // var_dump($id_siswa);
+        // die();
+
+        $uploadFields = [
+            'sktm'          => ['folder' => 'gambarSktm',     'prefix' => 'SKTM_'],
+            'ktp_ortu'      => ['folder' => 'gambarKtp',      'prefix' => 'KTP_'],
+            'sk_pendapatan' => ['folder' => 'gambarSK',       'prefix' => 'SKP_'],
+            'dokumen'       => ['folder' => 'gambarDokumen',  'prefix' => 'DOC_'],
+        ];
+
+        $existing = $uploadModel->where('id_siswa', $id_siswa)->first();
+
+        foreach ($uploadFields as $field => $info) {
+            $file = $this->request->getFile($field);
+            $folderPath = FCPATH . $info['folder'] . '/';
+
+            // Pastikan folder ada
+            if (!is_dir($folderPath)) {
+                mkdir($folderPath, 0777, true);
+            }
+
+            if ($file && $file->isValid() && !$file->hasMoved()) {
+                $newName = $info['prefix'] . $namaSiswaSafe . '_' . $timestamp . '.' . $file->getExtension();
+                $file->move($folderPath, $newName);
+                $uploadData[$field] = $newName;
+
+                // Hapus file lama jika ada
+                if (!empty($existing[$field]) && file_exists($folderPath . $existing[$field])) {
+                    unlink($folderPath . $existing[$field]);
+                }
+            } else if ($existing) {
+                // Pertahankan file lama
+                $uploadData[$field] = $existing[$field];
+            }
+        }
+
+        // Simpan ke database dokumen
+        if ($existing) {
+            $uploadData['user_id'] = $userId;
+            $uploadModel->update($existing['id_siswa'], $uploadData);
+        } else {
+            $uploadData['id_siswa'] = $id_siswa;
+            $uploadData['user_id']  = $userId;
+            if (count(array_filter($uploadData)) > 1) { // >1 karena pasti ada id_siswa 
+                $uploadModel->insert($uploadData);
+            }
+        }
+
+        // foreach ($uploadFields as $field => $folderPath) {
+        //     $file = $this->request->getFile($field);
+
+        //     if ($file && $file->isValid() && !$file->hasMoved()) {
+        //         // ✅ pastikan folder ada
+        //         if (!is_dir($folderPath)) {
+        //             mkdir($folderPath, 0777, true);
+        //         }
+
+        //         // ✅ buat nama file unik per siswa
+        //         $newName = '_' . $idSiswaSafe . '_' . $timestamp . '.' . $file->getClientExtension();
+
+        //         // ✅ pindahkan file
+        //         $file->move($folderPath, $newName);
+
+        //         // ✅ simpan path
+        //         $dataUpdate[$field] = $folderPath . $newName;
+        //     }
+        // }
+
+        // if (!empty($dataUpdate)) {
+        //     $existing = $this->upload->where('id_siswa', $userId)->first();
+
+        //     if ($existing) {
+        //         // update berdasarkan primary key id_siswa
+        //         $this->upload->update($userId, $dataUpdate);
+        //     } else {
+        //         // insert baru
+        //         $dataUpdate['id_siswa'] = $userId;
+        //         $this->upload->insert($dataUpdate);
+        //     }
+        // }
+
+        return redirect()->to('UploadDokumen')->with('success', 'Dokumen berhasil diupload');
     }
 }
