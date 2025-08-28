@@ -346,17 +346,17 @@ class AdminLolosptn extends BaseController
 
         // Hapus tabel induk biodata
         $biodataModel->truncate();
+        $userModel->truncate();
 
-        // Hapus user tapi sisakan yang user = 0
-        $db->table('user')
-            ->where('user <>', 0) // hapus semua kecuali user = 0
-            ->delete();
-
-        // Nyalakan lagi foreign key check
-        $db->query('SET FOREIGN_KEY_CHECKS = 1');
+        // Insert ulang admin
+        $db->table('user')->insert([
+            'username' => 'admin',
+            'password' => password_hash('admin123', PASSWORD_BCRYPT),
+            'user' => 0,
+        ]);
 
         // Pesan sukses
-        session()->setFlashdata('message', 'Semua data berhasil dihapus, kecuali user = 0.');
+        session()->setFlashdata('message', 'Semua data siswa berhasil dihapus!');
         return redirect()->to('/PKHLolosPTN');
     }
 
