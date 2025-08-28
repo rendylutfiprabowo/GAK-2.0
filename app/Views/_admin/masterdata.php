@@ -1305,7 +1305,10 @@
                         <select name="id_kabupaten" id="edit-id_kabupaten" class="form-control" required>
                             <option value="">-- Pilih Kabupaten --</option>
                             <?php foreach ($daftarkabupaten as $kab): ?>
-                                <option value="<?= $kab['id_kabupaten'] ?>"><?= $kab['nama_kabupaten'] ?></option>
+                                <option value="<?= $kab['id_kabupaten'] ?>"
+                                    <?= $kab['id_kabupaten'] ? 'selected' : '' ?>>
+                                    <?= $kab['nama_kabupaten'] ?>
+                                </option>
                             <?php endforeach; ?>
                         </select>
                     </div>
@@ -1326,25 +1329,15 @@
 
         let id = $(this).data('id');
         let nama = $(this).data('nama');
-        let id_kabupaten = $(this).data('id_kabupaten'); // ambil dari attribute
-
-        console.log("DEBUG => id:", id, "nama:", nama, "id_kabupaten:", id_kabupaten);
+        let id_kabupaten = $(this).data('id_kabupaten');
 
         // isi field form
         $('#edit-id-SMA').val(id);
         $('#edit-nama-SMA').val(nama);
-
-        // set dropdown kabupaten
-        $("#edit-id_kabupaten").val(id_kabupaten).trigger('change');
-
-        // set action form
+        $("#edit-id_kabupaten").val(id_kabupaten);
         $('#formEditSMA').attr('action', '/masterdata/SMA/update/' + id);
-
-        // buka modal
         $('#modalEditSMA').modal('show');
 
-        // debug cek apakah option ada
-        console.log("Jumlah option cocok:", $("#edit-id_kabupaten option[value='" + id_kabupaten + "']").length);
     });
 </script>
 
