@@ -17,6 +17,17 @@ This app has **two main roles**:
 * Role-based access: **Siswa** and **Admin**
 * Modular structure with **CodeIgniter 4**
 * Excel/CSV support via PhpSpreadsheet (optional for reporting)
+---
+## 🔐 Dummy Login Accounts
+Use the following dummy accounts to log in and explore the system:
+
+🛠 Admin
+Username: admin
+Password: admin123
+
+👨‍🎓 Student
+Username: agil
+Password: 12345678
 
 ---
 
